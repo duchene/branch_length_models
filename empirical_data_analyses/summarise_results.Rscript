@@ -1,0 +1,105 @@
+require(phangorn)
+source("../readIQ.R")
+
+rtabs <- list()
+schemes <- c("1_NOPART", "2_TM_q", "3_TEST_q", "4_TM_spp", "5_TEST_spp", "6_TM_sp", "7_TEST_sp")
+
+rdats <- c("Bergsten_2013", "Delsuc_2003", "Devitt_2013", "Dsouli_2011", "Ekrem_2010", "Fishbein_2001", "Sauquet_2011", "Siler_2013")
+
+
+# Function to calculate normalized topological distances between pairs of trees.
+
+prop.dist.topo <- function(tr1, tr2){
+               tr1 <- drop.tip(tr1, tr1$tip.label[which(!tr1$tip.label %in% intersect(tr1$tip.label, tr2$tip.label))])
+               tr2 <- drop.tip(tr2, tr2$tip.label[which(!tr2$tip.label %in% intersect(tr2$tip.label, tr1$tip.label))])
+               propdist <- RF.dist(tr1, tr2, normalize = T)
+               return(propdist)
+}
+
+
+
+for(i in 1:8){
+      rtabs[[i]] <- list()
+      rtabs[[i]][[1]] <- matrix(NA, 13, 7)
+      trs <- list()
+      for(j in 1:7){
+      	    setwd(paste0(schemes[j], "/", rdats[i]))
+	    res <- readIQ(grep("iqtree", dir(), value = T))
+	    rtabs[[i]][[1]][,j] <- res[[1]]
+	    trs[[j]] <- res[[2]]
+	    setwd("../..")
+      }
+      rownames(rtabs[[i]][[1]]) <- names(res[[1]])
+      colnames(rtabs[[i]][[1]]) <- schemes
+      class(trs) <- "multiPhylo"
+      rtabs[[i]][[2]] <- path.dist(trs)
+      rtabs[[i]][[3]] <- wRF.dist(trs, normalize = T)
+      names(rtabs[[i]]) <- c("stats", "pathtopdist.unweighted", "topdist.weighted")
+}
+
+names(rtabs) <- rdats
+
+astmars <- read.tree("mars.astral.tre")
+#astbird <- read.tree("bird.astral.tre")
+astbird <- read.nexus("bird.timetree.tre")
+
+mtabs <- list()
+
+for(i in c(1:300)){
+      mtabs[[i]] <- list()
+      mtabs[[i]][[1]] <- matrix(NA, 13, 7)
+      trs <- list()
+      for(j in 1:7){
+            setwd(paste0(schemes[j], "/Marsupials/set", i))
+            res <- readIQ(grep("iqtree", dir(), value = T))
+            mtabs[[i]][[1]][,j] <- res[[1]]
+            trs[[j]] <- res[[2]]
+            setwd("../../..")
+      }
+      rownames(mtabs[[i]][[1]]) <- names(res[[1]])
+      colnames(mtabs[[i]][[1]]) <- schemes
+      class(trs) <- "multiPhylo"
+      mtabs[[i]][[2]] <- path.dist(trs)
+      mtabs[[i]][[3]] <- wRF.dist(trs, normalize = T)
+      #mtabs[[i]][[4]] <- sapply(trs, function(x) prop.dist.topo(x, astmars))
+      mtabs[[i]][[4]] <- sapply(trs, function(x) path.dist(x, astmars, check.labels = F))
+      names(mtabs[[i]][[4]]) <- schemes
+      names(mtabs[[i]]) <- c("stats", "pathtopdist.unweighted", "topdist.weighted", "topdist.reftopo")
+}
+
+names(mtabs) <- paste0("set", 1:17)
+
+
+btabs <- list()
+
+for(i in c(1:17)){
+      btabs[[i]] <- list()
+      btabs[[i]][[1]] <- matrix(NA, 13, 7)
+      trs <- list()
+      for(j in 1:7){
+            setwd(paste0(schemes[j], "/Birds/set", i))
+            res <- readIQ(grep("iqtree", dir(), value = T))
+            btabs[[i]][[1]][,j] <- res[[1]]
+            trs[[j]] <- res[[2]]
+            setwd("../../..")
+      }
+      rownames(btabs[[i]][[1]]) <- names(res[[1]])
+      colnames(btabs[[i]][[1]]) <- schemes
+      class(trs) <- "multiPhylo"
+      btabs[[i]][[2]] <- path.dist(trs)
+      btabs[[i]][[3]] <- wRF.dist(trs, normalize = T)
+      trs <- lapply(trs, function(x){
+      	  x$tip.label <- tolower(x$tip.label)
+	  x$tip.label <- sapply(x$tip.label, function(y) paste(strsplit(y, split = "[_]")[[1]][-(1:3)], collapse = "_") )
+	  return(x)
+      })
+      astbird$tip.label <- tolower(astbird$tip.label)
+      #btabs[[i]][[4]] <- sapply(trs, function(x) prop.dist.topo(x, astbird))
+      btabs[[i]][[4]] <- sapply(trs, function(x) path.dist(x, astbird, check.labels = F))
+      names(btabs[[i]][[4]]) <- schemes
+      names(btabs[[i]]) <- c("stats", "pathtopdist.unweighted", "topdist.weighted", "topdist.reftopo")
+}
+
+names(btabs) <- paste0("set", 1:17)
+
+save(btabs, mtabs, rtabs, file = "results.tables.Rdata")

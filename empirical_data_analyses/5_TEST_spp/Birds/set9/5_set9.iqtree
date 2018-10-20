@@ -1,0 +1,938 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../../birds/set9.nex
+Input file name: ../../../../birds/set9.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 732321
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 194 taxa with 15 partitions and 22328 total sites (0% missing data)
+
+  ID  Name    Type	Seq	Site	Unique	Infor	Invar	Const
+   1  part1   DNA	194	1757	1056	725	811	811
+   2  part2   DNA	194	1937	1423	1236	541	541
+   3  part3   DNA	194	866	668	540	239	239
+   4  part4   DNA	194	1172	825	557	415	415
+   5  part5   DNA	194	1770	958	784	857	857
+   6  part6   DNA	194	1747	676	504	1110	1110
+   7  part7   DNA	194	1349	810	593	610	610
+   8  part8   DNA	194	1728	773	627	1031	1031
+   9  part9   DNA	194	1519	1050	891	537	537
+  10  part10  DNA	194	1537	904	796	646	646
+  11  part11  DNA	194	722	531	431	226	226
+  12  part12  DNA	194	1594	745	592	887	886
+  13  part13  DNA	194	1588	1488	1354	125	124
+  14  part14  DNA	194	1741	1230	1085	524	524
+  15  part15  DNA	194	1301	776	654	569	569
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: GTR+F+I+G4:part1,GTR+F+I+G4:part2,GTR+F+I+G4:part3,TVMe+I+G4:part4,TIM2e+I+G4:part5,TPM2u+F+I+G4:part6,TIM3+F+I+G4:part7,TVMe+I+G4:part8,TPM3u+F+I+G4:part9,GTR+F+I+G4:part10,GTR+F+I+G4:part11,GTR+F+I+G4:part12,GTR+F+I+G4:part13,GTR+F+I+G4:part14,TIM2e+I+G4:part15
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  GTR+F+I+G4      -30076.0099  60174.0199 + 0.0000  60174.1711 + 0.0000  60234.2049 + 0.0000
+   2  GTR+F+I+G4      -64309.2467 128640.4935 + 0.0000 128640.6306 + 0.0000 128701.7514 + 0.0000
+   3  GTR+F+I+G4      -25471.0180  50964.0361 + 0.0000  50964.3452 + 0.0000  51016.4388 + 0.0000
+   4  TVMe+I+G4       -25537.4120  51088.8241 + 0.0000  51088.9203 + 0.0000  51124.2893 + 0.0000
+   5  TIM2e+I+G4      -38264.7444  76541.4887 + 0.0000  76541.5364 + 0.0000  76574.3611 + 0.0000
+   6  TPM2u+F+I+G4    -23679.5200  47375.0399 + 0.0000  47375.1228 + 0.0000  47418.7651 + 0.0000
+   7  TIM3+F+I+G4     -26465.6013  52949.2026 + 0.0000  52949.3370 + 0.0000  52996.0666 + 0.0000
+   8  TVMe+I+G4       -32816.6691  65647.3382 + 0.0000  65647.4034 + 0.0000  65685.5213 + 0.0000
+   9  TPM3u+F+I+G4    -40636.2695  81288.5390 + 0.0000  81288.6344 + 0.0000  81331.1455 + 0.0000
+  10  GTR+F+I+G4      -38319.9591  76661.9182 + 0.0000  76662.0913 + 0.0000  76720.6317 + 0.0000
+  11  GTR+F+I+G4      -23828.6486  47679.2972 + 0.0000  47679.6690 + 0.0000  47729.6995 + 0.0000
+  12  GTR+F+I+G4      -36807.1117  73636.2234 + 0.0000  73636.3903 + 0.0000  73695.3374 + 0.0000
+  13  GTR+F+I+G4      -61280.2566 122582.5132 + 0.0000 122582.6807 + 0.0000 122641.5857 + 0.0000
+  14  GTR+F+I+G4      -50915.5179 101853.0357 + 0.0000 101853.1884 + 0.0000 101913.1201 + 0.0000
+  15  TIM2e+I+G4      -31627.0324  63266.0647 + 0.0000  63266.1297 + 0.0000  63297.0901 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  GTR+F+I+G4     0.7164  GTR{1.24774,5.26423,0.576691,1.4669,7.09812}+F{0.313513,0.215386,0.221865,0.249237}+I{0.349453}+G4{0.651346}
+   2  GTR+F+I+G4     1.2046  GTR{1.12132,6.4537,0.777264,1.5742,4.60878}+F{0.285363,0.1935,0.211054,0.310083}+I{0.248749}+G4{1.13487}
+   3  GTR+F+I+G4     1.1343  GTR{1.01714,4.17772,0.502263,1.49026,5.54465}+F{0.32956,0.206045,0.198239,0.266157}+I{0.228902}+G4{1.03561}
+   4  TVMe+I+G4      0.9075  TVMe{0.834527,2.54169,0.271871,1.22508}+FQ+I{0.25077}+G4{0.758276}
+   5  TIM2e+I+G4     1.2026  TIM2e{0.757762,7.24526,6.28108}+FQ+I{0.434623}+G4{0.682725}
+   6  TPM2u+F+I+G4   0.4879  TPM2u{0.776164,5.31367}+F{0.28352,0.250207,0.214867,0.251406}+I{0.583133}+G4{0.787973}
+   7  TIM3+F+I+G4    0.7873  TIM3{1.55831,4.37225,10.931}+F{0.282962,0.170142,0.321001,0.225894}+I{0.359868}+G4{0.726725}
+   8  TVMe+I+G4      0.7350  TVMe{0.904197,5.98746,0.476533,0.924166}+FQ+I{0.574545}+G4{0.964674}
+   9  TPM3u+F+I+G4   1.2023  TPM3u{1.53864,7.45957}+F{0.296634,0.221748,0.227637,0.253981}+I{0.323384}+G4{1.02126}
+  10  GTR+F+I+G4     0.9247  GTR{0.921944,5.5428,0.529265,1.18439,4.27869}+F{0.287929,0.210874,0.186571,0.314626}+I{0.393984}+G4{1.17305}
+  11  GTR+F+I+G4     1.3368  GTR{1.02411,4.66613,0.355126,2.64213,6.6874}+F{0.250548,0.306143,0.261875,0.181434}+I{0.260688}+G4{0.823554}
+  12  GTR+F+I+G4     0.9499  GTR{0.639071,5.13221,0.178881,1.34496,3.68649}+F{0.245149,0.324123,0.222604,0.208124}+I{0.514612}+G4{0.728531}
+  13  GTR+F+I+G4     1.2366  GTR{1.15337,3.3455,0.725778,1.6889,7.06416}+F{0.299837,0.180799,0.238992,0.280372}+I{0.0553547}+G4{1.86692}
+  14  GTR+F+I+G4     1.2092  GTR{0.939425,5.19496,0.412135,1.70627,6.30994}+F{0.36407,0.19925,0.202491,0.234189}+I{0.254779}+G4{0.956312}
+  15  TIM2e+I+G4     1.2154  TIM2e{0.734444,7.20898,6.05159}+FQ+I{0.386825}+G4{0.727889}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -549265.5035 (s.e. 4222.4569)
+Unconstrained log-likelihood (without tree): -124282.0655
+Number of free parameters (#branches + #model parameters): 523
+Akaike information criterion (AIC) score: 1099577.0070
+Corrected Akaike information criterion (AICc) score: 1099602.1448
+Bayesian information criterion (BIC) score: 1103768.1181
+
+Total tree length (sum of branch lengths): 7.1145
+Sum of internal branch lengths: 2.1403 (30.0829% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'I0185_86_Accipitridae_Buteo_jamaicensis' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--I0185_86_Accipitridae_Buteo_jamaicensis
+|
+|                                               +--------I0186_111_Momotidae_Momotus_lessonii
+|                                            +--| (100)
+|                                            |  |  +----------I0194_495_Alcedinidae_Alcedo_quadribrachys
+|                                            |  +--| (100)
+|                                            |     +-----I0272_5303_Alcedinidae_Chloroceryle_inda
+|                                         +--| (100)
+|                                         |  +-------I0234_1994_Todidae_Todus_mexicanus
+|                                      +--| (100)
+|                                      |  |  +----------I0199_955_Meropidae_Merops_muelleri
+|                                      |  +--| (100)
+|                                      |     |  +----I0284_6031_Coraciidae_Coracias_cyanogaster
+|                                      |     +--| (100)
+|                                      |        +------I0364_384759_Brachypteraciidae_Atelornis_pittoides
+|                                   +--| (100)
+|                                   |  |            +---I0191_344_Indicatoridae_Indicator_exilis
+|                                   |  |         +--| (100)
+|                                   |  |         |  |  +---I0213_1334_Picidae_Jynx_torquilla
+|                                   |  |         |  +--| (100)
+|                                   |  |         |     +--I0259_3344_Picidae_Picus_canus
+|                                   |  |  +------| (100)
+|                                   |  |  |      |     +----I0195_522_Ramphastidae_Buccanodon_duchaillui
+|                                   |  |  |      |  +--| (100)
+|                                   |  |  |      |  |  |  +--I0266_3617_Ramphastidae_Capito_niger
+|                                   |  |  |      |  |  +--| (100)
+|                                   |  |  |      |  |     +--I0286_6061_Ramphastidae_Ramphastos_ambiguus
+|                                   |  |  |      +--| (100)
+|                                   |  |  |         +-----I0397_17790_Ramphastidae_Megalaima_chrysopogon
+|                                   |  +--| (100)
+|                                   |     |      +--I0267_3690_Bucconidae_Bucco_capensis
+|                                   |     |  +---| (100)
+|                                   |     |  |   +-----I0274_5339_Bucconidae_Chelidoptera_tenebrosa
+|                                   |     +--| (100)
+|                                   |        +---------I0273_5315_Galbulidae_Galbula_dea
+|                                +--| (100)
+|                                |  |      +----I0198_937_Bucerotidae_Tockus_camurus
+|                                |  |  +---| (100)
+|                                |  |  |   +--I2828_3250_Bucerotidae_Bucorvus_leadbeateri
+|                                |  +--| (100)
+|                                |     |       +------I0233_1920_Upupidae_Upupa_epops
+|                                |     +-------| (100)
+|                                |             +-------I0392_15430_Phoeniculidae_Phoeniculus_purpureus
+|                             +--| (98)
+|                             |  |       +--I0187_115_Trogonidae_Trogon_elegans
+|                             |  +-------| (100)
+|                             |          +--I0190_295_Trogonidae_Apaloderma_aequatoriale
+|                          +--| (89)
+|                          |  |        +--I0410_52764_Coliidae_Colius_colius
+|                          |  +--------| (100)
+|                          |           +---I0413_67124_Coliidae_Colius_indicus
+|                       +--| (61)
+|                       |  |                     +---I0189_225_Eurylaimidae_Smithornis_rufolateralis
+|                       |  |                  +--| (100)
+|                       |  |                  |  +--I0459_6323_Eurylaimidae_Calyptomena_viridis
+|                       |  |               +--| (100)
+|                       |  |               |  +------I0400_19788_Pittidae_Pitta_angolensis
+|                       |  |            +--| (100)
+|                       |  |            |  |  +---I0387_12368_Eurylaimidae_Eurylaimus_ochromalus
+|                       |  |            |  +--| (100)
+|                       |  |            |     +---I0438_345711_Eurylaimidae_Neodrepanis_coruscans
+|                       |  |         +--| (100)
+|                       |  |         |  |              +--I0200_988_Furnariidae_Furnarius_rufus
+|                       |  |         |  |           +--| (100)
+|                       |  |         |  |           |  +--I0242_2273_Furnariidae_Lepidocolaptes_angustirostris
+|                       |  |         |  |        +--| (100)
+|                       |  |         |  |        |  +--I0223_1586_Furnariidae_Sclerurus_mexicanus
+|                       |  |         |  |     +--| (100)
+|                       |  |         |  |     |  +----I0429_3677_Grallariidae_Myrmothera_campanisona
+|                       |  |         |  |  +--| (100)
+|                       |  |         |  |  |  |        +--I0207_1193_Thamnophilidae_Thamnophilus_ruficapillus
+|                       |  |         |  |  |  |     +--| (83)
+|                       |  |         |  |  |  |     |  +--I0261_3515_Thamnophilidae_Terenura_callinota
+|                       |  |         |  |  |  |  +--| (100)
+|                       |  |         |  |  |  |  |  +--I0237_2182_Thamnophilidae_Myrmornis_torquata
+|                       |  |         |  |  |  +--| (100)
+|                       |  |         |  |  |     +-----I0377_2841_Melanopareiidae_Melanopareia_maximiliani
+|                       |  |         |  +--| (100)
+|                       |  |         |     |                          +--I0203_1087_Tyrannidae_Hymenops_perspicillatus
+|                       |  |         |     |                       +--| (100)
+|                       |  |         |     |                       |  +--I0246_2823_Tyrannidae_Tyrannus_albogularis
+|                       |  |         |     |                    +--| (100)
+|                       |  |         |     |                    |  +--I0430_5336_Tyrannidae_Elaenia_flavogaster
+|                       |  |         |     |                 +--| (100)
+|                       |  |         |     |                 |  +--I0205_1183_Tyrannidae_Hirundinea_ferruginea
+|                       |  |         |     |              +--| (100)
+|                       |  |         |     |              |  +--I0227_1698_Tyrannidae_Rhynchocyclus_olivaceus
+|                       |  |         |     |           +--| (100)
+|                       |  |         |     |           |  +--I0225_1616_Incertae_sedis_Piprites_chloris
+|                       |  |         |     |        +--| (80)
+|                       |  |         |     |        |  |  +--I0251_3044_Tityridae_Tityra_cayana
+|                       |  |         |     |        |  +--| (100)
+|                       |  |         |     |        |     +--I0265_3576_Tityridae_Schiffornis_turdina
+|                       |  |         |     |     +--| (91)
+|                       |  |         |     |     |  |  +--I0218_1474_Tityridae_Myiobius_barbatus
+|                       |  |         |     |     |  +--| (75)
+|                       |  |         |     |     |     +--I0262_3562_Oxyruncidae_Oxyruncus_cristatus
+|                       |  |         |     |  +--| (85)
+|                       |  |         |     |  |  |  +--I0217_1452_Cotingidae_Rupicola_rupicola
+|                       |  |         |     |  |  +--| (100)
+|                       |  |         |     |  |     +--I0238_2211_Cotingidae_Cotinga_cayana
+|                       |  |         |     +--| (100)
+|                       |  |         |        |  +--I0228_1712_Pipridae_Neopelma_chrysocephalum
+|                       |  |         |        +--| (100)
+|                       |  |         |           |  +--I0241_2249_Pipridae_Pipra_erythrocephala
+|                       |  |         |           +--| (100)
+|                       |  |         |              +--I0416_76941_Pipridae_Cryptopipo_holochlora
+|                       |  |      +--| (100)
+|                       |  |      |  |           +--I0197_832_Corvidae_Corvus_albus
+|                       |  |      |  |        +--| (100)
+|                       |  |      |  |        |  +--I0457_6346_Paradisaeidae_Lophorina_superba
+|                       |  |      |  |     +--| (100)
+|                       |  |      |  |     |  |           +---I0214_1354_Sylviidae_Sylvia_melanocephala
+|                       |  |      |  |     |  |        +--| (100)
+|                       |  |      |  |     |  |        |  +---I2826_181173_Pycnonotidae_Pycnonotus_macrotis
+|                       |  |      |  |     |  |     +--| (100)
+|                       |  |      |  |     |  |     |  +----I0455_1245_Alaudidae_Calandrella_brachydactyla
+|                       |  |      |  |     |  |  +--| (95)
+|                       |  |      |  |     |  |  |  +----I0456_3321_Paridae_Poecile_lugubris
+|                       |  |      |  |     |  +--| (100)
+|                       |  |      |  |     |     |     +-----I0215_1370_Regulidae_Regulus_ignicapilla
+|                       |  |      |  |     |     |  +--| (94)
+|                       |  |      |  |     |     |  |  +-----I0222_1568_Turdidae_Turdus_olivater
+|                       |  |      |  |     |     +--| (88)
+|                       |  |      |  |     |        |  +--I0232_1837_Fringillidae_Fringilla_coelebs
+|                       |  |      |  |     |        +--| (100)
+|                       |  |      |  |     |           +---I2825_21896_Emberizidae_Spizella_arborea
+|                       |  |      |  |  +--| (100)
+|                       |  |      |  |  |  |  +-----I0380_6178_Climacteridae_Climacteris_melanura
+|                       |  |      |  |  |  +--| (100)
+|                       |  |      |  |  |     +----I2824_12230_Ptilonorhynchidae_Sericulus_bakeri
+|                       |  |      |  +--| (100)
+|                       |  |      |     +---I0415_76638_Menuridae_Menura_novaehollandiae
+|                       |  |  +---| (100)
+|                       |  |  |   +---------I2829_RIFL_Acanthisittidae_Acanthisitta_chloris
+|                       |  +--| (100)
+|                       |     |             +--I0240_2217_Psittacidae_Deroptyus_accipitrinus
+|                       |     |          +--| (100)
+|                       |     |          |  +--I0370_1566_Psittacidae_Psittacus_erithacus
+|                       |     |       +--| (100)
+|                       |     |       |  |  +--I0271_5253_Psittacidae_Psittrichas_fulgidus
+|                       |     |       |  +--| (100)
+|                       |     |       |     +--I0383_8723_Psittacidae_Barnardius_zonarius
+|                       |     |    +--| (100)
+|                       |     |    |  +--I0280_5927_Psittacidae_Probosciger_aterrimus
+|                       |     +----| (100)
+|                       |          +---I0389_14873_Psittacidae_Nestor_meridionalis
+|                    +--| (87)
+|                    |  |  +--I0216_1413_Falconidae_Micrastur_gilvicollis
+|                    |  +--| (100)
+|                    |     |  +---I0236_2079_Falconidae_Falco_sparverius
+|                    |     +--| (100)
+|                    |        |  +--I0248_2938_Falconidae_Caracara_cheriway
+|                    |        +--| (100)
+|                    |           +--I0264_3574_Falconidae_Ibycter_americanus
+|                 +--| (85)
+|                 |  |  +-----I0367_449184_Leptosomidae_Leptosomus_discolor
+|                 |  +--| (74)
+|                 |     |   +--I0421_1173_Cariamidae_Cariama_cristata
+|                 |     +---| (100)
+|                 |         +--I0454_77230_Cariamidae_Chunga_burmeisteri
+|              +--| (100)
+|              |  |                          +--I0188_135_Apodidae_Streptoprocne_zonaris
+|              |  |                       +--| (100)
+|              |  |                       |  +---I0247_2886_Apodidae_Chaetura_brachyura
+|              |  |                    +--| (100)
+|              |  |                    |  +--I0388_12571_Hemiprocnidae_Hemiprocne_comata
+|              |  |                 +--| (100)
+|              |  |                 |  |       +--I0219_1489_Trochilidae_Topaza_pella
+|              |  |                 |  +-------| (100)
+|              |  |                 |          |  +--I0220_1514_Trochilidae_Phaethornis_superciliosus
+|              |  |                 |          +--| (92)
+|              |  |                 |             +--I0277_5465_Trochilidae_Archilochus_colubris
+|              |  |              +--| (100)
+|              |  |              |  +------I0394_16098_Aegothelidae_Aegotheles_insignis
+|              |  |           +--| (88)
+|              |  |           |  |  +----I0249_2220_Nyctibiidae_Nyctibius_griseus
+|              |  |           |  +--| (95)
+|              |  |           |     +------I0255_3161_Podargidae_Podargus_strigoides
+|              |  |        +--| (100)
+|              |  |        |  |     +--I0244_2276_Caprimulgidae_Chordeiles_pusillus
+|              |  |        |  |  +--| (100)
+|              |  |        |  |  |  +--I0258_3336_Caprimulgidae_Caprimulgus_europaeus
+|              |  |        |  +--| (100)
+|              |  |        |     +--I0399_18174_Caprimulgidae_Eurostopodus_macrotis
+|              |  |     +--| (92)
+|              |  |     |  |              +---I0192_375_Musophagidae_Tauraco_macrorhynchus
+|              |  |     |  |           +--| (100)
+|              |  |     |  |           |  +--I0196_523_Musophagidae_Corythaeola_cristata
+|              |  |     |  |        +--| (87)
+|              |  |     |  |        |  |            +--I0193_447_Columbidae_Treron_calvus
+|              |  |     |  |        |  |         +--| (100)
+|              |  |     |  |        |  |         |  +--I0434_6298_Columbidae_Ptilinopus_magnificus
+|              |  |     |  |        |  |  +------| (100)
+|              |  |     |  |        |  |  |      |     +--I0211_1232_Columbidae_Columba_livia
+|              |  |     |  |        |  |  |      |  +--| (100)
+|              |  |     |  |        |  |  |      |  |  +--I0221_1526_Columbidae_Leptotila_rufaxilla
+|              |  |     |  |        |  |  |      +--| (99)
+|              |  |     |  |        |  |  |         +---I0243_2275_Columbidae_Columbina_minuta
+|              |  |     |  |        |  +--| (96)
+|              |  |     |  |        |     |          +--I0363_345610_Mesitornithidae_Mesitornis_unicolor
+|              |  |     |  |        |     +----------| (100)
+|              |  |     |  |        |                +--I0366_438526_Mesitornithidae_Monias_benschi
+|              |  |     |  |     +--| (87)
+|              |  |     |  |     |  |              +-----I0224_1607_Cracidae_Crax_alector
+|              |  |     |  |     |  |           +--| (100)
+|              |  |     |  |     |  |           |  |          +--I0226_1619_Odontophoridae_Odontophorus_gujanensis
+|              |  |     |  |     |  |           |  |      +---| (100)
+|              |  |     |  |     |  |           |  |      |   +--I0250_2944_Odontophoridae_Colinus_cristatus
+|              |  |     |  |     |  |           |  |   +--| (100)
+|              |  |     |  |     |  |           |  |   |  |     +----I0278_5642_Phasianidae_Bonasa_umbellus
+|              |  |     |  |     |  |           |  |   |  |  +--| (100)
+|              |  |     |  |     |  |           |  |   |  |  |  +--I0374_2419_Phasianidae_Gallus_gallus
+|              |  |     |  |     |  |           |  |   |  +--| (100)
+|              |  |     |  |     |  |           |  |   |     +----I0371_1587_Phasianidae_Rollulus_rouloul
+|              |  |     |  |     |  |           |  +---| (100)
+|              |  |     |  |     |  |           |      +---I0448_52755_Numididae_Numida_malagris
+|              |  |     |  |     |  |        +--| (100)
+|              |  |     |  |     |  |        |  +-------I0256_3178_Megapodiidae_Leipoa_ocellata
+|              |  |     |  |     |  |     +--| (100)
+|              |  |     |  |     |  |     |  |                 +--I0252_3154_Anatidae_Anas_superciliosa
+|              |  |     |  |     |  |     |  |              +--| (100)
+|              |  |     |  |     |  |     |  |              |  +--I0288_6097_Anatidae_Aythya_valisineria
+|              |  |     |  |     |  |     |  |           +--| (99)
+|              |  |     |  |     |  |     |  |           |  +--I0285_6059_Anatidae_Anser_canagicus
+|              |  |     |  |     |  |     |  |        +--| (100)
+|              |  |     |  |     |  |     |  |        |  +--I0257_3236_Anatidae_Oxyura_jamaicensis
+|              |  |     |  |     |  |     |  |     +--| (100)
+|              |  |     |  |     |  |     |  |     |  +--I0283_6026_Anatidae_Dendrocygna_viduata
+|              |  |     |  |     |  |     |  |  +--| (100)
+|              |  |     |  |     |  |     |  |  |  +--I0253_3158_Anseranatidae_Anseranas_semipalmata
+|              |  |     |  |     |  |     |  +--| (100)
+|              |  |     |  |     |  |     |     +---I0373_1829_Anhimidae_Chauna_torquata
+|              |  |     |  |     |  |  +--| (100)
+|              |  |     |  |     |  |  |  |                        +------I0229_1748_Tinamidae_Nothoprocta_ornata
+|              |  |     |  |     |  |  |  |                +-------| (100)
+|              |  |     |  |     |  |  |  |                |       |     +------I0230_1770_Tinamidae_Crypturellus_tataupa
+|              |  |     |  |     |  |  |  |                |       |  +--| (100)
+|              |  |     |  |     |  |  |  |                |       |  |  +---I0231_1774_Tinamidae_Tinamus_major
+|              |  |     |  |     |  |  |  |                |       +--| (96)
+|              |  |     |  |     |  |  |  |                |          +-------I0432_5886_Tinamidae_Eudromia_elegans
+|              |  |     |  |     |  |  |  |             +--| (88)
+|              |  |     |  |     |  |  |  |             |  +------I0414_72512_Rheidae_Rhea_americana
+|              |  |     |  |     |  |  |  |          +--| (88)
+|              |  |     |  |     |  |  |  |          |  +--I0390_14905_Apterygidae_Apteryx_sp
+|              |  |     |  |     |  |  |  |       +--| (100)
+|              |  |     |  |     |  |  |  |       |  |  +--I0260_3380_Dromaiidae_Dromaius_novaehollandiae
+|              |  |     |  |     |  |  |  |       |  +--| (100)
+|              |  |     |  |     |  |  |  |       |     +--I0382_6875_Casuariidae_Casuarius_bennetti
+|              |  |     |  |     |  |  |  |   +---| (100)
+|              |  |     |  |     |  |  |  |   |   +-----I0453_90121_Struthionidae_Struthio_camelus
+|              |  |     |  |     |  |  |  +---| (100)
+|              |  |     |  |     |  |  |      |                                           +--I0460_HERP_14722_Crocodylidae_Crocodylus_porosus
+|              |  |     |  |     |  |  |      +-------------------------------------------| (100)
+|              |  |     |  |     |  |  |                                                  +--I0461_HERP_15451_Alligatoridae_Caiman_croccodilus
+|              |  |     |  |     |  +--| (70)
+|              |  |     |  |     |     |        +----I0263_3569_Psophiidae_Psophia_crepitans
+|              |  |     |  |     |     |     +--| (100)
+|              |  |     |  |     |     |     |  |     +--I0405_21897_Gruidae_Grus_canadensis
+|              |  |     |  |     |     |     |  |  +--| (100)
+|              |  |     |  |     |     |     |  |  |  +--I0433_6296_Gruidae_Balearica_regulorum
+|              |  |     |  |     |     |     |  +--| (100)
+|              |  |     |  |     |     |     |     +--I0419_90368_Aramidae_Aramus_guarauna
+|              |  |     |  |     |     |  +--| (100)
+|              |  |     |  |     |     |  |  |  +-------I0378_3087_Heliornithidae_Heliornis_fulica
+|              |  |     |  |     |     |  |  +--| (100)
+|              |  |     |  |     |     |  |     |      +--I0407_22888_Rallidae_Porphyrio_porphyrio
+|              |  |     |  |     |     |  |     |   +--| (100)
+|              |  |     |  |     |     |  |     |   |  +--I0425_2961_Rallidae_Micropygia_schomburgkii
+|              |  |     |  |     |     |  |     +---| (100)
+|              |  |     |  |     |     |  |         +--I0428_3386_Rallidae_Rallus_longirostris
+|              |  |     |  |     |     +--| (79)
+|              |  |     |  |     |        |  +--I0287_6069_Phoenicopteridae_Phoenicopterus_ruber
+|              |  |     |  |     |        +--| (100)
+|              |  |     |  |     |           +----I0422_1201_Podicipedidae_Rollandia_rolland
+|              |  |     |  |  +--| (89)
+|              |  |     |  |  |  |              +--I0201_999_Scolopacidae_Tringa_solitaria
+|              |  |     |  |  |  |           +--| (100)
+|              |  |     |  |  |  |           |  +--I0427_3383_Scolopacidae_Arenaria_interpres
+|              |  |     |  |  |  |        +--| (100)
+|              |  |     |  |  |  |        |  +--I0431_5370_Scolopacidae_Limosa_lapponica
+|              |  |     |  |  |  |     +--| (100)
+|              |  |     |  |  |  |     |  |     +----I0279_5911_Jacanidae_Jacana_jacana
+|              |  |     |  |  |  |     |  |  +--| (100)
+|              |  |     |  |  |  |     |  |  |  +----I0402_20061_Rostratulidae_Rostratula_benghalensis
+|              |  |     |  |  |  |     |  +--| (100)
+|              |  |     |  |  |  |     |     +----I2827_2685_Pedionomidae_Pedionomus_torquatus
+|              |  |     |  |  |  |  +--| (100)
+|              |  |     |  |  |  |  |  |              +--I0206_1192_Laridae_Chroicocephalus_cirrocephalus
+|              |  |     |  |  |  |  |  |           +--| (99)
+|              |  |     |  |  |  |  |  |           |  +--I0270_4099_Sternidae_Sterna_hirundo
+|              |  |     |  |  |  |  |  |        +--| (100)
+|              |  |     |  |  |  |  |  |        |  +--I0393_15950_Rynchopidae_Rhynchops_niger
+|              |  |     |  |  |  |  |  |     +--| (100)
+|              |  |     |  |  |  |  |  |     |  +--I0408_25293_Alcidae_Uria_aalge
+|              |  |     |  |  |  |  |  |  +--| (100)
+|              |  |     |  |  |  |  |  |  |  +--I0401_19903_Glareolidae_Glareola_nuchalis
+|              |  |     |  |  |  |  |  +--| (100)
+|              |  |     |  |  |  |  |     +------------------------I0409_25985_Turnicidae_Turnix_ocellata
+|              |  |     |  |  |  +--| (100)
+|              |  |     |  |  |     |  +--I0209_1223_Burhinidae_Burhinus_oedicnemus
+|              |  |     |  |  |     +--| (100)
+|              |  |     |  |  |        |  +--I0212_1289_Charadriidae_Charadrius_hiaticula
+|              |  |     |  |  |        +--| (100)
+|              |  |     |  |  |           |  +--I0289_6295_Haematopodidae_Haematopus_palliatus
+|              |  |     |  |  |           +--| (100)
+|              |  |     |  |  |              +--I0368_21_Recurvirostridae_Recurvirostra_americana
+|              |  |     |  +--| (87)
+|              |  |     |     |  +------I0281_5967_Otididae_Ardeotis_kori
+|              |  |     |     +--| (94)
+|              |  |     |        |  +-----I0375_2613_Phaethontidae_Phaethon_rubricauda
+|              |  |     |        +--| (94)
+|              |  |     |           +---------I0396_16818_Eurypygidae_Eurypyga_helias
+|              |  |  +--| (16)
+|              |  |  |  |           +------I0235_2065_Cuculidae_Coccyzus_melacoryphus
+|              |  |  |  |        +--| (100)
+|              |  |  |  |        |  +---I0423_2497_Cuculidae_Cuculus_optatus
+|              |  |  |  |     +--| (100)
+|              |  |  |  |     |  +-----------I0398_17932_Cuculidae_Centropus_bengalensis
+|              |  |  |  |  +--| (100)
+|              |  |  |  |  |  +-------I0424_2923_Cuculidae_Tapera_naevia
+|              |  |  |  +--| (88)
+|              |  |  |     |  +------I0369_848_Opisthocomidae_Opisthocomus_hoazin
+|              |  |  |     +--| (92)
+|              |  |  |        |    +--I0403_20547_Pteroclididae_Syrrhaptes_paradoxus
+|              |  |  |        +----| (100)
+|              |  |  |             +--I0411_53231_Pteroclididae_Pterocles_bicinctus
+|              |  +--| (100)
+|              |     |              +--I0204_1174_Threskiornithidae_Harpiprion_caerulescens
+|              |     |           +--| (100)
+|              |     |           |  |     +--I0239_2212_Ardeidae_Tigrisoma_lineatum
+|              |     |           |  |  +--| (100)
+|              |     |           |  |  |  |  +--I0245_2800_Ardeidae_Ardea_herodias
+|              |     |           |  |  |  +--| (100)
+|              |     |           |  |  |     +--I0420_730_Ardeidae_Ixobrychus_minutus
+|              |     |           |  +--| (100)
+|              |     |           |     |     +--I0275_5404_Balaenicipitidae_Balaeniceps_rex
+|              |     |           |     |  +--| (100)
+|              |     |           |     |  |  +---I0418_89784_Scopidae_Scopus_umbretta
+|              |     |           |     +--| (100)
+|              |     |           |        +--I0391_15014_Pelecanidae_Pelecanus_occidentalis
+|              |     |        +--| (100)
+|              |     |        |  |     +--I0254_3160_Sulidae_Morus_serrator
+|              |     |        |  |  +--| (100)
+|              |     |        |  |  |  |  +---I0372_1658_Phalacrocoracidae_Phalacrocorax_brasilianus
+|              |     |        |  |  |  +--| (100)
+|              |     |        |  |  |     +--I0379_3106_Anhingidae_Anhinga_anhinga
+|              |     |        |  +--| (100)
+|              |     |        |     +---I0384_9129_Fregatidae_Fregata_magnificens
+|              |     |     +--| (89)
+|              |     |     |  |  +--I0210_1226_Ciconiidae_Ciconia_nigra
+|              |     |     |  +--| (100)
+|              |     |     |     +--I0376_2661_Ciconiidae_Leptoptilos_crumeniferus
+|              |     |  +--| (48)
+|              |     |  |  |           +--I0282_6008_Hydrobatidae_Oceanodroma_leucorhoa
+|              |     |  |  |        +--| (100)
+|              |     |  |  |        |  |     +--I0386_10701_Pelecanoididae_Pelecanoides_urinatrix
+|              |     |  |  |        |  |  +--| (100)
+|              |     |  |  |        |  |  |  +--I0395_16363_Procellariidae_Pterodroma_externa
+|              |     |  |  |        |  +--| (100)
+|              |     |  |  |        |     +--I0404_21828_Procellariidae_Fulmarus_glacialoides
+|              |     |  |  |     +--| (100)
+|              |     |  |  |     |  |  +--I0362_3175_Hydrobatidae_Oceanites_oceanicus
+|              |     |  |  |     |  +--| (100)
+|              |     |  |  |     |     +--I0412_62853_Hydrobatidae_Pelagodroma_marina
+|              |     |  |  |  +--| (100)
+|              |     |  |  |  |  +--I0417_82096_Diomedeidae_Phoebastria_nigripes
+|              |     |  |  +--| (44)
+|              |     |  |     +---I0449_66928_Gaviidae_Gavia_immer
+|              |     +--| (95)
+|              |        +--I0451_85124_Spheniscidae_Spheniscus_humboldti
+|           +--| (100)
+|           |  |  +---I0208_1208_Strigidae_Strix_varia
+|           |  +--| (100)
+|           |     +----I0452_88784_Tytonidae_Tyto_alba
+|        +--| (100)
+|        |  |  +--I0202_1066_Cathartidae_Cathartes_burrovianus
+|        |  +--| (100)
+|        |     +--I0276_5411_Cathartidae_Vultur_gryphus
+|     +--| (100)
+|     |  +---I0361_9545_Sagittariidae_Sagittarius_serpentarius
+|  +--| (100)
+|  |  +--I0450_81668_Pandionidae_Pandion_haliaetus
++--| (100)
+|  +--I0385_9309_Accipitridae_Elanus_leucurus
+|
++--I0268_3790_Accipitridae_Accipiter_superciliosus
+
+Tree in newick format:
+
+(I0185_86_Accipitridae_Buteo_jamaicensis:0.0067836152,((((((((((((((((I0186_111_Momotidae_Momotus_lessonii:0.0559684810,(I0194_495_Alcedinidae_Alcedo_quadribrachys:0.0703252722,I0272_5303_Alcedinidae_Chloroceryle_inda:0.0376954027)100:0.0158341951)100:0.0055785623,I0234_1994_Todidae_Todus_mexicanus:0.0523374957)100:0.0073272628,(I0199_955_Meropidae_Merops_muelleri:0.0736253678,(I0284_6031_Coraciidae_Coracias_cyanogaster:0.0311773062,I0364_384759_Brachypteraciidae_Atelornis_pittoides:0.0452575698)100:0.0112880250)100:0.0023061984)100:0.0065047339,(((I0191_344_Indicatoridae_Indicator_exilis:0.0255434091,(I0213_1334_Picidae_Jynx_torquilla:0.0304079481,I0259_3344_Picidae_Picus_canus:0.0221267728)100:0.0103266123)100:0.0145479161,((I0195_522_Ramphastidae_Buccanodon_duchaillui:0.0341424300,(I0266_3617_Ramphastidae_Capito_niger:0.0194305279,I0286_6061_Ramphastidae_Ramphastos_ambiguus:0.0133532695)100:0.0140413701)100:0.0030405533,I0397_17790_Ramphastidae_Megalaima_chrysopogon:0.0403476699)100:0.0146099449)100:0.0493195933,((I0267_3690_Bucconidae_Bucco_capensis:0.0199154103,I0274_5339_Bucconidae_Chelidoptera_tenebrosa:0.0396029952)100:0.0292157697,I0273_5315_Galbulidae_Galbula_dea:0.0632705486)100:0.0162605476)100:0.0061238804)100:0.0022181361,((I0198_937_Bucerotidae_Tockus_camurus:0.0326782377,I2828_3250_Bucerotidae_Bucorvus_leadbeateri:0.0185032749)100:0.0282929168,(I0233_1920_Upupidae_Upupa_epops:0.0443838717,I0392_15430_Phoeniculidae_Phoeniculus_purpureus:0.0520050323)100:0.0516270035)100:0.0060715509)100:0.0021899659,(I0187_115_Trogonidae_Trogon_elegans:0.0201241616,I0190_295_Trogonidae_Apaloderma_aequatoriale:0.0222784338)100:0.0521603162)98:0.0011863642,(I0410_52764_Coliidae_Colius_colius:0.0223335997,I0413_67124_Coliidae_Colius_indicus:0.0282930645)100:0.0611693554)89:0.0011852085,(((((((I0189_225_Eurylaimidae_Smithornis_rufolateralis:0.0256913589,I0459_6323_Eurylaimidae_Calyptomena_viridis:0.0215696530)100:0.0065458293,I0400_19788_Pittidae_Pitta_angolensis:0.0480582259)100:0.0018256677,(I0387_12368_Eurylaimidae_Eurylaimus_ochromalus:0.0256570146,I0438_345711_Eurylaimidae_Neodrepanis_coruscans:0.0272640433)100:0.0098554074)100:0.0142291512,(((((I0200_988_Furnariidae_Furnarius_rufus:0.0173984814,I0242_2273_Furnariidae_Lepidocolaptes_angustirostris:0.0172143694)100:0.0024922578,I0223_1586_Furnariidae_Sclerurus_mexicanus:0.0192594959)100:0.0122596926,I0429_3677_Grallariidae_Myrmothera_campanisona:0.0338795146)100:0.0022351796,(((I0207_1193_Thamnophilidae_Thamnophilus_ruficapillus:0.0180733127,I0261_3515_Thamnophilidae_Terenura_callinota:0.0188107376)83:0.0012401913,I0237_2182_Thamnophilidae_Myrmornis_torquata:0.0143533107)100:0.0185255276,I0377_2841_Melanopareiidae_Melanopareia_maximiliani:0.0413002014)100:0.0030945936)100:0.0089225007,(((((((((I0203_1087_Tyrannidae_Hymenops_perspicillatus:0.0107917897,I0246_2823_Tyrannidae_Tyrannus_albogularis:0.0103268222)100:0.0027583426,I0430_5336_Tyrannidae_Elaenia_flavogaster:0.0135171300)100:0.0026532104,I0205_1183_Tyrannidae_Hirundinea_ferruginea:0.0120634628)100:0.0065056276,I0227_1698_Tyrannidae_Rhynchocyclus_olivaceus:0.0241628642)100:0.0017450262,I0225_1616_Incertae_sedis_Piprites_chloris:0.0245481489)100:0.0012883444,(I0251_3044_Tityridae_Tityra_cayana:0.0186451606,I0265_3576_Tityridae_Schiffornis_turdina:0.0148830113)100:0.0042244812)80:0.0006432766,(I0218_1474_Tityridae_Myiobius_barbatus:0.0226619638,I0262_3562_Oxyruncidae_Oxyruncus_cristatus:0.0202082388)75:0.0012455395)91:0.0009715360,(I0217_1452_Cotingidae_Rupicola_rupicola:0.0189446557,I0238_2211_Cotingidae_Cotinga_cayana:0.0148748820)100:0.0084801703)85:0.0010912987,(I0228_1712_Pipridae_Neopelma_chrysocephalum:0.0115603352,(I0241_2249_Pipridae_Pipra_erythrocephala:0.0061601667,I0416_76941_Pipridae_Cryptopipo_holochlora:0.0060265450)100:0.0068453514)100:0.0115662226)100:0.0149221004)100:0.0052925146)100:0.0071581644,((((I0197_832_Corvidae_Corvus_albus:0.0171435006,I0457_6346_Paradisaeidae_Lophorina_superba:0.0133136045)100:0.0095166719,((((I0214_1354_Sylviidae_Sylvia_melanocephala:0.0284533811,I2826_181173_Pycnonotidae_Pycnonotus_macrotis:0.0270245252)100:0.0044372755,I0455_1245_Alaudidae_Calandrella_brachydactyla:0.0311419095)100:0.0026094783,I0456_3321_Paridae_Poecile_lugubris:0.0310581774)95:0.0008267617,((I0215_1370_Regulidae_Regulus_ignicapilla:0.0406715062,I0222_1568_Turdidae_Turdus_olivater:0.0375194059)94:0.0018132947,(I0232_1837_Fringillidae_Fringilla_coelebs:0.0177149298,I2825_21896_Emberizidae_Spizella_arborea:0.0270330383)100:0.0178264586)88:0.0006392485)100:0.0103395602)100:0.0140637589,(I0380_6178_Climacteridae_Climacteris_melanura:0.0391165425,I2824_12230_Ptilonorhynchidae_Sericulus_bakeri:0.0321379878)100:0.0059312028)100:0.0062847164,I0415_76638_Menuridae_Menura_novaehollandiae:0.0307975957)100:0.0190004938)100:0.0069137938,I2829_RIFL_Acanthisittidae_Acanthisitta_chloris:0.0651456225)100:0.0266249644,((((I0240_2217_Psittacidae_Deroptyus_accipitrinus:0.0186852152,I0370_1566_Psittacidae_Psittacus_erithacus:0.0205892582)100:0.0036377331,(I0271_5253_Psittacidae_Psittrichas_fulgidus:0.0182346118,I0383_8723_Psittacidae_Barnardius_zonarius:0.0188850154)100:0.0023740652)100:0.0062213977,I0280_5927_Psittacidae_Probosciger_aterrimus:0.0227024921)100:0.0076114169,I0389_14873_Psittacidae_Nestor_meridionalis:0.0267783953)100:0.0345351775)100:0.0025645075)61:0.0017368467,(I0216_1413_Falconidae_Micrastur_gilvicollis:0.0186461178,(I0236_2079_Falconidae_Falco_sparverius:0.0252429673,(I0248_2938_Falconidae_Caracara_cheriway:0.0060690891,I0264_3574_Falconidae_Ibycter_americanus:0.0051182910)100:0.0090922139)100:0.0097493916)100:0.0158163343)87:0.0012654713,(I0367_449184_Leptosomidae_Leptosomus_discolor:0.0402158845,(I0421_1173_Cariamidae_Cariama_cristata:0.0065129080,I0454_77230_Cariamidae_Chunga_burmeisteri:0.0046987150)100:0.0302858283)74:0.0015580701)85:0.0005997118,(((((((((I0188_135_Apodidae_Streptoprocne_zonaris:0.0221672535,I0247_2886_Apodidae_Chaetura_brachyura:0.0275859183)100:0.0068448782,I0388_12571_Hemiprocnidae_Hemiprocne_comata:0.0245781083)100:0.0228772040,(I0219_1489_Trochilidae_Topaza_pella:0.0132898303,(I0220_1514_Trochilidae_Phaethornis_superciliosus:0.0180332757,I0277_5465_Trochilidae_Archilochus_colubris:0.0204779757)92:0.0009189193)100:0.0511579492)100:0.0091354361,I0394_16098_Aegothelidae_Aegotheles_insignis:0.0446643535)100:0.0062396458,(I0249_2220_Nyctibiidae_Nyctibius_griseus:0.0358682882,I0255_3161_Podargidae_Podargus_strigoides:0.0485242215)95:0.0014121024)88:0.0015750495,((I0244_2276_Caprimulgidae_Chordeiles_pusillus:0.0154579151,I0258_3336_Caprimulgidae_Caprimulgus_europaeus:0.0204528604)100:0.0115931022,I0399_18174_Caprimulgidae_Eurostopodus_macrotis:0.0227540624)100:0.0199312799)100:0.0024841992,(((((I0192_375_Musophagidae_Tauraco_macrorhynchus:0.0263963947,I0196_523_Musophagidae_Corythaeola_cristata:0.0189378128)100:0.0239588042,(((I0193_447_Columbidae_Treron_calvus:0.0217809932,I0434_6298_Columbidae_Ptilinopus_magnificus:0.0169901937)100:0.0013351929,((I0211_1232_Columbidae_Columba_livia:0.0195723402,I0221_1526_Columbidae_Leptotila_rufaxilla:0.0160363720)100:0.0066382783,I0243_2275_Columbidae_Columbina_minuta:0.0247824089)99:0.0007254682)100:0.0441413181,(I0363_345610_Mesitornithidae_Mesitornis_unicolor:0.0150345906,I0366_438526_Mesitornithidae_Monias_benschi:0.0187926090)100:0.0737934548)96:0.0041237594)87:0.0018174887,(((((I0224_1607_Cracidae_Crax_alector:0.0424609630,(((I0226_1619_Odontophoridae_Odontophorus_gujanensis:0.0150950342,I0250_2944_Odontophoridae_Colinus_cristatus:0.0183625232)100:0.0249182877,((I0278_5642_Phasianidae_Bonasa_umbellus:0.0339208507,I0374_2419_Phasianidae_Gallus_gallus:0.0220948792)100:0.0053612704,I0371_1587_Phasianidae_Rollulus_rouloul:0.0325351899)100:0.0051162001)100:0.0024246443,I0448_52755_Numididae_Numida_malagris:0.0250672482)100:0.0304732157)100:0.0043990062,I0256_3178_Megapodiidae_Leipoa_ocellata:0.0553695453)100:0.0152084068,((((((I0252_3154_Anatidae_Anas_superciliosa:0.0058881677,I0288_6097_Anatidae_Aythya_valisineria:0.0059596895)100:0.0159741751,I0285_6059_Anatidae_Anser_canagicus:0.0140350710)99:0.0021951000,I0257_3236_Anatidae_Oxyura_jamaicensis:0.0181387224)100:0.0079588772,I0283_6026_Anatidae_Dendrocygna_viduata:0.0201500982)100:0.0211188912,I0253_3158_Anseranatidae_Anseranas_semipalmata:0.0212630188)100:0.0043009996,I0373_1829_Anhimidae_Chauna_torquata:0.0292854047)100:0.0060521700)100:0.0234538446,((((((I0229_1748_Tinamidae_Nothoprocta_ornata:0.0468875239,((I0230_1770_Tinamidae_Crypturellus_tataupa:0.0478327637,I0231_1774_Tinamidae_Tinamus_major:0.0258058203)100:0.0103827427,I0432_5886_Tinamidae_Eudromia_elegans:0.0510151655)96:0.0031279642)100:0.0512920837,I0414_72512_Rheidae_Rhea_americana:0.0451839921)88:0.0023866876,I0390_14905_Apterygidae_Apteryx_sp:0.0238200458)88:0.0008207848,(I0260_3380_Dromaiidae_Dromaius_novaehollandiae:0.0087894697,I0382_6875_Casuariidae_Casuarius_bennetti:0.0082848795)100:0.0200365393)100:0.0075727726,I0453_90121_Struthionidae_Struthio_camelus:0.0420110304)100:0.0308018684,(I0460_HERP_14722_Crocodylidae_Crocodylus_porosus:0.0175391031,I0461_HERP_15451_Alligatoridae_Caiman_croccodilus:0.0201496139)100:0.2732890878)100:0.0272566106)100:0.0199861482,(((I0263_3569_Psophiidae_Psophia_crepitans:0.0318913886,((I0405_21897_Gruidae_Grus_canadensis:0.0074551977,I0433_6296_Gruidae_Balearica_regulorum:0.0107169077)100:0.0043256888,I0419_90368_Aramidae_Aramus_guarauna:0.0166160806)100:0.0099731952)100:0.0042367605,(I0378_3087_Heliornithidae_Heliornis_fulica:0.0533682824,((I0407_22888_Rallidae_Porphyrio_porphyrio:0.0159186074,I0425_2961_Rallidae_Micropygia_schomburgkii:0.0165932388)100:0.0042413354,I0428_3386_Rallidae_Rallus_longirostris:0.0219268465)100:0.0260037780)100:0.0213966765)100:0.0100959375,(I0287_6069_Phoenicopteridae_Phoenicopterus_ruber:0.0183172687,I0422_1201_Podicipedidae_Rollandia_rolland:0.0371188294)100:0.0082160192)79:0.0005087674)70:0.0004343534)87:0.0005062071,(((((I0201_999_Scolopacidae_Tringa_solitaria:0.0153585638,I0427_3383_Scolopacidae_Arenaria_interpres:0.0122423301)100:0.0037405760,I0431_5370_Scolopacidae_Limosa_lapponica:0.0110324649)100:0.0084174528,((I0279_5911_Jacanidae_Jacana_jacana:0.0330479154,I0402_20061_Rostratulidae_Rostratula_benghalensis:0.0325387270)100:0.0057269796,I2827_2685_Pedionomidae_Pedionomus_torquatus:0.0338779844)100:0.0086959730)100:0.0161838515,(((((I0206_1192_Laridae_Chroicocephalus_cirrocephalus:0.0103845126,I0270_4099_Sternidae_Sterna_hirundo:0.0091754904)99:0.0008224657,I0393_15950_Rynchopidae_Rhynchops_niger:0.0139061125)100:0.0030163966,I0408_25293_Alcidae_Uria_aalge:0.0134064523)100:0.0044874037,I0401_19903_Glareolidae_Glareola_nuchalis:0.0216567638)100:0.0061874012,I0409_25985_Turnicidae_Turnix_ocellata:0.1590057138)100:0.0045500951)100:0.0058517647,(I0209_1223_Burhinidae_Burhinus_oedicnemus:0.0243976611,(I0212_1289_Charadriidae_Charadrius_hiaticula:0.0205080302,(I0289_6295_Haematopodidae_Haematopus_palliatus:0.0096882378,I0368_21_Recurvirostridae_Recurvirostra_americana:0.0118028521)100:0.0075776652)100:0.0092207983)100:0.0017359427)100:0.0062564169)89:0.0003856657,(I0281_5967_Otididae_Ardeotis_kori:0.0487519728,(I0375_2613_Phaethontidae_Phaethon_rubricauda:0.0384680083,I0396_16818_Eurypygidae_Eurypyga_helias:0.0626253697)94:0.0014186713)94:0.0005966404)87:0.0006406583)92:0.0008659360,((((I0235_2065_Cuculidae_Coccyzus_melacoryphus:0.0476591860,I0423_2497_Cuculidae_Cuculus_optatus:0.0270700670)100:0.0124698298,I0398_17932_Cuculidae_Centropus_bengalensis:0.0777965932)100:0.0044761008,I0424_2923_Cuculidae_Tapera_naevia:0.0536212930)100:0.0243266181,(I0369_848_Opisthocomidae_Opisthocomus_hoazin:0.0481876159,(I0403_20547_Pteroclididae_Syrrhaptes_paradoxus:0.0192522505,I0411_53231_Pteroclididae_Pterocles_bicinctus:0.0167546947)100:0.0343624214)92:0.0013221932)88:0.0011617442)16:0.0003679305,(((((I0204_1174_Threskiornithidae_Harpiprion_caerulescens:0.0231568397,((I0239_2212_Ardeidae_Tigrisoma_lineatum:0.0131853138,(I0245_2800_Ardeidae_Ardea_herodias:0.0113441628,I0420_730_Ardeidae_Ixobrychus_minutus:0.0169939067)100:0.0086708680)100:0.0156905996,((I0275_5404_Balaenicipitidae_Balaeniceps_rex:0.0200675002,I0418_89784_Scopidae_Scopus_umbretta:0.0282299001)100:0.0005633400,I0391_15014_Pelecanidae_Pelecanus_occidentalis:0.0209547519)100:0.0057586456)100:0.0008414223)100:0.0007945990,((I0254_3160_Sulidae_Morus_serrator:0.0201380466,(I0372_1658_Phalacrocoracidae_Phalacrocorax_brasilianus:0.0275035586,I0379_3106_Anhingidae_Anhinga_anhinga:0.0199468794)100:0.0013329783)100:0.0090734282,I0384_9129_Fregatidae_Fregata_magnificens:0.0251075983)100:0.0037564583)100:0.0013664219,(I0210_1226_Ciconiidae_Ciconia_nigra:0.0082549466,I0376_2661_Ciconiidae_Leptoptilos_crumeniferus:0.0065305173)100:0.0152665687)89:0.0005702524,((((I0282_6008_Hydrobatidae_Oceanodroma_leucorhoa:0.0201071038,((I0386_10701_Pelecanoididae_Pelecanoides_urinatrix:0.0127457365,I0395_16363_Procellariidae_Pterodroma_externa:0.0091378510)100:0.0008211292,I0404_21828_Procellariidae_Fulmarus_glacialoides:0.0094735475)100:0.0089825658)100:0.0015603604,(I0362_3175_Hydrobatidae_Oceanites_oceanicus:0.0114960550,I0412_62853_Hydrobatidae_Pelagodroma_marina:0.0097408766)100:0.0145987119)100:0.0005229343,I0417_82096_Diomedeidae_Phoebastria_nigripes:0.0143012178)100:0.0035752575,I0449_66928_Gaviidae_Gavia_immer:0.0283246623)44:0.0006772376)48:0.0005979633,I0451_85124_Spheniscidae_Spheniscus_humboldti:0.0232626948)95:0.0008821149)100:0.0023238290)100:0.0007457880,(I0208_1208_Strigidae_Strix_varia:0.0258233129,I0452_88784_Tytonidae_Tyto_alba:0.0354043979)100:0.0068008713)100:0.0009896289,(I0202_1066_Cathartidae_Cathartes_burrovianus:0.0054535861,I0276_5411_Cathartidae_Vultur_gryphus:0.0069168588)100:0.0135244415)100:0.0057885431,I0361_9545_Sagittariidae_Sagittarius_serpentarius:0.0261470069)100:0.0067930725,I0450_81668_Pandionidae_Pandion_haliaetus:0.0212180942)100:0.0027435821,I0385_9309_Accipitridae_Elanus_leucurus:0.0234655142)100:0.0083073487,I0268_3790_Accipitridae_Accipiter_superciliosus:0.0081177433);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -549267.435326
+Robinson-Foulds distance between ML tree and consensus tree: 6
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--I0185_86_Accipitridae_Buteo_jamaicensis
+|
+|                                               +--------I0186_111_Momotidae_Momotus_lessonii
+|                                            +--| (100)
+|                                            |  |  +----------I0194_495_Alcedinidae_Alcedo_quadribrachys
+|                                            |  +--| (100)
+|                                            |     +-----I0272_5303_Alcedinidae_Chloroceryle_inda
+|                                         +--| (100)
+|                                         |  +-------I0234_1994_Todidae_Todus_mexicanus
+|                                      +--| (100)
+|                                      |  |  +----------I0199_955_Meropidae_Merops_muelleri
+|                                      |  +--| (100)
+|                                      |     |  +----I0284_6031_Coraciidae_Coracias_cyanogaster
+|                                      |     +--| (100)
+|                                      |        +------I0364_384759_Brachypteraciidae_Atelornis_pittoides
+|                                   +--| (100)
+|                                   |  |            +---I0191_344_Indicatoridae_Indicator_exilis
+|                                   |  |         +--| (100)
+|                                   |  |         |  |  +---I0213_1334_Picidae_Jynx_torquilla
+|                                   |  |         |  +--| (100)
+|                                   |  |         |     +--I0259_3344_Picidae_Picus_canus
+|                                   |  |  +------| (100)
+|                                   |  |  |      |     +----I0195_522_Ramphastidae_Buccanodon_duchaillui
+|                                   |  |  |      |  +--| (100)
+|                                   |  |  |      |  |  |  +--I0266_3617_Ramphastidae_Capito_niger
+|                                   |  |  |      |  |  +--| (100)
+|                                   |  |  |      |  |     +--I0286_6061_Ramphastidae_Ramphastos_ambiguus
+|                                   |  |  |      +--| (100)
+|                                   |  |  |         +-----I0397_17790_Ramphastidae_Megalaima_chrysopogon
+|                                   |  +--| (100)
+|                                   |     |      +--I0267_3690_Bucconidae_Bucco_capensis
+|                                   |     |  +---| (100)
+|                                   |     |  |   +-----I0274_5339_Bucconidae_Chelidoptera_tenebrosa
+|                                   |     +--| (100)
+|                                   |        +---------I0273_5315_Galbulidae_Galbula_dea
+|                                +--| (100)
+|                                |  |      +----I0198_937_Bucerotidae_Tockus_camurus
+|                                |  |  +---| (100)
+|                                |  |  |   +--I2828_3250_Bucerotidae_Bucorvus_leadbeateri
+|                                |  +--| (100)
+|                                |     |       +------I0233_1920_Upupidae_Upupa_epops
+|                                |     +-------| (100)
+|                                |             +-------I0392_15430_Phoeniculidae_Phoeniculus_purpureus
+|                             +--| (98)
+|                             |  |       +--I0187_115_Trogonidae_Trogon_elegans
+|                             |  +-------| (100)
+|                             |          +--I0190_295_Trogonidae_Apaloderma_aequatoriale
+|                          +--| (89)
+|                          |  |        +--I0410_52764_Coliidae_Colius_colius
+|                          |  +--------| (100)
+|                          |           +---I0413_67124_Coliidae_Colius_indicus
+|                       +--| (61)
+|                       |  |                     +---I0189_225_Eurylaimidae_Smithornis_rufolateralis
+|                       |  |                  +--| (100)
+|                       |  |                  |  +--I0459_6323_Eurylaimidae_Calyptomena_viridis
+|                       |  |               +--| (100)
+|                       |  |               |  +------I0400_19788_Pittidae_Pitta_angolensis
+|                       |  |            +--| (100)
+|                       |  |            |  |  +---I0387_12368_Eurylaimidae_Eurylaimus_ochromalus
+|                       |  |            |  +--| (100)
+|                       |  |            |     +---I0438_345711_Eurylaimidae_Neodrepanis_coruscans
+|                       |  |         +--| (100)
+|                       |  |         |  |              +--I0200_988_Furnariidae_Furnarius_rufus
+|                       |  |         |  |           +--| (100)
+|                       |  |         |  |           |  +--I0242_2273_Furnariidae_Lepidocolaptes_angustirostris
+|                       |  |         |  |        +--| (100)
+|                       |  |         |  |        |  +--I0223_1586_Furnariidae_Sclerurus_mexicanus
+|                       |  |         |  |     +--| (100)
+|                       |  |         |  |     |  +----I0429_3677_Grallariidae_Myrmothera_campanisona
+|                       |  |         |  |  +--| (100)
+|                       |  |         |  |  |  |        +--I0207_1193_Thamnophilidae_Thamnophilus_ruficapillus
+|                       |  |         |  |  |  |     +--| (83)
+|                       |  |         |  |  |  |     |  +--I0261_3515_Thamnophilidae_Terenura_callinota
+|                       |  |         |  |  |  |  +--| (100)
+|                       |  |         |  |  |  |  |  +--I0237_2182_Thamnophilidae_Myrmornis_torquata
+|                       |  |         |  |  |  +--| (100)
+|                       |  |         |  |  |     +-----I0377_2841_Melanopareiidae_Melanopareia_maximiliani
+|                       |  |         |  +--| (100)
+|                       |  |         |     |                          +--I0203_1087_Tyrannidae_Hymenops_perspicillatus
+|                       |  |         |     |                       +--| (100)
+|                       |  |         |     |                       |  +--I0246_2823_Tyrannidae_Tyrannus_albogularis
+|                       |  |         |     |                    +--| (100)
+|                       |  |         |     |                    |  +--I0430_5336_Tyrannidae_Elaenia_flavogaster
+|                       |  |         |     |                 +--| (100)
+|                       |  |         |     |                 |  +--I0205_1183_Tyrannidae_Hirundinea_ferruginea
+|                       |  |         |     |              +--| (100)
+|                       |  |         |     |              |  +--I0227_1698_Tyrannidae_Rhynchocyclus_olivaceus
+|                       |  |         |     |           +--| (100)
+|                       |  |         |     |           |  +--I0225_1616_Incertae_sedis_Piprites_chloris
+|                       |  |         |     |        +--| (80)
+|                       |  |         |     |        |  |  +--I0251_3044_Tityridae_Tityra_cayana
+|                       |  |         |     |        |  +--| (100)
+|                       |  |         |     |        |     +--I0265_3576_Tityridae_Schiffornis_turdina
+|                       |  |         |     |     +--| (91)
+|                       |  |         |     |     |  |  +--I0218_1474_Tityridae_Myiobius_barbatus
+|                       |  |         |     |     |  +--| (75)
+|                       |  |         |     |     |     +--I0262_3562_Oxyruncidae_Oxyruncus_cristatus
+|                       |  |         |     |  +--| (85)
+|                       |  |         |     |  |  |  +--I0217_1452_Cotingidae_Rupicola_rupicola
+|                       |  |         |     |  |  +--| (100)
+|                       |  |         |     |  |     +--I0238_2211_Cotingidae_Cotinga_cayana
+|                       |  |         |     +--| (100)
+|                       |  |         |        |  +--I0228_1712_Pipridae_Neopelma_chrysocephalum
+|                       |  |         |        +--| (100)
+|                       |  |         |           |  +--I0241_2249_Pipridae_Pipra_erythrocephala
+|                       |  |         |           +--| (100)
+|                       |  |         |              +--I0416_76941_Pipridae_Cryptopipo_holochlora
+|                       |  |      +--| (100)
+|                       |  |      |  |           +--I0197_832_Corvidae_Corvus_albus
+|                       |  |      |  |        +--| (100)
+|                       |  |      |  |        |  +--I0457_6346_Paradisaeidae_Lophorina_superba
+|                       |  |      |  |     +--| (100)
+|                       |  |      |  |     |  |           +---I0214_1354_Sylviidae_Sylvia_melanocephala
+|                       |  |      |  |     |  |        +--| (100)
+|                       |  |      |  |     |  |        |  +---I2826_181173_Pycnonotidae_Pycnonotus_macrotis
+|                       |  |      |  |     |  |     +--| (100)
+|                       |  |      |  |     |  |     |  +----I0455_1245_Alaudidae_Calandrella_brachydactyla
+|                       |  |      |  |     |  |  +--| (95)
+|                       |  |      |  |     |  |  |  +----I0456_3321_Paridae_Poecile_lugubris
+|                       |  |      |  |     |  +--| (100)
+|                       |  |      |  |     |     |     +-----I0215_1370_Regulidae_Regulus_ignicapilla
+|                       |  |      |  |     |     |  +--| (94)
+|                       |  |      |  |     |     |  |  +-----I0222_1568_Turdidae_Turdus_olivater
+|                       |  |      |  |     |     +--| (88)
+|                       |  |      |  |     |        |  +--I0232_1837_Fringillidae_Fringilla_coelebs
+|                       |  |      |  |     |        +--| (100)
+|                       |  |      |  |     |           +---I2825_21896_Emberizidae_Spizella_arborea
+|                       |  |      |  |  +--| (100)
+|                       |  |      |  |  |  |  +-----I0380_6178_Climacteridae_Climacteris_melanura
+|                       |  |      |  |  |  +--| (100)
+|                       |  |      |  |  |     +----I2824_12230_Ptilonorhynchidae_Sericulus_bakeri
+|                       |  |      |  +--| (100)
+|                       |  |      |     +---I0415_76638_Menuridae_Menura_novaehollandiae
+|                       |  |  +---| (100)
+|                       |  |  |   +---------I2829_RIFL_Acanthisittidae_Acanthisitta_chloris
+|                       |  +--| (100)
+|                       |     |             +--I0240_2217_Psittacidae_Deroptyus_accipitrinus
+|                       |     |          +--| (100)
+|                       |     |          |  +--I0370_1566_Psittacidae_Psittacus_erithacus
+|                       |     |       +--| (100)
+|                       |     |       |  |  +--I0271_5253_Psittacidae_Psittrichas_fulgidus
+|                       |     |       |  +--| (100)
+|                       |     |       |     +--I0383_8723_Psittacidae_Barnardius_zonarius
+|                       |     |    +--| (100)
+|                       |     |    |  +--I0280_5927_Psittacidae_Probosciger_aterrimus
+|                       |     +----| (100)
+|                       |          +---I0389_14873_Psittacidae_Nestor_meridionalis
+|                    +--| (87)
+|                    |  |  +--I0216_1413_Falconidae_Micrastur_gilvicollis
+|                    |  +--| (100)
+|                    |     |  +---I0236_2079_Falconidae_Falco_sparverius
+|                    |     +--| (100)
+|                    |        |  +--I0248_2938_Falconidae_Caracara_cheriway
+|                    |        +--| (100)
+|                    |           +--I0264_3574_Falconidae_Ibycter_americanus
+|                 +--| (85)
+|                 |  |  +-----I0367_449184_Leptosomidae_Leptosomus_discolor
+|                 |  +--| (74)
+|                 |     |   +--I0421_1173_Cariamidae_Cariama_cristata
+|                 |     +---| (100)
+|                 |         +--I0454_77230_Cariamidae_Chunga_burmeisteri
+|              +--| (100)
+|              |  |                       +--I0188_135_Apodidae_Streptoprocne_zonaris
+|              |  |                    +--| (100)
+|              |  |                    |  +---I0247_2886_Apodidae_Chaetura_brachyura
+|              |  |                 +--| (100)
+|              |  |                 |  +--I0388_12571_Hemiprocnidae_Hemiprocne_comata
+|              |  |              +--| (100)
+|              |  |              |  |       +--I0219_1489_Trochilidae_Topaza_pella
+|              |  |              |  +-------| (100)
+|              |  |              |          |  +--I0220_1514_Trochilidae_Phaethornis_superciliosus
+|              |  |              |          +--| (92)
+|              |  |              |             +--I0277_5465_Trochilidae_Archilochus_colubris
+|              |  |           +--| (100)
+|              |  |           |  +------I0394_16098_Aegothelidae_Aegotheles_insignis
+|              |  |        +--| (88)
+|              |  |        |  |  +----I0249_2220_Nyctibiidae_Nyctibius_griseus
+|              |  |        |  +--| (95)
+|              |  |        |     +------I0255_3161_Podargidae_Podargus_strigoides
+|              |  |     +--| (100)
+|              |  |     |  |     +--I0244_2276_Caprimulgidae_Chordeiles_pusillus
+|              |  |     |  |  +--| (100)
+|              |  |     |  |  |  +--I0258_3336_Caprimulgidae_Caprimulgus_europaeus
+|              |  |     |  +--| (100)
+|              |  |     |     +--I0399_18174_Caprimulgidae_Eurostopodus_macrotis
+|              |  |  +--| (92)
+|              |  |  |  |              +---I0192_375_Musophagidae_Tauraco_macrorhynchus
+|              |  |  |  |           +--| (100)
+|              |  |  |  |           |  +--I0196_523_Musophagidae_Corythaeola_cristata
+|              |  |  |  |        +--| (87)
+|              |  |  |  |        |  |            +--I0193_447_Columbidae_Treron_calvus
+|              |  |  |  |        |  |         +--| (100)
+|              |  |  |  |        |  |         |  +--I0434_6298_Columbidae_Ptilinopus_magnificus
+|              |  |  |  |        |  |  +------| (100)
+|              |  |  |  |        |  |  |      |     +--I0211_1232_Columbidae_Columba_livia
+|              |  |  |  |        |  |  |      |  +--| (100)
+|              |  |  |  |        |  |  |      |  |  +--I0221_1526_Columbidae_Leptotila_rufaxilla
+|              |  |  |  |        |  |  |      +--| (99)
+|              |  |  |  |        |  |  |         +---I0243_2275_Columbidae_Columbina_minuta
+|              |  |  |  |        |  +--| (96)
+|              |  |  |  |        |     |          +--I0363_345610_Mesitornithidae_Mesitornis_unicolor
+|              |  |  |  |        |     +----------| (100)
+|              |  |  |  |        |                +--I0366_438526_Mesitornithidae_Monias_benschi
+|              |  |  |  |     +--| (87)
+|              |  |  |  |     |  |              +-----I0224_1607_Cracidae_Crax_alector
+|              |  |  |  |     |  |           +--| (100)
+|              |  |  |  |     |  |           |  |          +--I0226_1619_Odontophoridae_Odontophorus_gujanensis
+|              |  |  |  |     |  |           |  |      +---| (100)
+|              |  |  |  |     |  |           |  |      |   +--I0250_2944_Odontophoridae_Colinus_cristatus
+|              |  |  |  |     |  |           |  |   +--| (100)
+|              |  |  |  |     |  |           |  |   |  |     +----I0278_5642_Phasianidae_Bonasa_umbellus
+|              |  |  |  |     |  |           |  |   |  |  +--| (100)
+|              |  |  |  |     |  |           |  |   |  |  |  +--I0374_2419_Phasianidae_Gallus_gallus
+|              |  |  |  |     |  |           |  |   |  +--| (100)
+|              |  |  |  |     |  |           |  |   |     +----I0371_1587_Phasianidae_Rollulus_rouloul
+|              |  |  |  |     |  |           |  +---| (100)
+|              |  |  |  |     |  |           |      +---I0448_52755_Numididae_Numida_malagris
+|              |  |  |  |     |  |        +--| (100)
+|              |  |  |  |     |  |        |  +-------I0256_3178_Megapodiidae_Leipoa_ocellata
+|              |  |  |  |     |  |     +--| (100)
+|              |  |  |  |     |  |     |  |                 +--I0252_3154_Anatidae_Anas_superciliosa
+|              |  |  |  |     |  |     |  |              +--| (100)
+|              |  |  |  |     |  |     |  |              |  +--I0288_6097_Anatidae_Aythya_valisineria
+|              |  |  |  |     |  |     |  |           +--| (99)
+|              |  |  |  |     |  |     |  |           |  +--I0285_6059_Anatidae_Anser_canagicus
+|              |  |  |  |     |  |     |  |        +--| (100)
+|              |  |  |  |     |  |     |  |        |  +--I0257_3236_Anatidae_Oxyura_jamaicensis
+|              |  |  |  |     |  |     |  |     +--| (100)
+|              |  |  |  |     |  |     |  |     |  +--I0283_6026_Anatidae_Dendrocygna_viduata
+|              |  |  |  |     |  |     |  |  +--| (100)
+|              |  |  |  |     |  |     |  |  |  +--I0253_3158_Anseranatidae_Anseranas_semipalmata
+|              |  |  |  |     |  |     |  +--| (100)
+|              |  |  |  |     |  |     |     +---I0373_1829_Anhimidae_Chauna_torquata
+|              |  |  |  |     |  |  +--| (100)
+|              |  |  |  |     |  |  |  |                        +------I0229_1748_Tinamidae_Nothoprocta_ornata
+|              |  |  |  |     |  |  |  |                +-------| (100)
+|              |  |  |  |     |  |  |  |                |       |     +------I0230_1770_Tinamidae_Crypturellus_tataupa
+|              |  |  |  |     |  |  |  |                |       |  +--| (100)
+|              |  |  |  |     |  |  |  |                |       |  |  +---I0231_1774_Tinamidae_Tinamus_major
+|              |  |  |  |     |  |  |  |                |       +--| (96)
+|              |  |  |  |     |  |  |  |                |          +-------I0432_5886_Tinamidae_Eudromia_elegans
+|              |  |  |  |     |  |  |  |             +--| (88)
+|              |  |  |  |     |  |  |  |             |  +------I0414_72512_Rheidae_Rhea_americana
+|              |  |  |  |     |  |  |  |          +--| (88)
+|              |  |  |  |     |  |  |  |          |  +--I0390_14905_Apterygidae_Apteryx_sp
+|              |  |  |  |     |  |  |  |       +--| (100)
+|              |  |  |  |     |  |  |  |       |  |  +--I0260_3380_Dromaiidae_Dromaius_novaehollandiae
+|              |  |  |  |     |  |  |  |       |  +--| (100)
+|              |  |  |  |     |  |  |  |       |     +--I0382_6875_Casuariidae_Casuarius_bennetti
+|              |  |  |  |     |  |  |  |   +---| (100)
+|              |  |  |  |     |  |  |  |   |   +-----I0453_90121_Struthionidae_Struthio_camelus
+|              |  |  |  |     |  |  |  +---| (100)
+|              |  |  |  |     |  |  |      |                                           +--I0460_HERP_14722_Crocodylidae_Crocodylus_porosus
+|              |  |  |  |     |  |  |      +-------------------------------------------| (100)
+|              |  |  |  |     |  |  |                                                  +--I0461_HERP_15451_Alligatoridae_Caiman_croccodilus
+|              |  |  |  |     |  +--| (70)
+|              |  |  |  |     |     |        +----I0263_3569_Psophiidae_Psophia_crepitans
+|              |  |  |  |     |     |     +--| (100)
+|              |  |  |  |     |     |     |  |     +--I0405_21897_Gruidae_Grus_canadensis
+|              |  |  |  |     |     |     |  |  +--| (100)
+|              |  |  |  |     |     |     |  |  |  +--I0433_6296_Gruidae_Balearica_regulorum
+|              |  |  |  |     |     |     |  +--| (100)
+|              |  |  |  |     |     |     |     +--I0419_90368_Aramidae_Aramus_guarauna
+|              |  |  |  |     |     |  +--| (100)
+|              |  |  |  |     |     |  |  |  +-------I0378_3087_Heliornithidae_Heliornis_fulica
+|              |  |  |  |     |     |  |  +--| (100)
+|              |  |  |  |     |     |  |     |      +--I0407_22888_Rallidae_Porphyrio_porphyrio
+|              |  |  |  |     |     |  |     |   +--| (100)
+|              |  |  |  |     |     |  |     |   |  +--I0425_2961_Rallidae_Micropygia_schomburgkii
+|              |  |  |  |     |     |  |     +---| (100)
+|              |  |  |  |     |     |  |         +--I0428_3386_Rallidae_Rallus_longirostris
+|              |  |  |  |     |     +--| (79)
+|              |  |  |  |     |        |  +--I0287_6069_Phoenicopteridae_Phoenicopterus_ruber
+|              |  |  |  |     |        +--| (100)
+|              |  |  |  |     |           +----I0422_1201_Podicipedidae_Rollandia_rolland
+|              |  |  |  |  +--| (89)
+|              |  |  |  |  |  |              +--I0201_999_Scolopacidae_Tringa_solitaria
+|              |  |  |  |  |  |           +--| (100)
+|              |  |  |  |  |  |           |  +--I0427_3383_Scolopacidae_Arenaria_interpres
+|              |  |  |  |  |  |        +--| (100)
+|              |  |  |  |  |  |        |  +--I0431_5370_Scolopacidae_Limosa_lapponica
+|              |  |  |  |  |  |     +--| (100)
+|              |  |  |  |  |  |     |  |     +----I0279_5911_Jacanidae_Jacana_jacana
+|              |  |  |  |  |  |     |  |  +--| (100)
+|              |  |  |  |  |  |     |  |  |  +----I0402_20061_Rostratulidae_Rostratula_benghalensis
+|              |  |  |  |  |  |     |  +--| (100)
+|              |  |  |  |  |  |     |     +----I2827_2685_Pedionomidae_Pedionomus_torquatus
+|              |  |  |  |  |  |  +--| (100)
+|              |  |  |  |  |  |  |  |              +--I0206_1192_Laridae_Chroicocephalus_cirrocephalus
+|              |  |  |  |  |  |  |  |           +--| (99)
+|              |  |  |  |  |  |  |  |           |  +--I0270_4099_Sternidae_Sterna_hirundo
+|              |  |  |  |  |  |  |  |        +--| (100)
+|              |  |  |  |  |  |  |  |        |  +--I0393_15950_Rynchopidae_Rhynchops_niger
+|              |  |  |  |  |  |  |  |     +--| (100)
+|              |  |  |  |  |  |  |  |     |  +--I0408_25293_Alcidae_Uria_aalge
+|              |  |  |  |  |  |  |  |  +--| (100)
+|              |  |  |  |  |  |  |  |  |  +--I0401_19903_Glareolidae_Glareola_nuchalis
+|              |  |  |  |  |  |  |  +--| (100)
+|              |  |  |  |  |  |  |     +------------------------I0409_25985_Turnicidae_Turnix_ocellata
+|              |  |  |  |  |  +--| (100)
+|              |  |  |  |  |     |  +--I0209_1223_Burhinidae_Burhinus_oedicnemus
+|              |  |  |  |  |     +--| (100)
+|              |  |  |  |  |        |  +--I0212_1289_Charadriidae_Charadrius_hiaticula
+|              |  |  |  |  |        +--| (100)
+|              |  |  |  |  |           |  +--I0289_6295_Haematopodidae_Haematopus_palliatus
+|              |  |  |  |  |           +--| (100)
+|              |  |  |  |  |              +--I0368_21_Recurvirostridae_Recurvirostra_americana
+|              |  |  |  +--| (87)
+|              |  |  |     |  +------I0281_5967_Otididae_Ardeotis_kori
+|              |  |  |     +--| (94)
+|              |  |  |        |  +-----I0375_2613_Phaethontidae_Phaethon_rubricauda
+|              |  |  |        +--| (94)
+|              |  |  |           +---------I0396_16818_Eurypygidae_Eurypyga_helias
+|              |  +--| (100)
+|              |     |                 +--I0204_1174_Threskiornithidae_Harpiprion_caerulescens
+|              |     |              +--| (100)
+|              |     |              |  |     +--I0239_2212_Ardeidae_Tigrisoma_lineatum
+|              |     |              |  |  +--| (100)
+|              |     |              |  |  |  |  +--I0245_2800_Ardeidae_Ardea_herodias
+|              |     |              |  |  |  +--| (100)
+|              |     |              |  |  |     +--I0420_730_Ardeidae_Ixobrychus_minutus
+|              |     |              |  +--| (100)
+|              |     |              |     |     +--I0275_5404_Balaenicipitidae_Balaeniceps_rex
+|              |     |              |     |  +--| (100)
+|              |     |              |     |  |  +---I0418_89784_Scopidae_Scopus_umbretta
+|              |     |              |     +--| (100)
+|              |     |              |        +--I0391_15014_Pelecanidae_Pelecanus_occidentalis
+|              |     |           +--| (100)
+|              |     |           |  |     +--I0254_3160_Sulidae_Morus_serrator
+|              |     |           |  |  +--| (100)
+|              |     |           |  |  |  |  +---I0372_1658_Phalacrocoracidae_Phalacrocorax_brasilianus
+|              |     |           |  |  |  +--| (100)
+|              |     |           |  |  |     +--I0379_3106_Anhingidae_Anhinga_anhinga
+|              |     |           |  +--| (100)
+|              |     |           |     +---I0384_9129_Fregatidae_Fregata_magnificens
+|              |     |        +--| (89)
+|              |     |        |  |  +--I0210_1226_Ciconiidae_Ciconia_nigra
+|              |     |        |  +--| (100)
+|              |     |        |     +--I0376_2661_Ciconiidae_Leptoptilos_crumeniferus
+|              |     |     +--| (44)
+|              |     |     |  |           +--I0282_6008_Hydrobatidae_Oceanodroma_leucorhoa
+|              |     |     |  |        +--| (100)
+|              |     |     |  |        |  |     +--I0386_10701_Pelecanoididae_Pelecanoides_urinatrix
+|              |     |     |  |        |  |  +--| (100)
+|              |     |     |  |        |  |  |  +--I0395_16363_Procellariidae_Pterodroma_externa
+|              |     |     |  |        |  +--| (100)
+|              |     |     |  |        |     +--I0404_21828_Procellariidae_Fulmarus_glacialoides
+|              |     |     |  |     +--| (100)
+|              |     |     |  |     |  |  +--I0362_3175_Hydrobatidae_Oceanites_oceanicus
+|              |     |     |  |     |  +--| (100)
+|              |     |     |  |     |     +--I0412_62853_Hydrobatidae_Pelagodroma_marina
+|              |     |     |  |  +--| (100)
+|              |     |     |  |  |  +--I0417_82096_Diomedeidae_Phoebastria_nigripes
+|              |     |     |  +--| (51)
+|              |     |     |     +--I0451_85124_Spheniscidae_Spheniscus_humboldti
+|              |     |  +--| (95)
+|              |     |  |  +---I0449_66928_Gaviidae_Gavia_immer
+|              |     +--| (64)
+|              |        |           +------I0235_2065_Cuculidae_Coccyzus_melacoryphus
+|              |        |        +--| (100)
+|              |        |        |  +---I0423_2497_Cuculidae_Cuculus_optatus
+|              |        |     +--| (100)
+|              |        |     |  +-----------I0398_17932_Cuculidae_Centropus_bengalensis
+|              |        |  +--| (100)
+|              |        |  |  +-------I0424_2923_Cuculidae_Tapera_naevia
+|              |        +--| (88)
+|              |           |  +------I0369_848_Opisthocomidae_Opisthocomus_hoazin
+|              |           +--| (92)
+|              |              |    +--I0403_20547_Pteroclididae_Syrrhaptes_paradoxus
+|              |              +----| (100)
+|              |                   +--I0411_53231_Pteroclididae_Pterocles_bicinctus
+|           +--| (100)
+|           |  |  +---I0208_1208_Strigidae_Strix_varia
+|           |  +--| (100)
+|           |     +----I0452_88784_Tytonidae_Tyto_alba
+|        +--| (100)
+|        |  |  +--I0202_1066_Cathartidae_Cathartes_burrovianus
+|        |  +--| (100)
+|        |     +--I0276_5411_Cathartidae_Vultur_gryphus
+|     +--| (100)
+|     |  +---I0361_9545_Sagittariidae_Sagittarius_serpentarius
+|  +--| (100)
+|  |  +--I0450_81668_Pandionidae_Pandion_haliaetus
++--| (100)
+|  +--I0385_9309_Accipitridae_Elanus_leucurus
+|
++--I0268_3790_Accipitridae_Accipiter_superciliosus
+
+
+Consensus tree in newick format: 
+
+(I0185_86_Accipitridae_Buteo_jamaicensis:0.0067817022,((((((((((((((((I0186_111_Momotidae_Momotus_lessonii:0.0559744547,(I0194_495_Alcedinidae_Alcedo_quadribrachys:0.0703369789,I0272_5303_Alcedinidae_Chloroceryle_inda:0.0377019829)100:0.0158385802)100:0.0055790442,I0234_1994_Todidae_Todus_mexicanus:0.0523483640)100:0.0073250551,(I0199_955_Meropidae_Merops_muelleri:0.0736387587,(I0284_6031_Coraciidae_Coracias_cyanogaster:0.0311803073,I0364_384759_Brachypteraciidae_Atelornis_pittoides:0.0452678819)100:0.0112900509)100:0.0023071221)100:0.0065039056,(((I0191_344_Indicatoridae_Indicator_exilis:0.0255492571,(I0213_1334_Picidae_Jynx_torquilla:0.0304157513,I0259_3344_Picidae_Picus_canus:0.0221309921)100:0.0103274712)100:0.0145530950,((I0195_522_Ramphastidae_Buccanodon_duchaillui:0.0341497356,(I0266_3617_Ramphastidae_Capito_niger:0.0194344285,I0286_6061_Ramphastidae_Ramphastos_ambiguus:0.0133569168)100:0.0140441880)100:0.0030410374,I0397_17790_Ramphastidae_Megalaima_chrysopogon:0.0403568232)100:0.0146124005)100:0.0493501011,((I0267_3690_Bucconidae_Bucco_capensis:0.0199163900,I0274_5339_Bucconidae_Chelidoptera_tenebrosa:0.0396134002)100:0.0292267448,I0273_5315_Galbulidae_Galbula_dea:0.0632663720)100:0.0162600978)100:0.0061284820)100:0.0022164048,((I0198_937_Bucerotidae_Tockus_camurus:0.0326728826,I2828_3250_Bucerotidae_Bucorvus_leadbeateri:0.0185181217)100:0.0283010272,(I0233_1920_Upupidae_Upupa_epops:0.0443941536,I0392_15430_Phoeniculidae_Phoeniculus_purpureus:0.0520151791)100:0.0516501389)100:0.0060748594)100:0.0021990220,(I0187_115_Trogonidae_Trogon_elegans:0.0201313465,I0190_295_Trogonidae_Apaloderma_aequatoriale:0.0222737298)100:0.0521638172)98:0.0011880442,(I0410_52764_Coliidae_Colius_colius:0.0223409779,I0413_67124_Coliidae_Colius_indicus:0.0282940416)100:0.0612034776)89:0.0012102915,(((((((I0189_225_Eurylaimidae_Smithornis_rufolateralis:0.0256967039,I0459_6323_Eurylaimidae_Calyptomena_viridis:0.0215723601)100:0.0065472069,I0400_19788_Pittidae_Pitta_angolensis:0.0480665395)100:0.0018264899,(I0387_12368_Eurylaimidae_Eurylaimus_ochromalus:0.0256610353,I0438_345711_Eurylaimidae_Neodrepanis_coruscans:0.0272681953)100:0.0098570408)100:0.0142371353,(((((I0200_988_Furnariidae_Furnarius_rufus:0.0174004715,I0242_2273_Furnariidae_Lepidocolaptes_angustirostris:0.0172172822)100:0.0024936137,I0223_1586_Furnariidae_Sclerurus_mexicanus:0.0192616552)100:0.0122618194,I0429_3677_Grallariidae_Myrmothera_campanisona:0.0338829433)100:0.0022355971,(((I0207_1193_Thamnophilidae_Thamnophilus_ruficapillus:0.0180761763,I0261_3515_Thamnophilidae_Terenura_callinota:0.0188135367)83:0.0012402483,I0237_2182_Thamnophilidae_Myrmornis_torquata:0.0143550112)100:0.0185290376,I0377_2841_Melanopareiidae_Melanopareia_maximiliani:0.0413045600)100:0.0030945602)100:0.0089224046,(((((((((I0203_1087_Tyrannidae_Hymenops_perspicillatus:0.0107926996,I0246_2823_Tyrannidae_Tyrannus_albogularis:0.0103275346)100:0.0027583584,I0430_5336_Tyrannidae_Elaenia_flavogaster:0.0135191975)100:0.0026532590,I0205_1183_Tyrannidae_Hirundinea_ferruginea:0.0120642674)100:0.0065063290,I0227_1698_Tyrannidae_Rhynchocyclus_olivaceus:0.0241665618)100:0.0017442505,I0225_1616_Incertae_sedis_Piprites_chloris:0.0245516481)100:0.0012878887,(I0251_3044_Tityridae_Tityra_cayana:0.0186478517,I0265_3576_Tityridae_Schiffornis_turdina:0.0148851649)100:0.0042257824)80:0.0006418317,(I0218_1474_Tityridae_Myiobius_barbatus:0.0226661994,I0262_3562_Oxyruncidae_Oxyruncus_cristatus:0.0202120680)75:0.0012459850)91:0.0009712312,(I0217_1452_Cotingidae_Rupicola_rupicola:0.0189489351,I0238_2211_Cotingidae_Cotinga_cayana:0.0148757336)100:0.0084817347)85:0.0010920546,(I0228_1712_Pipridae_Neopelma_chrysocephalum:0.0115614498,(I0241_2249_Pipridae_Pipra_erythrocephala:0.0061598495,I0416_76941_Pipridae_Cryptopipo_holochlora:0.0060262977)100:0.0068460494)100:0.0115684761)100:0.0149226353)100:0.0052913137)100:0.0071541534,((((I0197_832_Corvidae_Corvus_albus:0.0171460424,I0457_6346_Paradisaeidae_Lophorina_superba:0.0133151704)100:0.0095183812,((((I0214_1354_Sylviidae_Sylvia_melanocephala:0.0284580772,I2826_181173_Pycnonotidae_Pycnonotus_macrotis:0.0270283625)100:0.0044377814,I0455_1245_Alaudidae_Calandrella_brachydactyla:0.0311456911)100:0.0026100144,I0456_3321_Paridae_Poecile_lugubris:0.0310622207)95:0.0008259211,((I0215_1370_Regulidae_Regulus_ignicapilla:0.0406779370,I0222_1568_Turdidae_Turdus_olivater:0.0375258464)94:0.0018133831,(I0232_1837_Fringillidae_Fringilla_coelebs:0.0177173566,I2825_21896_Emberizidae_Spizella_arborea:0.0270365752)100:0.0178298518)88:0.0006393232)100:0.0103411287)100:0.0140652320,(I0380_6178_Climacteridae_Climacteris_melanura:0.0391232636,I2824_12230_Ptilonorhynchidae_Sericulus_bakeri:0.0321425332)100:0.0059326292)100:0.0062851937,I0415_76638_Menuridae_Menura_novaehollandiae:0.0308039676)100:0.0190057072)100:0.0069176448,I2829_RIFL_Acanthisittidae_Acanthisitta_chloris:0.0651601386)100:0.0266217450,((((I0240_2217_Psittacidae_Deroptyus_accipitrinus:0.0186880823,I0370_1566_Psittacidae_Psittacus_erithacus:0.0205929707)100:0.0036380772,(I0271_5253_Psittacidae_Psittrichas_fulgidus:0.0182368971,I0383_8723_Psittacidae_Barnardius_zonarius:0.0188876711)100:0.0023756667)100:0.0062220515,I0280_5927_Psittacidae_Probosciger_aterrimus:0.0227056412)100:0.0076149043,I0389_14873_Psittacidae_Nestor_meridionalis:0.0267813124)100:0.0345400255)100:0.0025795415)61:0.0016720396,(I0216_1413_Falconidae_Micrastur_gilvicollis:0.0186713028,(I0236_2079_Falconidae_Falco_sparverius:0.0252481277,(I0248_2938_Falconidae_Caracara_cheriway:0.0060694737,I0264_3574_Falconidae_Ibycter_americanus:0.0051183769)100:0.0090829400)100:0.0097409483)100:0.0158445420)87:0.0012332534,(I0367_449184_Leptosomidae_Leptosomus_discolor:0.0402506854,(I0421_1173_Cariamidae_Cariama_cristata:0.0064789697,I0454_77230_Cariamidae_Chunga_burmeisteri:0.0047344936)100:0.0303135282)74:0.0015744896)85:0.0005816937,((((((((I0188_135_Apodidae_Streptoprocne_zonaris:0.0221727471,I0247_2886_Apodidae_Chaetura_brachyura:0.0275922431)100:0.0068502519,I0388_12571_Hemiprocnidae_Hemiprocne_comata:0.0245757710)100:0.0229023359,(I0219_1489_Trochilidae_Topaza_pella:0.0132923094,(I0220_1514_Trochilidae_Phaethornis_superciliosus:0.0180369643,I0277_5465_Trochilidae_Archilochus_colubris:0.0204821596)92:0.0009188043)100:0.0511692622)100:0.0091524949,I0394_16098_Aegothelidae_Aegotheles_insignis:0.0446391064)100:0.0062174388,(I0249_2220_Nyctibiidae_Nyctibius_griseus:0.0358337344,I0255_3161_Podargidae_Podargus_strigoides:0.0485925824)95:0.0014179471)88:0.0016084689,((I0244_2276_Caprimulgidae_Chordeiles_pusillus:0.0154570868,I0258_3336_Caprimulgidae_Caprimulgus_europaeus:0.0204615463)100:0.0116212992,I0399_18174_Caprimulgidae_Eurostopodus_macrotis:0.0227237296)100:0.0198697775)100:0.0024335041,(((((I0192_375_Musophagidae_Tauraco_macrorhynchus:0.0264067384,I0196_523_Musophagidae_Corythaeola_cristata:0.0189274372)100:0.0239687187,(((I0193_447_Columbidae_Treron_calvus:0.0217844461,I0434_6298_Columbidae_Ptilinopus_magnificus:0.0169927137)100:0.0013313276,((I0211_1232_Columbidae_Columba_livia:0.0195763218,I0221_1526_Columbidae_Leptotila_rufaxilla:0.0160406070)100:0.0066407511,I0243_2275_Columbidae_Columbina_minuta:0.0247892166)99:0.0007286671)100:0.0442089134,(I0363_345610_Mesitornithidae_Mesitornis_unicolor:0.0150321572,I0366_438526_Mesitornithidae_Monias_benschi:0.0188084432)100:0.0737740314)96:0.0041326644)87:0.0018266434,(((((I0224_1607_Cracidae_Crax_alector:0.0424739211,(((I0226_1619_Odontophoridae_Odontophorus_gujanensis:0.0150990269,I0250_2944_Odontophoridae_Colinus_cristatus:0.0183673812)100:0.0249258462,((I0278_5642_Phasianidae_Bonasa_umbellus:0.0339288266,I0374_2419_Phasianidae_Gallus_gallus:0.0220998920)100:0.0053633172,I0371_1587_Phasianidae_Rollulus_rouloul:0.0325419659)100:0.0051163135)100:0.0024247805,I0448_52755_Numididae_Numida_malagris:0.0250731453)100:0.0304778292)100:0.0043996243,I0256_3178_Megapodiidae_Leipoa_ocellata:0.0553802661)100:0.0152282053,((((((I0252_3154_Anatidae_Anas_superciliosa:0.0058895290,I0288_6097_Anatidae_Aythya_valisineria:0.0059608264)100:0.0159783121,I0285_6059_Anatidae_Anser_canagicus:0.0140385513)99:0.0021950676,I0257_3236_Anatidae_Oxyura_jamaicensis:0.0181433596)100:0.0079619094,I0283_6026_Anatidae_Dendrocygna_viduata:0.0201526695)100:0.0211242799,I0253_3158_Anseranatidae_Anseranas_semipalmata:0.0212683278)100:0.0043073438,I0373_1829_Anhimidae_Chauna_torquata:0.0292884065)100:0.0060394331)100:0.0234834418,((((((I0229_1748_Tinamidae_Nothoprocta_ornata:0.0469004529,((I0230_1770_Tinamidae_Crypturellus_tataupa:0.0478449810,I0231_1774_Tinamidae_Tinamus_major:0.0258122795)100:0.0103851737,I0432_5886_Tinamidae_Eudromia_elegans:0.0510279839)96:0.0031275068)100:0.0513102381,I0414_72512_Rheidae_Rhea_americana:0.0451965568)88:0.0023898592,I0390_14905_Apterygidae_Apteryx_sp:0.0238196229)88:0.0008204725,(I0260_3380_Dromaiidae_Dromaius_novaehollandiae:0.0087912221,I0382_6875_Casuariidae_Casuarius_bennetti:0.0082867975)100:0.0200355285)100:0.0075694404,I0453_90121_Struthionidae_Struthio_camelus:0.0420331606)100:0.0307992324,(I0460_HERP_14722_Crocodylidae_Crocodylus_porosus:0.0175444743,I0461_HERP_15451_Alligatoridae_Caiman_croccodilus:0.0201528079)100:0.2733477004)100:0.0272337013)100:0.0199714584,(((I0263_3569_Psophiidae_Psophia_crepitans:0.0319333527,((I0405_21897_Gruidae_Grus_canadensis:0.0074559438,I0433_6296_Gruidae_Balearica_regulorum:0.0107196955)100:0.0043057413,I0419_90368_Aramidae_Aramus_guarauna:0.0166413467)100:0.0099631366)100:0.0042510196,(I0378_3087_Heliornithidae_Heliornis_fulica:0.0533880569,((I0407_22888_Rallidae_Porphyrio_porphyrio:0.0159224004,I0425_2961_Rallidae_Micropygia_schomburgkii:0.0165980979)100:0.0042410568,I0428_3386_Rallidae_Rallus_longirostris:0.0219331349)100:0.0260064702)100:0.0214049013)100:0.0101441506,(I0287_6069_Phoenicopteridae_Phoenicopterus_ruber:0.0183348280,I0422_1201_Podicipedidae_Rollandia_rolland:0.0371042596)100:0.0081458658)79:0.0005073918)70:0.0004310298)87:0.0005180545,(((((I0201_999_Scolopacidae_Tringa_solitaria:0.0153616937,I0427_3383_Scolopacidae_Arenaria_interpres:0.0122445602)100:0.0037405684,I0431_5370_Scolopacidae_Limosa_lapponica:0.0110356846)100:0.0084114989,((I0279_5911_Jacanidae_Jacana_jacana:0.0330548749,I0402_20061_Rostratulidae_Rostratula_benghalensis:0.0325482817)100:0.0057307931,I2827_2685_Pedionomidae_Pedionomus_torquatus:0.0338819934)100:0.0087034260)100:0.0161752283,(((((I0206_1192_Laridae_Chroicocephalus_cirrocephalus:0.0103857573,I0270_4099_Sternidae_Sterna_hirundo:0.0091798392)99:0.0008254666,I0393_15950_Rynchopidae_Rhynchops_niger:0.0139066539)100:0.0030162519,I0408_25293_Alcidae_Uria_aalge:0.0134049385)100:0.0044876419,I0401_19903_Glareolidae_Glareola_nuchalis:0.0216637598)100:0.0061919992,I0409_25985_Turnicidae_Turnix_ocellata:0.1590362506)100:0.0045541621)100:0.0058962584,(I0209_1223_Burhinidae_Burhinus_oedicnemus:0.0243668772,(I0212_1289_Charadriidae_Charadrius_hiaticula:0.0205312019,(I0289_6295_Haematopodidae_Haematopus_palliatus:0.0097044851,I0368_21_Recurvirostridae_Recurvirostra_americana:0.0117913490)100:0.0075603583)100:0.0092348708)100:0.0017099696)100:0.0062629768)89:0.0003714292,(I0281_5967_Otididae_Ardeotis_kori:0.0487848892,(I0375_2613_Phaethontidae_Phaethon_rubricauda:0.0384806875,I0396_16818_Eurypygidae_Eurypyga_helias:0.0625863237)94:0.0014253812)94:0.0006067103)87:0.0006774349)92:0.0009942424,((((((I0204_1174_Threskiornithidae_Harpiprion_caerulescens:0.0231758913,((I0239_2212_Ardeidae_Tigrisoma_lineatum:0.0131749257,(I0245_2800_Ardeidae_Ardea_herodias:0.0113438291,I0420_730_Ardeidae_Ixobrychus_minutus:0.0170004177)100:0.0086893231)100:0.0156946822,((I0275_5404_Balaenicipitidae_Balaeniceps_rex:0.0200731725,I0418_89784_Scopidae_Scopus_umbretta:0.0282310076)100:0.0005579170,I0391_15014_Pelecanidae_Pelecanus_occidentalis:0.0209674688)100:0.0057481716)100:0.0008454925)100:0.0007862369,((I0254_3160_Sulidae_Morus_serrator:0.0201718601,(I0372_1658_Phalacrocoracidae_Phalacrocorax_brasilianus:0.0275175195,I0379_3106_Anhingidae_Anhinga_anhinga:0.0199288325)100:0.0013304584)100:0.0090896134,I0384_9129_Fregatidae_Fregata_magnificens:0.0250819075)100:0.0037771007)100:0.0013812529,(I0210_1226_Ciconiidae_Ciconia_nigra:0.0083111760,I0376_2661_Ciconiidae_Leptoptilos_crumeniferus:0.0064654349)100:0.0152652357)89:0.0005298284,((((I0282_6008_Hydrobatidae_Oceanodroma_leucorhoa:0.0201360882,((I0386_10701_Pelecanoididae_Pelecanoides_urinatrix:0.0127449621,I0395_16363_Procellariidae_Pterodroma_externa:0.0091486948)100:0.0008418139,I0404_21828_Procellariidae_Fulmarus_glacialoides:0.0094510864)100:0.0089493431)100:0.0015772779,(I0362_3175_Hydrobatidae_Oceanites_oceanicus:0.0115045286,I0412_62853_Hydrobatidae_Pelagodroma_marina:0.0097448621)100:0.0145931210)100:0.0005247822,I0417_82096_Diomedeidae_Phoebastria_nigripes:0.0142842464)100:0.0036013913,I0451_85124_Spheniscidae_Spheniscus_humboldti:0.0229997377)51:0.0007280792)44:0.0003537471,I0449_66928_Gaviidae_Gavia_immer:0.0287565433)95:0.0009063643,((((I0235_2065_Cuculidae_Coccyzus_melacoryphus:0.0477086546,I0423_2497_Cuculidae_Cuculus_optatus:0.0270513074)100:0.0125045002,I0398_17932_Cuculidae_Centropus_bengalensis:0.0777724377)100:0.0044746521,I0424_2923_Cuculidae_Tapera_naevia:0.0535876315)100:0.0244614763,(I0369_848_Opisthocomidae_Opisthocomus_hoazin:0.0483081689,(I0403_20547_Pteroclididae_Syrrhaptes_paradoxus:0.0192837744,I0411_53231_Pteroclididae_Pterocles_bicinctus:0.0167358174)100:0.0343315393)92:0.0011716386)88:0.0011678120)64:0.0004010407)100:0.0023661976)100:0.0007844613,(I0208_1208_Strigidae_Strix_varia:0.0257984407,I0452_88784_Tytonidae_Tyto_alba:0.0354376194)100:0.0067749075)100:0.0010350478,(I0202_1066_Cathartidae_Cathartes_burrovianus:0.0054648128,I0276_5411_Cathartidae_Vultur_gryphus:0.0069043059)100:0.0135570770)100:0.0058043119,I0361_9545_Sagittariidae_Sagittarius_serpentarius:0.0261520772)100:0.0067917539,I0450_81668_Pandionidae_Pandion_haliaetus:0.0212635601)100:0.0027268363,I0385_9309_Accipitridae_Elanus_leucurus:0.0234856223)100:0.0082881562,I0268_3790_Accipitridae_Accipiter_superciliosus:0.0081221363);
+
+TIME STAMP
+----------
+
+Date and time: Sat Sep  8 19:03:12 2018
+Total CPU time used: 8173.71008 seconds (2h:16m:13s)
+Total wall-clock time used: 16741.72679 seconds (4h:39m:1s)
+

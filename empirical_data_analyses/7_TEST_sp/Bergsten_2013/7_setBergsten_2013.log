@@ -1,0 +1,211 @@
+IQ-TREE multicore version 1.6.7 for Mac OS X 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meeps-mac-pro.staff.sydney.edu.au (AVX, 64 GB RAM)
+Command: /Users/davidduchene/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s ../../../RobAlignments/1_Bergsten_2013.fasta -m TEST -bb 1000 -sp ../../../RobAlignments/1_Bergsten_2013_partitions.nex -nt AUTO -pre 7_setBergsten_2013
+Seed:    959362 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Sep  6 17:12:12 2018
+Kernel:  AVX - auto-detect threads (8 CPU cores detected)
+
+Reading partition model file ../../../RobAlignments/1_Bergsten_2013_partitions.nex ...
+Reading alignment file ../../../RobAlignments/1_Bergsten_2013.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 38 sequences with 2111 columns, 605 distinct patterns
+443 parsimony-informative, 110 singleton sites, 1558 constant sites
+                            Gap/Ambiguity  Composition  p-value
+   1  Hovahydrus_minutissimus       0.71%    passed     78.97%
+   2  Sanfilippodytes_terminalis    0.71%    passed     93.09%
+   3  Canthyporus_hottentotus       1.04%    passed     59.88%
+   4  Laccornellus_copelatoides     0.81%    passed     16.58%
+   5  Andex_insignis                1.14%    passed     89.75%
+   6  Hyphydrus_ovatus              0.66%    passed     94.40%
+   7  Heterosternusa_pulcher        0.81%    passed     98.38%
+   8  Neoporus_arizonicus           0.81%    passed     97.31%
+   9  Neoporus_undulatus            2.04%    passed     86.45%
+  10  Hydrocolus_sahlbergi          0.90%    passed     98.80%
+  11  Suphrodytes_figuratus         0.71%    passed     95.13%
+  12  Suphrodytes_dorsalis          0.66%    passed     92.48%
+  13  Hydroporus_scalesianus        0.76%    passed     92.33%
+  14  Hydroporus_vagepictus         0.71%    passed     89.44%
+  15  Hydroporus_longiusculus       0.95%    passed     88.46%
+  16  Hydroporus_carri              1.75%    passed     88.04%
+  17  Hydroporus_nigellus           4.22%    passed     97.43%
+  18  Hydroporus_niger              7.58%    passed     99.50%
+  19  Hydroporus_notabilis          3.32%    passed     99.72%
+  20  Hydroporus_appalachius        1.61%    passed     71.22%
+  21  Hydroporus_mannerheimi        0.95%    passed     87.65%
+  22  Hydroporus_neglectus          6.02%    passed     99.77%
+  23  Hydroporus_sinuatipes         9.10%    passed     79.61%
+  24  Hydroporus_obscurus           0.85%    passed     72.39%
+  25  Hydroporus_erythrocephalus    1.61%    passed     96.69%
+  26  Hydroporus_puberulus          1.52%    passed     90.99%
+  27  Hydroporus_axillaris          0.76%    passed     99.74%
+  28  Hydroporus_fortis             6.21%    passed     98.69%
+  29  Hydroporus_kraatzii           3.13%    passed     88.26%
+  30  Hydroporus_memnonius          0.76%    passed     91.63%
+  31  Hydroporus_rufifrons          3.60%    passed     83.69%
+  32  Hydroporus_tristis            3.98%    passed     89.28%
+  33  Hydroporus_nigrita            0.81%    passed     94.95%
+  34  Hydroporus_lapponum           0.81%    passed     89.45%
+  35  Hydroporus_submuticus         0.76%    passed     75.59%
+  36  Hydroporus_pilosus            0.71%    passed     99.50%
+  37  Hydroporus_pubescens          0.71%    passed     99.53%
+  38  Hydroporus_tessellatus        1.33%    passed     94.60%
+****  TOTAL                         1.99%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 8 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		38	250	36	202	TEST	COI_1
+2		38	251	4	242	TEST	COI_2
+3		38	251	198	23	TEST	COI_3
+4		38	103	3	96	TEST	H3_1
+5		38	104	0	103	TEST	H3_2
+WARNING: No parsimony-informative sites in partition H3_2
+6		38	103	62	25	TEST	H3_3
+7		38	439	120	294	TEST	16S
+8		38	610	20	573	TEST	18S
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.025 seconds
+NOTE: ModelFinder requires 6 MB RAM!
+NUMBER OF THREADS FOR PARTITION FINDING: 8
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -14365.406 / df: 82 / AIC: 28894.812 / AICc: 28901.524 / BIC: 29358.515
+Selecting individual models for 8 charsets using BIC...
+ No. Model        Score       Charset
+   1 JC           640.860     H3_2
+   2 TNe+I        762.835     H3_1
+   3 K2P+I+G4     3046.033    18S
+   4 TIM2+F+G4    3017.830    H3_3
+   5 TN+F+I+G4    1292.787    COI_2
+   6 TIM2+F+G4    2680.513    COI_1
+   7 GTR+F+I+G4   5962.871    16S
+   8 K3Pu+F+G4    11248.977   COI_3
+Full partition model BIC score: 30077.581 (LnL: -12638.974  df:627)
+Partition information was printed to 7_setBergsten_2013.best_scheme.nex
+Partition information in Raxml format was printed to 7_setBergsten_2013.best_scheme
+
+WARNING: Partition model has worse fit than single model!
+WARNING: Add MERGE to -m option to increase model fit!
+
+All model information printed to 7_setBergsten_2013.model.gz
+CPU time for ModelFinder: 24.447 seconds (0h:0m:24s)
+Wall-clock time for ModelFinder: 64.067 seconds (0h:1m:4s)
+Generating 1000 samples for ultrafast bootstrap (seed: 959362)...
+
+NOTE: 6 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 8 CPU cores
+Increase to 10 rounds for branch lengths
+15 trees examined
+Threads: 1 / Time: 8.531 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -15955
+Threads: 2 / Time: 4.939 sec / Speedup: 1.727 / Efficiency: 86% / LogL: -15955
+Threads: 3 / Time: 3.758 sec / Speedup: 2.270 / Efficiency: 76% / LogL: -15955
+Threads: 4 / Time: 2.544 sec / Speedup: 3.353 / Efficiency: 84% / LogL: -15955
+Threads: 5 / Time: 2.338 sec / Speedup: 3.649 / Efficiency: 73% / LogL: -15955
+Threads: 6 / Time: 2.572 sec / Speedup: 3.317 / Efficiency: 55% / LogL: -15955
+BEST NUMBER OF THREADS: 5
+
+Estimate model parameters (epsilon = 0.100)
+Optimizing K3Pu+F+G4 parameters for partition COI_3 (79 free parameters)
+Optimizing GTR+F+I+G4 parameters for partition 16S (83 free parameters)
+Optimizing TIM2+F+G4 parameters for partition COI_1 (80 free parameters)
+Optimizing TIM2+F+G4 parameters for partition H3_3 (80 free parameters)
+Optimizing TN+F+I+G4 parameters for partition COI_2 (80 free parameters)
+Optimizing K2P+I+G4 parameters for partition 18S (76 free parameters)
+Optimizing TNe+I parameters for partition H3_1 (76 free parameters)
+Optimizing JC parameters for partition H3_2 (73 free parameters)
+Optimal log-likelihood: -12638.391
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Computing ML distances based on estimated model parameters... 0.099 sec
+Computing BIONJ tree...
+0.005 seconds
+Log-likelihood of BIONJ tree: -12662.723
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 8.144 second
+Computing log-likelihood of 98 initial trees ... 5.648 seconds
+Current best score: -12634.442
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -12626.412
+Iteration 10 / LogL: -12634.095 / Time: 0h:1m:28s
+Iteration 20 / LogL: -12637.219 / Time: 0h:1m:41s
+Finish initializing candidate tree set (11)
+Current best tree score: -12626.412 / CPU time: 36.579
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -12640.592 / Time: 0h:2m:2s (0h:5m:0s left)
+Iteration 40 / LogL: -12665.615 / Time: 0h:2m:16s (0h:3m:32s left)
+Iteration 50 / LogL: -12644.225 / Time: 0h:2m:30s (0h:2m:36s left)
+Log-likelihood cutoff on original alignment: -12677.701
+Iteration 60 / LogL: -12641.312 / Time: 0h:2m:44s (0h:1m:54s left)
+Iteration 70 / LogL: -12657.829 / Time: 0h:2m:56s (0h:1m:19s left)
+Iteration 80 / LogL: -12639.216 / Time: 0h:3m:9s (0h:0m:50s left)
+Iteration 90 / LogL: -12645.573 / Time: 0h:3m:21s (0h:0m:24s left)
+Iteration 100 / LogL: -12632.461 / Time: 0h:3m:34s (0h:0m:2s left)
+Log-likelihood cutoff on original alignment: -12677.701
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:3m:40s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Optimizing K3Pu+F+G4 parameters for partition COI_3 (79 free parameters)
+Optimizing GTR+F+I+G4 parameters for partition 16S (83 free parameters)
+Optimizing TIM2+F+G4 parameters for partition COI_1 (80 free parameters)
+Optimizing TIM2+F+G4 parameters for partition H3_3 (80 free parameters)
+Optimizing TN+F+I+G4 parameters for partition COI_2 (80 free parameters)
+Optimizing K2P+I+G4 parameters for partition 18S (76 free parameters)
+Optimizing TNe+I parameters for partition H3_1 (76 free parameters)
+Optimizing JC parameters for partition H3_2 (73 free parameters)
+Optimal log-likelihood: -12626.361
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -12626.361
+Creating bootstrap support values...
+Split supports printed to NEXUS file 7_setBergsten_2013.splits.nex
+Total tree length: 4.732
+
+Total number of iterations: 102
+CPU time used for tree search: 58.031 sec (0h:0m:58s)
+Wall-clock time used for tree search: 156.299 sec (0h:2m:36s)
+Total CPU time used: 79.604 sec (0h:1m:19s)
+Total wall-clock time used: 222.554 sec (0h:3m:42s)
+
+Computing bootstrap consensus tree...
+Reading input file 7_setBergsten_2013.splits.nex...
+38 taxa and 163 splits.
+Consensus tree written to 7_setBergsten_2013.contree
+Reading input trees file 7_setBergsten_2013.contree
+Log-likelihood of consensus tree: -12626.724
+
+Analysis results written to: 
+  IQ-TREE report:                7_setBergsten_2013.iqtree
+  Maximum-likelihood tree:       7_setBergsten_2013.treefile
+  Likelihood distances:          7_setBergsten_2013.mldist
+  Best partitioning scheme:      7_setBergsten_2013.best_scheme.nex
+           in RAxML format:      7_setBergsten_2013.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          7_setBergsten_2013.splits.nex
+  Consensus tree:                7_setBergsten_2013.contree
+  Screen log file:               7_setBergsten_2013.log
+
+Date and Time: Thu Sep  6 17:17:00 2018

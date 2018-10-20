@@ -1,0 +1,24 @@
+#nexus
+begin sets;
+  charset atpb_pos1 = 1-1353\3;
+  charset atpb_pos2 = 2-1353\3;
+  charset atpb_pos3 = 3-1353\3;
+  charset rbcl_pos1 = 1354-2781\3;
+  charset rbcl_pos2 = 1355-2781\3;
+  charset rbcl_pos3 = 1356-2781\3;
+  charset spacer_rbcl = 2782-3774;
+  charset spacer_trnlf = 3775-4255;
+  charset trnl_intron = 4256-4813;
+  charset its = 4814-5441;
+  charpartition mymodels =
+    TIM2+F+I+G4: atpb_pos1,
+    HKY+F+I+G4: atpb_pos2,
+    TVM+F+I: atpb_pos3,
+    F81+F+I+G4: rbcl_pos1,
+    JC+I+G4: rbcl_pos2,
+    K3Pu+F+G4: rbcl_pos3,
+    K3Pu+F+G4: spacer_rbcl,
+    K3Pu+F+I: spacer_trnlf,
+    TIM+F+I: trnl_intron,
+    GTR+F+I+G4: its;
+end;

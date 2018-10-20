@@ -1,0 +1,14 @@
+#nexus
+begin sets;
+  charset Cytb_1 = 1-1110\3;
+  charset Cytb_2 = 2-1110\3;
+  charset Cytb_3 = 3-1110\3;
+  charset Cmos_3_Vim = 1111-1679\3  1680-2697;
+  charset Cmos_1_Cmos_2 = 1112-1679\3  1113-1679\3;
+  charpartition mymodels =
+    TPM2u+F+I+G4: Cytb_1,
+    HKY+F+I+G4: Cytb_2,
+    TIM+F+I+G4: Cytb_3,
+    HKY+F+G4: Cmos_3_Vim,
+    K2P+I: Cmos_1_Cmos_2;
+end;

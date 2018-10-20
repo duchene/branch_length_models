@@ -1,0 +1,54 @@
+require(phangorn)
+require(MASS)
+require(plyr)
+load("results.tables.Rdata")
+
+allres <- list(mars = mtabs, birds = btabs, robs = rtabs)
+
+pdf("~/Dropbox/Research/branch_lengths/f1_summary_plots.pdf", height = 8, width = 4, useDingbats = T)
+
+for(l in 1:3){
+
+# Plots from parameters in the summary table from iqtree
+
+tabstats <- c(7)
+iqmats <- lapply(allres[[l]], function(x) x[[1]])
+
+par(mfrow = c(2, 1))
+
+for(i in tabstats){
+      	# Boxplots of model differences to scheme 1_NOPART
+        statmat <- matrix(NA, length(allres[[l]]), 7)
+        for(j in 1:length(allres[[l]])){
+              statmat[j,] <- iqmats[[j]][i,] - iqmats[[j]][i,1]
+        }
+        colnames(statmat) <- colnames(iqmats[[j]])
+        if(l == 3){
+	     	plot(jitter(1:7, 0.5), statmat[1,], pch = "1", ylim = c(min(statmat), max(statmat)), main = rownames(iqmats[[1]])[i], xlim = c(0.5, 7.5))
+		for(k in 2:nrow(statmat)) points(jitter(1:7, 0.5), statmat[k,],  pch = as.character(k), xlim = c(0.5, 7.5))
+		abline(0, 0, lty = 2)
+	} else {
+		boxplot(statmat, main = rownames(iqmats[[1]])[i], range = 0)
+		abline(0, 0, lty = 2)
+	}
+	# Boxplots of model ranks:
+	statmat <- matrix(NA, length(allres[[l]]), 7)
+	for(j in 1:length(allres[[l]])){
+	      statmat[j,] <- rank(iqmats[[j]][i,], ties.method = "first")
+	}
+	colnames(statmat) <- colnames(iqmats[[j]])
+	if(l == 3){
+	     	plot(jitter(1:7, 0.5), statmat[1,], pch = "1", ylim = c(min(statmat), max(statmat)), main = rownames(iqmats[[1]])[i], xlim = c(0.5, 7.5))
+		for(k in 2:nrow(statmat)) points(jitter(1:7, 0.5), statmat[k,], pch = as.character(k), xlim = c(0.5, 7.5))
+		abline(0, 0, lty = 2)
+	} else {
+	        boxplot(statmat, main = rownames(iqmats[[1]])[i], range = 0)
+		abline(0, 0, lty = 2)
+	}
+	
+}
+
+
+}
+
+dev.off()

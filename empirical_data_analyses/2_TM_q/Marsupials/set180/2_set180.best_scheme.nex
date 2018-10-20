@@ -1,0 +1,14 @@
+#nexus
+begin sets;
+  charset part1.1_part1.2_part3.1_part3.2_part5.1 = 1-600\3  2-600\3  1309-1557\3  1310-1557\3  2068-2355\3;
+  charset part1.3_part2.3_part5.3 = 3-600\3  603-1308\3  2070-2355\3;
+  charset part2.1_part3.3_part4.3 = 601-1308\3  1311-1557\3  1560-2067\3;
+  charset part2.2 = 602-1308\3;
+  charset part4.1_part4.2_part5.2 = 1558-2067\3  1559-2067\3  2069-2355\3;
+  charpartition mymodels =
+    K2P+I+G4: part1.1_part1.2_part3.1_part3.2_part5.1,
+    K3P+G4: part1.3_part2.3_part5.3,
+    K2P+G4: part2.1_part3.3_part4.3,
+    TPM2u+F+G4: part2.2,
+    JC+I+G4: part4.1_part4.2_part5.2;
+end;

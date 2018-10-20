@@ -1,0 +1,269 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../../marsupials/set119.nex
+Input file name: ../../../../marsupials/set119.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 510528
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 35 taxa with 4 partitions and 1998 total sites (0.0986701% missing data)
+
+  ID  Name                                                             Type	Seq	Site	Unique	Infor	Invar	Const
+   1  part1.1+part1.2+part2.1+part3.1+part3.2+part4.1+part4.2+part5.1  DNA	35	1182	416	173	882	882
+   2  part1.3+part2.3+part4.3+part5.3                                  DNA	35	423	317	196	120	120
+   3  part2.2                                                          DNA	34	69	13	0	66	66
+   4  part3.3+part5.2                                                  DNA	35	324	176	72	190	190
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: HKY+F+I+G4:part1.1+part1.2+part2.1+part3.1+part3.2+part4.1+part4.2+part5.1,K3P+G4:part1.3+part2.3+part4.3+part5.3,K2P:part2.2,HKY+F+G4:part3.3+part5.2
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  HKY+F+I+G4       -4943.9433   9901.8867 + 0.0000   9901.9821 + 0.0000   9937.4114 + 0.0000
+   2  K3P+G4           -3869.4297   7746.8593 + 0.0000   7746.9550 + 0.0000   7763.0488 + 0.0000
+   3  K2P               -119.0569    242.1139 + 0.0000    242.2957 + 0.0000    246.5821 + 0.0000
+   4  HKY+F+G4         -1775.3007   3562.6013 + 0.0000   3562.8663 + 0.0000   3585.2858 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  HKY+F+I+G4     0.6380  HKY{2.65768}+F{0.340086,0.204441,0.256223,0.199251}+I{0.411615}+G4{0.600702}
+   2  K3P+G4         2.0885  K3P{4.39751,0.599352}+FQ+G4{1.67551}
+   3  K2P            0.0530  K2P{100}+FQ
+   4  HKY+F+G4       1.1012  HKY{4.09576}+F{0.331647,0.124754,0.158097,0.385502}+G4{0.539246}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -10699.3773 (s.e. 256.8229)
+Unconstrained log-likelihood (without tree): -9241.5860
+Number of free parameters (#branches + #model parameters): 85
+Akaike information criterion (AIC) score: 21568.7546
+Corrected Akaike information criterion (AICc) score: 21576.4011
+Bayesian information criterion (BIC) score: 22044.7463
+
+Total tree length (sum of branch lengths): 0.8388
+Sum of internal branch lengths: 0.3257 (38.8302% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Burramyidae_Burramys_parvus' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-----------Burramyidae_Burramys_parvus
+|
+|               +-------------------------Notoryctidae_Notoryctes_typhlops
+|            +--| (61)
+|            |  |                       +-------------------Didelphidae_Didelphis_virginiana
+|            |  |  +--------------------| (100)
+|            |  |  |                    +------Marmosidae_Monodelphis_domestica
+|            |  +--| (87)
+|            |     +--------------------------Microbiotheriidae_Dromiciops_gliroides
+|      +-----| (96)
+|      |     |                      +--Dasyuridae_Dasyurus_maculatus
+|      |     |                   +--| (97)
+|      |     |                   |  |  +--Dasyuridae_Sarcophilus_harrisii
+|      |     |                   |  +--| (67)
+|      |     |                   |     +--Dasyuridae_Dasyurus_geffroii
+|      |     |                +--| (98)
+|      |     |                |  |     +--Dasyuridae_Phascogale_tapoatafa
+|      |     |                |  |  +--| (92)
+|      |     |                |  |  |  +--Dasyuridae_Phascogale_calura
+|      |     |                |  +--| (99)
+|      |     |                |     +--Dasyuridae_Antechinus_stuartii
+|      |     |    +-----------| (100)
+|      |     |    |           |  +----------Dasyuridae_Sminthopsis_macroura
+|      |     |    |           +--| (91)
+|      |     |    |              +---Dasyuridae_Planigale_tenuirostris
+|      |     +----| (96)
+|      |          |                         +--Peramelidae_Perameles_nasuta
+|      |          |                     +---| (100)
+|      |          |                     |   +--Peramelidae_Perameles_gunnii
+|      |          |                  +--| (90)
+|      |          |                  |  +----Peramelidae_Peroryctes_raffrayana
+|      |          +------------------| (100)
+|      |                             +-------Peramelidae_Echymipera_kalubu
+|  +---| (70)
+|  |   |                               +--Potoroidae_Bettongia_penicillata
+|  |   |                            +--| (100)
+|  |   |                            |  +--Potoroidae_Bettongia_lesueur
+|  |   |                        +---| (99)
+|  |   |                        |   +-----Potoroidae_Aepyprymnus_rufescens
+|  |   |               +--------| (100)
+|  |   |               |        |  +--Macropodidae_Dorcopsulus_vanheurni
+|  |   |               |        +--| (99)
+|  |   |               |           +--Macropodidae_Wallabia_bicolor
+|  |   |  +------------| (100)
+|  |   |  |            +-------------Hypsiprymnodontidae_Hypsiprymnodon_moschatus
+|  |   +--| (73)
+|  |      |   +---------Acrobatidae_Acrobates_pygmaeus
+|  |      +---| (90)
+|  |          +---------Acrobatidae_Distoechurus_pennatus
++--| (96)
+|  |  +-----------------Vombatidae_Lasiorhinus_latifrons
+|  +--| (65)
+|     |           +----Pseudochiridae_Pseudochirulus_forbesi
+|     |     +-----| (100)
+|     |     |     +-----------Pseudochiridae_Pseudocheirus_occidentalis
+|     |  +--| (99)
+|     |  |  +---------Pseudochiridae_Petauroides_volans
+|     +--| (93)
+|        +--------------------Tarsipedidae_Tarsipes_rostratus
+|
+|       +---Phalangeridae_Trichosurus_vulpecula
++-------| (100)
+        |              +---Phalangeridae_Spilocuscus_maculatus
+        |         +----| (100)
+        |         |    |  +--Phalangeridae_Phalanger_orientalis
+        |         |    +--| (98)
+        |         |       +--Phalangeridae_Phalanger_carmelitae
+        +---------| (100)
+                  +---Phalangeridae_Strigocuscus_pelengensis
+
+Tree in newick format:
+
+(Burramyidae_Burramys_parvus:0.0230125786,((((Notoryctidae_Notoryctes_typhlops:0.0497518425,((Didelphidae_Didelphis_virginiana:0.0385120215,Marmosidae_Monodelphis_domestica:0.0145764126)100:0.0399600289,Microbiotheriidae_Dromiciops_gliroides:0.0520756139)87:0.0075114870)61:0.0016703850,((((Dasyuridae_Dasyurus_maculatus:0.0048428205,(Dasyuridae_Sarcophilus_harrisii:0.0048496952,Dasyuridae_Dasyurus_geffroii:0.0043646977)67:0.0009596683)97:0.0054648396,((Dasyuridae_Phascogale_tapoatafa:0.0017297594,Dasyuridae_Phascogale_calura:0.0024372539)92:0.0015555339,Dasyuridae_Antechinus_stuartii:0.0028163582)99:0.0035566818)98:0.0038381091,(Dasyuridae_Sminthopsis_macroura:0.0210993773,Dasyuridae_Planigale_tenuirostris:0.0091725882)91:0.0021298874)100:0.0232888259,(((Peramelidae_Perameles_nasuta:0.0005532191,Peramelidae_Perameles_gunnii:0.0005435930)100:0.0077628328,Peramelidae_Peroryctes_raffrayana:0.0096529652)90:0.0024450975,Peramelidae_Echymipera_kalubu:0.0159331879)100:0.0367393112)96:0.0104135921)96:0.0124072657,(((((Potoroidae_Bettongia_penicillata:0.0021140744,Potoroidae_Bettongia_lesueur:0.0030726582)100:0.0062813089,Potoroidae_Aepyprymnus_rufescens:0.0113654021)99:0.0076121015,(Macropodidae_Dorcopsulus_vanheurni:0.0074804337,Macropodidae_Wallabia_bicolor:0.0043486177)99:0.0062621213)100:0.0186174072,Hypsiprymnodontidae_Hypsiprymnodon_moschatus:0.0266157180)100:0.0248978182,(Acrobatidae_Acrobates_pygmaeus:0.0200290621,Acrobatidae_Distoechurus_pennatus:0.0201327082)90:0.0089729557)73:0.0034176705)70:0.0076831919,(Vombatidae_Lasiorhinus_latifrons:0.0349787097,(((Pseudochiridae_Pseudochirulus_forbesi:0.0101999615,Pseudochiridae_Pseudocheirus_occidentalis:0.0232464898)100:0.0125838690,Pseudochiridae_Petauroides_volans:0.0202026993)99:0.0056172613,Tarsipedidae_Tarsipes_rostratus:0.0401059856)93:0.0042133688)65:0.0044307820)96:0.0050702743,(Phalangeridae_Trichosurus_vulpecula:0.0076472239,((Phalangeridae_Spilocuscus_maculatus:0.0092568596,(Phalangeridae_Phalanger_orientalis:0.0074286529,Phalangeridae_Phalanger_carmelitae:0.0010014602)98:0.0037945536)100:0.0098817951,Phalangeridae_Strigocuscus_pelengensis:0.0079409235)100:0.0197452923)100:0.0169221882);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -10699.377332
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----------Burramyidae_Burramys_parvus
+|
+|               +-------------------------Notoryctidae_Notoryctes_typhlops
+|            +--| (61)
+|            |  |                       +-------------------Didelphidae_Didelphis_virginiana
+|            |  |  +--------------------| (100)
+|            |  |  |                    +------Marmosidae_Monodelphis_domestica
+|            |  +--| (87)
+|            |     +--------------------------Microbiotheriidae_Dromiciops_gliroides
+|      +-----| (96)
+|      |     |                      +--Dasyuridae_Dasyurus_maculatus
+|      |     |                   +--| (97)
+|      |     |                   |  |  +--Dasyuridae_Sarcophilus_harrisii
+|      |     |                   |  +--| (67)
+|      |     |                   |     +--Dasyuridae_Dasyurus_geffroii
+|      |     |                +--| (98)
+|      |     |                |  |     +--Dasyuridae_Phascogale_tapoatafa
+|      |     |                |  |  +--| (92)
+|      |     |                |  |  |  +--Dasyuridae_Phascogale_calura
+|      |     |                |  +--| (99)
+|      |     |                |     +--Dasyuridae_Antechinus_stuartii
+|      |     |    +-----------| (100)
+|      |     |    |           |  +----------Dasyuridae_Sminthopsis_macroura
+|      |     |    |           +--| (91)
+|      |     |    |              +---Dasyuridae_Planigale_tenuirostris
+|      |     +----| (96)
+|      |          |                         +--Peramelidae_Perameles_nasuta
+|      |          |                     +---| (100)
+|      |          |                     |   +--Peramelidae_Perameles_gunnii
+|      |          |                  +--| (90)
+|      |          |                  |  +----Peramelidae_Peroryctes_raffrayana
+|      |          +------------------| (100)
+|      |                             +-------Peramelidae_Echymipera_kalubu
+|  +---| (70)
+|  |   |                               +--Potoroidae_Bettongia_penicillata
+|  |   |                            +--| (100)
+|  |   |                            |  +--Potoroidae_Bettongia_lesueur
+|  |   |                        +---| (99)
+|  |   |                        |   +-----Potoroidae_Aepyprymnus_rufescens
+|  |   |               +--------| (100)
+|  |   |               |        |  +--Macropodidae_Dorcopsulus_vanheurni
+|  |   |               |        +--| (99)
+|  |   |               |           +--Macropodidae_Wallabia_bicolor
+|  |   |  +------------| (100)
+|  |   |  |            +-------------Hypsiprymnodontidae_Hypsiprymnodon_moschatus
+|  |   +--| (73)
+|  |      |   +---------Acrobatidae_Acrobates_pygmaeus
+|  |      +---| (90)
+|  |          +---------Acrobatidae_Distoechurus_pennatus
++--| (96)
+|  |  +-----------------Vombatidae_Lasiorhinus_latifrons
+|  +--| (65)
+|     |           +----Pseudochiridae_Pseudochirulus_forbesi
+|     |     +-----| (100)
+|     |     |     +-----------Pseudochiridae_Pseudocheirus_occidentalis
+|     |  +--| (99)
+|     |  |  +---------Pseudochiridae_Petauroides_volans
+|     +--| (93)
+|        +--------------------Tarsipedidae_Tarsipes_rostratus
+|
+|        +---Phalangeridae_Trichosurus_vulpecula
++--------| (100)
+         |              +---Phalangeridae_Spilocuscus_maculatus
+         |         +----| (100)
+         |         |    |  +--Phalangeridae_Phalanger_orientalis
+         |         |    +--| (98)
+         |         |       +--Phalangeridae_Phalanger_carmelitae
+         +---------| (100)
+                   +---Phalangeridae_Strigocuscus_pelengensis
+
+
+Consensus tree in newick format: 
+
+(Burramyidae_Burramys_parvus:0.0230134792,((((Notoryctidae_Notoryctes_typhlops:0.0497578317,((Didelphidae_Didelphis_virginiana:0.0385132234,Marmosidae_Monodelphis_domestica:0.0145779774)100:0.0399659323,Microbiotheriidae_Dromiciops_gliroides:0.0520859832)87:0.0074982011)61:0.0016778190,((((Dasyuridae_Dasyurus_maculatus:0.0048437780,(Dasyuridae_Sarcophilus_harrisii:0.0048508321,Dasyuridae_Dasyurus_geffroii:0.0043656016)67:0.0009598860)97:0.0054653348,((Dasyuridae_Phascogale_tapoatafa:0.0017291049,Dasyuridae_Phascogale_calura:0.0024376893)92:0.0015557658,Dasyuridae_Antechinus_stuartii:0.0028167714)99:0.0035569918)98:0.0038394645,(Dasyuridae_Sminthopsis_macroura:0.0211048940,Dasyuridae_Planigale_tenuirostris:0.0091738731)91:0.0021270088)100:0.0232905947,(((Peramelidae_Perameles_nasuta:0.0005537404,Peramelidae_Perameles_gunnii:0.0005438643)100:0.0077638320,Peramelidae_Peroryctes_raffrayana:0.0096538997)90:0.0024443789,Peramelidae_Echymipera_kalubu:0.0159369110)100:0.0367472908)96:0.0104166426)96:0.0124081597,(((((Potoroidae_Bettongia_penicillata:0.0021156963,Potoroidae_Bettongia_lesueur:0.0030725178)100:0.0062810509,Potoroidae_Aepyprymnus_rufescens:0.0113659939)99:0.0076117592,(Macropodidae_Dorcopsulus_vanheurni:0.0074808786,Macropodidae_Wallabia_bicolor:0.0043490673)99:0.0062616815)100:0.0186187687,Hypsiprymnodontidae_Hypsiprymnodon_moschatus:0.0266178410)100:0.0248976474,(Acrobatidae_Acrobates_pygmaeus:0.0200303906,Acrobatidae_Distoechurus_pennatus:0.0201343289)90:0.0089735986)73:0.0034177180)70:0.0076837294,(Vombatidae_Lasiorhinus_latifrons:0.0349807026,(((Pseudochiridae_Pseudochirulus_forbesi:0.0102004077,Pseudochiridae_Pseudocheirus_occidentalis:0.0232474896)100:0.0125835372,Pseudochiridae_Petauroides_volans:0.0202036430)99:0.0056179941,Tarsipedidae_Tarsipes_rostratus:0.0401081503)93:0.0042131033)65:0.0044308700)96:0.0050703314,(Phalangeridae_Trichosurus_vulpecula:0.0076483027,((Phalangeridae_Spilocuscus_maculatus:0.0092571813,(Phalangeridae_Phalanger_orientalis:0.0074289120,Phalangeridae_Phalanger_carmelitae:0.0010019202)98:0.0037939341)100:0.0098821475,Phalangeridae_Strigocuscus_pelengensis:0.0079411880)100:0.0197458377)100:0.0169229088);
+
+TIME STAMP
+----------
+
+Date and time: Fri Sep  7 10:48:35 2018
+Total CPU time used: 48.993465 seconds (0h:0m:48s)
+Total wall-clock time used: 184.6339872 seconds (0h:3m:4s)
+

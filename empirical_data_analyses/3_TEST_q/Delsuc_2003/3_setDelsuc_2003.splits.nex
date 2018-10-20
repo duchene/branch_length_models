@@ -1,0 +1,56 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=13;
+TAXLABELS
+[1] 'Bradypus'
+[2] 'Choloepus'
+[3] 'Cyclopes'
+[4] 'Tamandua'
+[5] 'Myrmecophaga'
+[6] 'Dasypus_kappleri'
+[7] 'Dasypus_novemcinctus'
+[8] 'Cabassous'
+[9] 'Priodontes'
+[10] 'Tolypeutes'
+[11] 'Chaetophractus'
+[12] 'Euphractus'
+[13] 'Zaedyus'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=13 nsplits=28;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 4,
+	100	 5,
+	100	 4 5,
+	100	 3 4 5,
+	100	 6,
+	100	 7,
+	100	 6 7,
+	100	 8,
+	100	 9,
+	59	 8 9,
+	100	 10,
+	100	 8 9 10,
+	100	 11,
+	100	 12,
+	67	 11 12,
+	100	 13,
+	100	 11 12 13,
+	100	 8 9 10 11 12 13,
+	100	 1 2 3 4 5,
+	100	 1 2,
+	100	 1,
+	20	 12 13,
+	14	 11 13,
+	34	 8 10,
+	7	 9 10,
+	0	 6 7 11 12 13,
+;
+END; [Splits]
+

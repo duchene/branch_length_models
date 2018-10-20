@@ -1,0 +1,268 @@
+IQ-TREE multicore version 1.6.7 for Mac OS X 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meeps-mac-pro.staff.sydney.edu.au (AVX, 64 GB RAM)
+Command: /Users/davidduchene/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s ../../../RobAlignments/1_Bergsten_2013.fasta -m TESTMERGE -bb 1000 -q ../../../RobAlignments/1_Bergsten_2013_partitions.nex -nt 2 -pre 2_setBergsten_2013
+Seed:    629050 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Sep  7 08:23:14 2018
+Kernel:  AVX - 2 threads (8 CPU cores detected)
+
+Reading partition model file ../../../RobAlignments/1_Bergsten_2013_partitions.nex ...
+Reading alignment file ../../../RobAlignments/1_Bergsten_2013.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 38 sequences with 2111 columns, 605 distinct patterns
+443 parsimony-informative, 110 singleton sites, 1558 constant sites
+                            Gap/Ambiguity  Composition  p-value
+   1  Hovahydrus_minutissimus       0.71%    passed     78.97%
+   2  Sanfilippodytes_terminalis    0.71%    passed     93.09%
+   3  Canthyporus_hottentotus       1.04%    passed     59.88%
+   4  Laccornellus_copelatoides     0.81%    passed     16.58%
+   5  Andex_insignis                1.14%    passed     89.75%
+   6  Hyphydrus_ovatus              0.66%    passed     94.40%
+   7  Heterosternusa_pulcher        0.81%    passed     98.38%
+   8  Neoporus_arizonicus           0.81%    passed     97.31%
+   9  Neoporus_undulatus            2.04%    passed     86.45%
+  10  Hydrocolus_sahlbergi          0.90%    passed     98.80%
+  11  Suphrodytes_figuratus         0.71%    passed     95.13%
+  12  Suphrodytes_dorsalis          0.66%    passed     92.48%
+  13  Hydroporus_scalesianus        0.76%    passed     92.33%
+  14  Hydroporus_vagepictus         0.71%    passed     89.44%
+  15  Hydroporus_longiusculus       0.95%    passed     88.46%
+  16  Hydroporus_carri              1.75%    passed     88.04%
+  17  Hydroporus_nigellus           4.22%    passed     97.43%
+  18  Hydroporus_niger              7.58%    passed     99.50%
+  19  Hydroporus_notabilis          3.32%    passed     99.72%
+  20  Hydroporus_appalachius        1.61%    passed     71.22%
+  21  Hydroporus_mannerheimi        0.95%    passed     87.65%
+  22  Hydroporus_neglectus          6.02%    passed     99.77%
+  23  Hydroporus_sinuatipes         9.10%    passed     79.61%
+  24  Hydroporus_obscurus           0.85%    passed     72.39%
+  25  Hydroporus_erythrocephalus    1.61%    passed     96.69%
+  26  Hydroporus_puberulus          1.52%    passed     90.99%
+  27  Hydroporus_axillaris          0.76%    passed     99.74%
+  28  Hydroporus_fortis             6.21%    passed     98.69%
+  29  Hydroporus_kraatzii           3.13%    passed     88.26%
+  30  Hydroporus_memnonius          0.76%    passed     91.63%
+  31  Hydroporus_rufifrons          3.60%    passed     83.69%
+  32  Hydroporus_tristis            3.98%    passed     89.28%
+  33  Hydroporus_nigrita            0.81%    passed     94.95%
+  34  Hydroporus_lapponum           0.81%    passed     89.45%
+  35  Hydroporus_submuticus         0.76%    passed     75.59%
+  36  Hydroporus_pilosus            0.71%    passed     99.50%
+  37  Hydroporus_pubescens          0.71%    passed     99.53%
+  38  Hydroporus_tessellatus        1.33%    passed     94.60%
+****  TOTAL                         1.99%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 8 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		38	250	36	202	TESTMERGE	COI_1
+2		38	251	4	242	TESTMERGE	COI_2
+3		38	251	198	23	TESTMERGE	COI_3
+4		38	103	3	96	TESTMERGE	H3_1
+5		38	104	0	103	TESTMERGE	H3_2
+WARNING: No parsimony-informative sites in partition H3_2
+6		38	103	62	25	TESTMERGE	H3_3
+7		38	439	120	294	TESTMERGE	16S
+8		38	610	20	573	TESTMERGE	18S
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.007 seconds
+NOTE: ModelFinder requires 6 MB RAM!
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -14387.532 / df: 82 / AIC: 28939.064 / AICc: 28945.776 / BIC: 29402.768
+Selecting individual models for 8 charsets using BIC...
+ No. Model        Score       Charset
+   1 GTR+F+I+G4   5712.059    16S
+   2 TIM2+F+I+G4  11816.795   COI_3
+   3 TIM2+F+I+G4  2394.839    COI_1
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+   4 TIM2+F+G4    2948.270    H3_3
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+   5 K2P+I+G4     2757.504    18S
+   6 TN+F+I+G4    952.972     COI_2
+   7 TIM2e+I+G4   478.889     H3_1
+   8 JC+I+G4      321.060     H3_2
+Full partition model BIC score: 28051.899 (LnL: -13555.172  df:123)
+Merging models to increase model fit (about 57 total partition schemes)...
+   9 SYM+I+G4     28304.365   COI_3+H3_3
+  10 GTR+F+I+G4   28076.036   COI_3+16S	0h:1m:9s (0h:5m:25s left)
+  11 TIM2+F+I+G4  28044.560   COI_1+COI_3	0h:1m:17s (0h:5m:25s left)
+  12 TVM+F+I+G4   28082.991   COI_2+COI_3	0h:1m:29s (0h:5m:35s left)
+  13 GTR+F+I+G4   28294.405   COI_3+18S	0h:1m:39s (0h:5m:37s left)
+  14 GTR+F+I+G4   28079.985   COI_3+H3_1	0h:1m:52s (0h:5m:45s left)
+  15 GTR+F+I+G4   28089.360   COI_3+H3_2	0h:1m:59s (0h:5m:33s left)
+  16 TIM+F+I+G4   28348.997   H3_3+16S	0h:2m:3s (0h:5m:15s left)
+  17 GTR+F+I+G4   28303.862   COI_1+16S	0h:2m:15s (0h:5m:18s left)
+  18 GTR+F+I+G4   28210.565   COI_2+16S	0h:2m:15s (0h:4m:53s left)
+  19 TIM3e+I+G4   28178.266   COI_1+H3_3	0h:2m:22s (0h:4m:44s left)
+  20 GTR+F+I+G4   28387.481   16S+18S	0h:2m:26s (0h:4m:30s left)
+  21 GTR+F+I+G4   28143.977   H3_1+16S	0h:2m:33s (0h:4m:23s left)
+  22 GTR+F+I+G4   28153.791   H3_2+16S	0h:2m:38s (0h:4m:12s left)
+  23 TIM3+F+I+G4  28250.223   COI_2+H3_3	0h:2m:39s (0h:3m:55s left)
+  24 TN+F+I+G4    28102.952   COI_1+COI_2	0h:2m:46s (0h:3m:48s left)
+  25 TNe+I+G4     28111.870   COI_1+18S	0h:2m:46s (0h:3m:32s left)
+  26 HKY+F+G4     28092.684   H3_1+H3_3	0h:2m:50s (0h:3m:23s left)
+  27 HKY+F+I+G4   28278.142   H3_3+18S	0h:2m:50s (0h:3m:9s left)
+  28 TNe+I+G4     28057.787   COI_2+18S	0h:2m:57s (0h:3m:3s left)
+  29 TIM2e+I+G4   28050.444   COI_1+H3_1	0h:2m:58s (0h:2m:52s left)
+  30 HKY+F+I+G4   28177.572   H3_2+H3_3	0h:3m:2s (0h:2m:44s left)
+  31 TIM2+F+I+G4  28091.479   COI_1+H3_2	0h:3m:5s (0h:2m:35s left)
+  32 K2P+I+G4     28027.151   H3_1+18S	0h:3m:10s (0h:2m:28s left)
+  33 TNe+I+G4     28047.330   COI_2+H3_1	0h:3m:10s (0h:2m:18s left)
+  34 K2P+I+G4     28047.714   H3_2+18S	0h:3m:14s (0h:2m:11s left)
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+  35 TN+F+I+G4    28057.457   COI_2+H3_2	0h:3m:16s (0h:2m:3s left)
+  36 K2P+I+G4     28039.063   H3_1+H3_2	0h:3m:17s (0h:1m:55s left)
+Merging H3_1+18S with BIC score: 28027.151 (LnL: -13561.936  df: 118)
+  37 GTR+F+I+G4   28404.624   H3_1+16S+18S	0h:3m:27s (0h:1m:52s left)
+  38 HKY+F+I+G4   28253.449   H3_1+H3_3+18S	0h:3m:31s (0h:1m:45s left)
+  39 GTR+F+I+G4   28314.261   COI_3+H3_1+18S	0h:3m:35s (0h:1m:39s left)
+  40 TIM2e+I+G4   28087.323   COI_1+H3_1+18S	0h:3m:38s (0h:1m:32s left)
+  41 K2P+I+G4     28030.639   COI_2+H3_1+18S	0h:3m:44s (0h:1m:27s left)
+  42 K2P+I+G4     28024.647   H3_1+H3_2+18S	0h:3m:44s (0h:1m:20s left)
+Merging COI_1+COI_3 with BIC score: 28019.812 (LnL: -13588.885  df: 110)
+  43 GTR+F+I+G4   28332.984   COI_1+COI_3+H3_1+18S	0h:4m:7s (0h:1m:20s left)
+  44 GTR+F+I+G4   28158.093   COI_1+COI_3+16S	0h:4m:14s (0h:1m:15s left)
+  45 GTR+F+I+G4   28105.866   COI_1+COI_2+COI_3	0h:4m:31s (0h:1m:12s left)
+  46 GTR+F+I+G4   28069.614   COI_1+COI_3+H3_2	0h:4m:36s (0h:1m:6s left)
+  47 GTR+F+I+G4   28322.855   COI_1+COI_3+H3_3	0h:4m:51s (0h:1m:2s left)
+Merging H3_1+H3_2+18S with BIC score: 28017.308 (LnL: -13595.288  df: 108)
+  48 K2P+I+G4     28017.561   COI_2+H3_1+H3_2+18S	0h:5m:1s (0h:0m:56s left)
+  49 HKY+F+I+G4   28268.906   H3_1+H3_2+H3_3+18S	0h:5m:7s (0h:0m:50s left)
+  50 GTR+F+I+G4   28378.172   COI_1+COI_3+H3_1+H3_2+18S	0h:5m:17s (0h:0m:44s left)
+  51 GTR+F+I+G4   28427.830   H3_1+H3_2+16S+18S	0h:5m:20s (0h:0m:37s left)
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = TIM2+F+I+G4: COI_1 COI_3, TN+F+I+G4: COI_2, K2P+I+G4: H3_1 H3_2 18S, TIM2+F+G4: H3_3, GTR+F+I+G4: 16S;
+Agglomerative model selection: ((COI_1,COI_3)2:28019.8,COI_2,((H3_1,18S)1:28027.2,H3_2)3:28017.3,H3_3,16S)
+Merging into 5 partitions...
+Partition information was printed to 2_setBergsten_2013.best_scheme.nex
+Partition information in Raxml format was printed to 2_setBergsten_2013.best_scheme
+
+All model information printed to 2_setBergsten_2013.model.gz
+CPU time for ModelFinder: 130.961 seconds (0h:2m:10s)
+Wall-clock time for ModelFinder: 321.942 seconds (0h:5m:21s)
+Generating 1000 samples for ultrafast bootstrap (seed: 629050)...
+
+NOTE: 5 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -14775.764
+Current log-likelihood at step 1: -13555.534
+Current log-likelihood at step 2: -13505.602
+Current log-likelihood at step 3: -13486.778
+Current log-likelihood at step 4: -13478.958
+Current log-likelihood at step 5: -13474.790
+Current log-likelihood at step 6: -13474.099
+Current log-likelihood at step 7: -13473.838
+Current log-likelihood at step 8: -13473.707
+Current log-likelihood at step 9: -13473.636
+Parameters optimization took 8 rounds (12.748 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Computing ML distances based on estimated model parameters... 0.078 sec
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -13474.421
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 5.798 second
+Computing log-likelihood of 98 initial trees ... 57.923 seconds
+Current best score: -13467.762
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -13443.115
+Current log-likelihood at step 1: -13442.668
+Current log-likelihood at step 2: -13442.587
+Parameters optimization took 1 rounds (2.207 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -13442.587
+Iteration 10 / LogL: -13443.271 / Time: 0h:2m:1s
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -13442.571
+Current log-likelihood at step 1: -13442.505
+Parameters optimization took 0 rounds (0.537 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+UPDATE BEST LOG-LIKELIHOOD: -13442.505
+Iteration 20 / LogL: -13456.703 / Time: 0h:2m:44s
+Finish initializing candidate tree set (4)
+Current best tree score: -13442.505 / CPU time: 149.415
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -13442.497
+Iteration 30 / LogL: -13454.884 / Time: 0h:3m:41s (0h:9m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -13442.497
+Iteration 40 / LogL: -13442.507 / Time: 0h:4m:44s (0h:7m:25s left)
+UPDATE BEST LOG-LIKELIHOOD: -13442.497
+Iteration 50 / LogL: -13442.512 / Time: 0h:5m:43s (0h:5m:57s left)
+Log-likelihood cutoff on original alignment: -13497.367
+Iteration 60 / LogL: -13442.506 / Time: 0h:6m:33s (0h:4m:33s left)
+Iteration 70 / LogL: -13454.888 / Time: 0h:7m:17s (0h:3m:16s left)
+Iteration 80 / LogL: -13442.671 / Time: 0h:7m:57s (0h:2m:7s left)
+Iteration 90 / LogL: -13442.587 / Time: 0h:8m:34s (0h:1m:3s left)
+Iteration 100 / LogL: -13442.561 / Time: 0h:9m:23s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -13497.367
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:9m:35s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -13442.495
+Current log-likelihood at step 1: -13442.451
+Current log-likelihood at step 2: -13442.430
+Current log-likelihood at step 3: -13442.418
+Current log-likelihood at step 4: -13442.410
+Parameters optimization took 3 rounds (3.148 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -13442.410
+Creating bootstrap support values...
+Split supports printed to NEXUS file 2_setBergsten_2013.splits.nex
+Total tree length: 5.968
+
+Total number of iterations: 102
+CPU time used for tree search: 70.212 sec (0h:1m:10s)
+Wall-clock time used for tree search: 560.655 sec (0h:9m:20s)
+Total CPU time used: 73.231 sec (0h:1m:13s)
+Total wall-clock time used: 580.271 sec (0h:9m:40s)
+
+Computing bootstrap consensus tree...
+Reading input file 2_setBergsten_2013.splits.nex...
+38 taxa and 215 splits.
+Consensus tree written to 2_setBergsten_2013.contree
+Reading input trees file 2_setBergsten_2013.contree
+Log-likelihood of consensus tree: -13442.408
+
+Analysis results written to: 
+  IQ-TREE report:                2_setBergsten_2013.iqtree
+  Maximum-likelihood tree:       2_setBergsten_2013.treefile
+  Likelihood distances:          2_setBergsten_2013.mldist
+  Best partitioning scheme:      2_setBergsten_2013.best_scheme.nex
+           in RAxML format:      2_setBergsten_2013.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          2_setBergsten_2013.splits.nex
+  Consensus tree:                2_setBergsten_2013.contree
+  Screen log file:               2_setBergsten_2013.log
+
+Date and Time: Fri Sep  7 08:38:18 2018

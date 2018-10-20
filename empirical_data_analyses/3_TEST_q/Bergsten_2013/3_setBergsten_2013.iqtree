@@ -1,0 +1,293 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../RobAlignments/1_Bergsten_2013_partitions.nex
+Input file name: ../../../RobAlignments/1_Bergsten_2013.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 404125
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 38 taxa with 8 partitions and 2111 total sites (0% missing data)
+
+  ID  Name   Type	Seq	Site	Unique	Infor	Invar	Const
+   1  COI_1  DNA	38	250	83	36	202	202
+   2  COI_2  DNA	38	251	48	4	242	242
+   3  COI_3  DNA	38	251	237	198	23	23
+   4  H3_1   DNA	38	103	15	3	96	96
+   5  H3_2   DNA	38	104	8	0	103	103
+   6  H3_3   DNA	38	103	83	62	25	25
+   7  16S    DNA	38	439	148	120	294	294
+   8  18S    DNA	38	610	48	20	573	573
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+I+G4:COI_1,TN+F+I+G4:COI_2,TIM2+F+I+G4:COI_3,TIM2e+I+G4:H3_1,JC+I+G4:H3_2,TIM2+F+G4:H3_3,GTR+F+G4:16S,K2P+I+G4:18S
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM2+F+I+G4      -1172.7192   2361.4384 + 0.0000   2362.0359 + 0.0000   2389.6101 + 0.0000
+   2  TN+F+I+G4         -454.1162    922.2324 + 0.0000    922.6933 + 0.0000    946.9105 + 0.0000
+   3  TIM2+F+I+G4      -5900.2412  11816.4824 + 0.0000  11817.0774 + 0.0000  11844.6860 + 0.0000
+   4  TIM2e+I+G4        -228.2393    466.4786 + 0.0000    467.0971 + 0.0000    479.6522 + 0.0000
+   5  JC+I+G4           -155.8817    315.7635 + 0.0000    315.8823 + 0.0000    321.0522 + 0.0000
+   6  TIM2+F+G4        -1436.1135   2886.2269 + 0.0000   2887.4059 + 0.0000   2904.6700 + 0.0000
+   7  GTR+F+G4         -2826.9346   5671.8691 + 0.0000   5672.2887 + 0.0000   5708.6296 + 0.0000
+   8  K2P+I+G4         -1367.8263   2741.6526 + 0.0000   2741.6922 + 0.0000   2754.8930 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-equal partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM2+F+I+G4    1.0000  TIM2{2.26415,2.49344,100}+F{0.284139,0.136982,0.257042,0.321837}+I{0.681547}+G4{0.272494}
+   2  TN+F+I+G4      1.0000  TN{100,1.00252}+F{0.188198,0.241705,0.144701,0.425396}+I{0.915171}+G4{0.091532}
+   3  TIM2+F+I+G4    1.0000  TIM2{0.933283,19.1061,16.7504}+F{0.429991,0.0781407,0.0315978,0.460271}+I{1.00013e-06}+G4{0.646091}
+   4  TIM2e+I+G4     1.0000  TIM2e{20.6591,0.0001,100}+FQ+I{0.814046}+G4{0.0573771}
+   5  JC+I+G4        1.0000  JC+I{0.97505}+G4{0.0390628}
+   6  TIM2+F+G4      1.0000  TIM2{1.80228,9.59035,4.08236}+F{0.0888043,0.475591,0.292751,0.142854}+G4{0.427502}
+   7  GTR+F+G4       1.0000  GTR{0.242791,13.793,10.6845,0.0001,2.86642}+F{0.384886,0.08551,0.140719,0.388886}+G4{0.154868}
+   8  K2P+I+G4       1.0000  K2P{3.93405}+FQ+I{0.868121}+G4{0.0609877}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -13285.8969 (s.e. 435.8238)
+Unconstrained log-likelihood (without tree): -6178.9340
+Number of free parameters (#branches + #model parameters): 122
+Akaike information criterion (AIC) score: 26815.7937
+Corrected Akaike information criterion (AICc) score: 26830.8903
+Bayesian information criterion (BIC) score: 27505.6936
+
+Total tree length (sum of branch lengths): 18.6038
+Sum of internal branch lengths: 5.6894 (30.5822% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Hovahydrus_minutissimus' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++------------------Hovahydrus_minutissimus
+|
+|                           +------------------Sanfilippodytes_terminalis
+|                       +---| (95)
+|                       |   |            +-------------Heterosternusa_pulcher
+|                       |   +------------| (100)
+|                       |                |    +----------Neoporus_arizonicus
+|                       |                +----| (97)
+|                       |                     +-----------Neoporus_undulatus
+|                    +--| (36)
+|                    |  |               +---Suphrodytes_figuratus
+|                    |  |     +---------| (100)
+|                    |  |     |         +---Suphrodytes_dorsalis
+|                    |  |  +--| (56)
+|                    |  |  |  |                   +--Hydroporus_longiusculus
+|                    |  |  |  |              +----| (100)
+|                    |  |  |  |              |    +--Hydroporus_carri
+|                    |  |  |  |           +--| (99)
+|                    |  |  |  |           |  +--Hydroporus_nigellus
+|                    |  |  |  |        +--| (90)
+|                    |  |  |  |        |  |  +--Hydroporus_lapponum
+|                    |  |  |  |        |  +--| (100)
+|                    |  |  |  |        |     +--Hydroporus_submuticus
+|                    |  |  |  |     +--| (83)
+|                    |  |  |  |     |  |   +--Hydroporus_appalachius
+|                    |  |  |  |     |  +---| (100)
+|                    |  |  |  |     |      +--Hydroporus_mannerheimi
+|                    |  |  |  |  +--| (89)
+|                    |  |  |  |  |  |        +--Hydroporus_niger
+|                    |  |  |  |  |  |     +--| (95)
+|                    |  |  |  |  |  |     |  +---Hydroporus_notabilis
+|                    |  |  |  |  |  |  +--| (99)
+|                    |  |  |  |  |  |  |  +------Hydroporus_sinuatipes
+|                    |  |  |  |  |  +--| (87)
+|                    |  |  |  |  |     |  +------Hydroporus_obscurus
+|                    |  |  |  |  |     +--| (98)
+|                    |  |  |  |  |        |  +--------Hydroporus_erythrocephalus
+|                    |  |  |  |  |        +--| (77)
+|                    |  |  |  |  |           +----Hydroporus_rufifrons
+|                    |  |  |  +--| (99)
+|                    |  |  |     |  +------Hydroporus_axillaris
+|                    |  |  |     +--| (95)
+|                    |  |  |        +------Hydroporus_fortis
+|                    |  +--| (60)
+|                    |     |         +--------Hydroporus_scalesianus
+|                    |     |  +------| (100)
+|                    |     |  |      +-----Hydroporus_neglectus
+|                    |     +--| (63)
+|                    |        |       +----------Hydroporus_vagepictus
+|                    |        |  +----| (100)
+|                    |        |  |    +-----Hydroporus_tristis
+|                    |        +--| (76)
+|                    |           |  +------------Hydroporus_puberulus
+|                    |           +--| (82)
+|                    |              |          +---Hydroporus_kraatzii
+|                    |              |  +-------| (100)
+|                    |              |  |       +----Hydroporus_memnonius
+|                    |              +--| (80)
+|                    |                 |         +---Hydroporus_nigrita
+|                    |                 |      +--| (83)
+|                    |                 |      |  +----Hydroporus_tessellatus
+|                    |                 |   +--| (96)
+|                    |                 |   |  +---Hydroporus_pubescens
+|                    |                 +---| (99)
+|                    |                     +-----Hydroporus_pilosus
+|                 +--| (71)
+|                 |  +--------------Hydrocolus_sahlbergi
+|    +------------| (100)
+|    |            |       +-----------------------Canthyporus_hottentotus
+|    |            +-------| (99)
+|    |                    +------------------------Laccornellus_copelatoides
++----| (98)
+|    +---------------------Hyphydrus_ovatus
+|
++-------------Andex_insignis
+
+Tree in newick format:
+
+(Hovahydrus_minutissimus:0.7635002569,(((((Sanfilippodytes_terminalis:0.7751131942,(Heterosternusa_pulcher:0.5682887997,(Neoporus_arizonicus:0.4320297875,Neoporus_undulatus:0.4986220927)97:0.2210117961)100:0.5472938631)95:0.1614602862,(((Suphrodytes_figuratus:0.1933613721,Suphrodytes_dorsalis:0.1905283115)100:0.3934487594,((((((Hydroporus_longiusculus:0.0058153991,Hydroporus_carri:0.0037028849)100:0.2127043109,Hydroporus_nigellus:0.1370482934)99:0.1152664680,(Hydroporus_lapponum:0.0523521490,Hydroporus_submuticus:0.0330181755)100:0.1245136873)90:0.0826477226,(Hydroporus_appalachius:0.0760993096,Hydroporus_mannerheimi:0.0355825269)100:0.1768362473)83:0.0427583467,(((Hydroporus_niger:0.0981381796,Hydroporus_notabilis:0.1614647776)95:0.0565674363,Hydroporus_sinuatipes:0.2833773979)99:0.1059349801,(Hydroporus_obscurus:0.2971234497,(Hydroporus_erythrocephalus:0.3666597229,Hydroporus_rufifrons:0.2056555470)77:0.0536824968)98:0.0815387882)87:0.0616332728)89:0.0485788037,(Hydroporus_axillaris:0.2827489959,Hydroporus_fortis:0.2896755840)95:0.0951380433)99:0.1388628485)56:0.0797155502,((Hydroporus_scalesianus:0.3755178903,Hydroporus_neglectus:0.2670768373)100:0.2752448811,((Hydroporus_vagepictus:0.4334596330,Hydroporus_tristis:0.2612498924)100:0.2111288643,(Hydroporus_puberulus:0.5359623843,((Hydroporus_kraatzii:0.1684851848,Hydroporus_memnonius:0.2307794136)100:0.3169645221,(((Hydroporus_nigrita:0.1910173713,Hydroporus_tessellatus:0.2285422995)83:0.0710486748,Hydroporus_pubescens:0.1905180333)96:0.0870074812,Hydroporus_pilosus:0.2616205344)99:0.1699574993)80:0.0580929049)82:0.0860900600)76:0.1145181638)63:0.0976771848)60:0.1378366123)36:0.0528463997,Hydrocolus_sahlbergi:0.6098942142)71:0.1114151059,(Canthyporus_hottentotus:0.9532506672,Laccornellus_copelatoides:1.0104997149)99:0.3397101337)100:0.5409796015,Hyphydrus_ovatus:0.8947271441)98:0.2193328916,Andex_insignis:0.5518325526);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -13287.041316
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------------------Hovahydrus_minutissimus
+|
+|                        +-------------------Sanfilippodytes_terminalis
+|                     +--| (95)
+|                     |  |             +-------------Heterosternusa_pulcher
+|                     |  +-------------| (100)
+|                     |                |    +----------Neoporus_arizonicus
+|                     |                +----| (97)
+|                     |                     +------------Neoporus_undulatus
+|                  +--| (71)
+|                  |  |  +---------------Hydrocolus_sahlbergi
+|                  |  +--| (39)
+|                  |     |               +----Suphrodytes_figuratus
+|                  |     |     +---------| (100)
+|                  |     |     |         +---Suphrodytes_dorsalis
+|                  |     |  +--| (56)
+|                  |     |  |  |                   +--Hydroporus_longiusculus
+|                  |     |  |  |              +----| (100)
+|                  |     |  |  |              |    +--Hydroporus_carri
+|                  |     |  |  |           +--| (99)
+|                  |     |  |  |           |  +--Hydroporus_nigellus
+|                  |     |  |  |        +--| (90)
+|                  |     |  |  |        |  |  +--Hydroporus_lapponum
+|                  |     |  |  |        |  +--| (100)
+|                  |     |  |  |        |     +--Hydroporus_submuticus
+|                  |     |  |  |     +--| (83)
+|                  |     |  |  |     |  |   +--Hydroporus_appalachius
+|                  |     |  |  |     |  +---| (100)
+|                  |     |  |  |     |      +--Hydroporus_mannerheimi
+|                  |     |  |  |  +--| (89)
+|                  |     |  |  |  |  |        +--Hydroporus_niger
+|                  |     |  |  |  |  |     +--| (95)
+|                  |     |  |  |  |  |     |  +---Hydroporus_notabilis
+|                  |     |  |  |  |  |  +--| (99)
+|                  |     |  |  |  |  |  |  +------Hydroporus_sinuatipes
+|                  |     |  |  |  |  +--| (87)
+|                  |     |  |  |  |     |  +------Hydroporus_obscurus
+|                  |     |  |  |  |     +--| (98)
+|                  |     |  |  |  |        |  +--------Hydroporus_erythrocephalus
+|                  |     |  |  |  |        +--| (77)
+|                  |     |  |  |  |           +----Hydroporus_rufifrons
+|                  |     |  |  +--| (99)
+|                  |     |  |     |  +------Hydroporus_axillaris
+|                  |     |  |     +--| (95)
+|                  |     |  |        +------Hydroporus_fortis
+|                  |     +--| (60)
+|                  |        |         +--------Hydroporus_scalesianus
+|                  |        |  +------| (100)
+|                  |        |  |      +------Hydroporus_neglectus
+|                  |        +--| (63)
+|                  |           |       +----------Hydroporus_vagepictus
+|                  |           |  +----| (100)
+|                  |           |  |    +-----Hydroporus_tristis
+|                  |           +--| (76)
+|                  |              |  +-------------Hydroporus_puberulus
+|                  |              +--| (82)
+|                  |                 |          +---Hydroporus_kraatzii
+|                  |                 |  +-------| (100)
+|                  |                 |  |       +-----Hydroporus_memnonius
+|                  |                 +--| (80)
+|                  |                    |         +----Hydroporus_nigrita
+|                  |                    |      +--| (83)
+|                  |                    |      |  +-----Hydroporus_tessellatus
+|                  |                    |   +--| (96)
+|                  |                    |   |  +----Hydroporus_pubescens
+|                  |                    +---| (99)
+|                  |                        +-----Hydroporus_pilosus
+|     +------------| (100)
+|     |            |        +-------------------------Canthyporus_hottentotus
+|     |            +--------| (99)
+|     |                     +------------------------Laccornellus_copelatoides
++-----| (98)
+|     +----------------------Hyphydrus_ovatus
+|
++-------------Andex_insignis
+
+
+Consensus tree in newick format: 
+
+(Hovahydrus_minutissimus:0.7684966121,((((Sanfilippodytes_terminalis:0.7800304101,(Heterosternusa_pulcher:0.5649334516,(Neoporus_arizonicus:0.4324332990,Neoporus_undulatus:0.4989301064)97:0.2248356426)100:0.5440002247)95:0.1243099165,(Hydrocolus_sahlbergi:0.6370419783,(((Suphrodytes_figuratus:0.1959982501,Suphrodytes_dorsalis:0.1883707151)100:0.3958843947,((((((Hydroporus_longiusculus:0.0062731047,Hydroporus_carri:0.0032433584)100:0.2131526561,Hydroporus_nigellus:0.1369367440)99:0.1156365005,(Hydroporus_lapponum:0.0523761319,Hydroporus_submuticus:0.0330189819)100:0.1243775403)90:0.0826902213,(Hydroporus_appalachius:0.0764907533,Hydroporus_mannerheimi:0.0352267263)100:0.1773330138)83:0.0422620568,(((Hydroporus_niger:0.0985590362,Hydroporus_notabilis:0.1613453400)95:0.0566317413,Hydroporus_sinuatipes:0.2839304263)99:0.1063328136,(Hydroporus_obscurus:0.2976159007,(Hydroporus_erythrocephalus:0.3677579112,Hydroporus_rufifrons:0.2061546855)77:0.0530861321)98:0.0816452352)87:0.0621875967)89:0.0482971807,(Hydroporus_axillaris:0.2829312163,Hydroporus_fortis:0.2899708406)95:0.0949606245)99:0.1408462035)56:0.0736643505,((Hydroporus_scalesianus:0.3739949399,Hydroporus_neglectus:0.2673001531)100:0.2835754126,((Hydroporus_vagepictus:0.4331680287,Hydroporus_tristis:0.2625344010)100:0.2135897479,(Hydroporus_puberulus:0.5363421297,((Hydroporus_kraatzii:0.1683747965,Hydroporus_memnonius:0.2309015551)100:0.3171442029,(((Hydroporus_nigrita:0.1911977734,Hydroporus_tessellatus:0.2287676051)83:0.0710668236,Hydroporus_pubescens:0.1901807686)96:0.0873892398,Hydroporus_pilosus:0.2615150569)99:0.1698612095)80:0.0586286190)82:0.0830011803)76:0.1090200227)63:0.1046821194)60:0.1356087745)39:0.0676028025)71:0.1231526827,(Canthyporus_hottentotus:0.9871289863,Laccornellus_copelatoides:0.9738508953)99:0.3547487232)100:0.5009619095,Hyphydrus_ovatus:0.8730737994)98:0.2462285307,Andex_insignis:0.5439986039);
+
+TIME STAMP
+----------
+
+Date and time: Thu Sep  6 17:16:38 2018
+Total CPU time used: 61.131721 seconds (0h:1m:1s)
+Total wall-clock time used: 294.2249069 seconds (0h:4m:54s)
+

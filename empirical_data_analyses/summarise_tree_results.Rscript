@@ -1,0 +1,63 @@
+require(phangorn)
+source("../topclustMDS.R")
+source("../readIQ.R")
+load("results.trees.Rdata")
+
+#schemes <- c("1_NOPART", "2_TM_q", "3_TEST_q", "4_TM_spp", "5_TEST_spp", "6_TM_sp", "7_TEST_sp")
+#rdats <- c("Bergsten_2013", "Delsuc_2003", "Devitt_2013", "Dsouli_2011", "Ekrem_2010", "Fishbein_2001", "Sauquet_2011", "Siler_2013")
+#rtrs <- list()
+#rdistmat <- list()
+#rmdsres <- list()
+#for(i in 1:8){
+#      rtrs[[i]] <- list()
+#      for(j in 1:7){
+#      	setwd(paste0(schemes[j], "/", rdats[i]))
+#	    res <- readIQ(grep("iqtree", dir(), value = T))
+#	    rtrs[[i]][[j]] <- res[[2]]
+#	    setwd("../..")
+#      }
+#      class(rtrs[[i]]) <- "multiPhylo"
+#      names(rtrs[[i]]) <- schemes      
+#}
+#names(rtrs) <- rdats
+
+#astmars <- read.tree("mars.astral.tre")
+#astbird <- read.tree("bird.astral.tre")
+
+#mtrs <- list()
+#for(i in c(1:300)){
+#      for(j in 1:7){
+#            setwd(paste0(schemes[j], "/Marsupials/set", i))
+#            res <- readIQ(grep("iqtree", dir(), value = T))
+#            mtrs[[length(mtrs)+1]] <- res[[2]]
+#            setwd("../../..")
+#      }
+#}
+#mtrs[[length(mtrs) + 1]] <- astmars
+#class(mtrs) <- "multiPhylo"
+#names(mtrs) <- c(paste0(rep(paste0("set", 1:300), each = 7), "_", schemes), "astral")
+
+#btrs <- list()
+#for(i in c(1:17)){
+#      for(j in 1:7){
+#            setwd(paste0(schemes[j], "/Birds/set", i))
+#            res <- readIQ(grep("iqtree", dir(), value = T))
+#            btrs[[length(btrs)+1]] <- res[[2]]
+#            setwd("../../..")
+#      }
+#}
+#btrs[[length(btrs) + 1]] <- astbird
+#class(btrs) <- "multiPhylo"
+#names(btrs) <- c(paste0(rep(paste0("set", 1:17), each = 7), "_", schemes), "astral")
+
+for(i in 1:8){
+	rdistmat[[i]] <- path.dist(rtrs[[i]], check.labels = T)
+	rmdsres[[i]] <- cmdscale(as.dist(rdistmat[[i]]), eig = F, k = 2)
+}
+mdistmat <- path.dist(mtrs, check.labels = T)
+mmdsres <- cmdscale(as.dist(mdistmat), eig = T, k = 2)
+bdistmat <- path.dist(btrs, check.labels = T)
+
+bmdsres <- cmdscale(as.dist(bdistmat), eig = T, k = 2)
+
+save(rtrs, mtrs, btrs, rdistmat, rmdsres, mmdsres, bmdsres, mdistmat, bdistmat, file = "results.trees.Rdata")

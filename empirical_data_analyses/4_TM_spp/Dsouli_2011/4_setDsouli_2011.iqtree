@@ -1,0 +1,285 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../RobAlignments/1_Dsouli_2011_partitions.nex
+Input file name: ../../../RobAlignments/1_Dsouli_2011.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 108267
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 39 taxa with 4 partitions and 1635 total sites (1.85054% missing data)
+
+  ID  Name          Type	Seq	Site	Unique	Infor	Invar	Const
+   1  COI_1+CYTB_1  DNA	39	447	155	95	317	317
+   2  COI_2+CYTB_2  DNA	39	447	76	38	396	396
+   3  COI_3+CYTB_3  DNA	39	446	375	322	77	77
+   4  ITS2          DNA	35	295	184	147	127	127
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+G4:COI_1+CYTB_1,HKY+F+I:COI_2+CYTB_2,HKY+F+G4:COI_3+CYTB_3,HKY+F+G4:ITS2
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM2+F+G4        -2110.9643   4237.9287 + 0.0000   4238.2575 + 0.0000   4270.7492 + 0.0000
+   2  HKY+F+I          -1105.0186   2222.0373 + 0.0000   2222.2282 + 0.0000   2246.6526 + 0.0000
+   3  HKY+F+G4         -5742.2357  11496.4713 + 0.0000  11496.6627 + 0.0000  11521.0733 + 0.0000
+   4  HKY+F+G4         -2546.7887   5105.5774 + 0.0000   5105.8691 + 0.0000   5127.6992 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM2+F+G4      0.1679  TIM2{3.60684,6.00741,34.5702}+F{0.296277,0.153614,0.248032,0.302078}+G4{0.214524}
+   2  HKY+F+I        0.0348  HKY{1.82631}+F{0.206239,0.226899,0.131238,0.435624}+I{0.802685}
+   3  HKY+F+G4       3.1067  HKY{38.9347}+F{0.445229,0.0554237,0.0107999,0.488547}+G4{0.690486}
+   4  HKY+F+G4       0.5385  HKY{2.59511}+F{0.35843,0.100488,0.167712,0.373369}+G4{0.484707}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -11451.3542 (s.e. 293.9119)
+Unconstrained log-likelihood (without tree): -6968.2212
+Number of free parameters (#branches + #model parameters): 100
+Akaike information criterion (AIC) score: 23102.7085
+Corrected Akaike information criterion (AICc) score: 23115.8767
+Bayesian information criterion (BIC) score: 23642.6483
+
+Total tree length (sum of branch lengths): 5.5684
+Sum of internal branch lengths: 3.6647 (65.8128% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Cheilosia_longula' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++----Cheilosia_longula
+|
++------Cheilosia_naruska
+|
+|                                       +--Dolichopus_excisus
+|                    +------------------| (100)
+|                    |                  +--Dolichopus_nubilus
+|     +--------------| (100)
+|     |              |                       +-----Drosophila_melanogaster
+|     |              |            +----------| (100)
+|     |              |            |          +---Drosophila_yakuba
+|     |              |         +--| (98)
+|     |              |         |  +--------------Drosophila_virilis
+|     |              +---------| (100)
+|     |                        |              +------Haematobia_irritans
+|     |                        |           +--| (90)
+|     |                        |           |  |    +--Haematobosca_croceicomis_1
+|     |                        |           |  +----| (100)
+|     |                        |           |       +--Heamatobosca_croceicomis_2
+|     |                        |        +--| (86)
+|     |                        |        |  |                    +--Prostomoxys_saegerae_1
+|     |                        |        |  |              +-----| (100)
+|     |                        |        |  |              |     +--Prostomoxyssaegerae_2
+|     |                        |        |  |           +--| (57)
+|     |                        |        |  |           |  |   +--S_varipes_1
+|     |                        |        |  |           |  +---| (100)
+|     |                        |        |  |           |      +**S_varipes_2
+|     |                        |        |  |        +--| (35)
+|     |                        |        |  |        |  |         +**S_bengalensis_1
+|     |                        |        |  |        |  |     +---| (100)
+|     |                        |        |  |        |  |     |   +**S_bengalensis_2
+|     |                        |        |  |        |  |  +--| (98)
+|     |                        |        |  |        |  |  |  |     +**S_sitiens_1
+|     |                        |        |  |        |  |  |  |  +--| (100)
+|     |                        |        |  |        |  |  |  |  |  +--S_sitiens_2
+|     |                        |        |  |        |  |  |  +--| (100)
+|     |                        |        |  |        |  |  |     +--S_sitiens_Burkina_Faso
+|     |                        |        |  |        |  +--| (86)
+|     |                        |        |  |        |     |        +--S_calcitrans_Africa
+|     |                        |        |  |        |     |     +--| (100)
+|     |                        |        |  |        |     |     |  +--S_calcitrans_India
+|     |                        |        |  |        |     |  +--| (66)
+|     |                        |        |  |        |     |  |  +**S_calcitrans_Thailand_2
+|     |                        |        |  |        |     +--| (100)
+|     |                        |        |  |        |        +**S_calcitrans_Thailand_1
+|     |                        |        |  |     +--| (74)
+|     |                        |        |  |     |  |     +--S_niger_bilineatus_1
+|     |                        |        |  |     |  |  +--| (100)
+|     |                        |        |  |     |  |  |  +--S_niger_bilineatus_2
+|     |                        |        |  |     |  +--| (64)
+|     |                        |        |  |     |     |   +--S_niger_niger_1
+|     |                        |        |  |     |     +---| (100)
+|     |                        |        |  |     |         +--S_niger_niger_2
+|     |                        |        |  |  +--| (98)
+|     |                        |        |  |  |  |         +--S_inornatus_1
+|     |                        |        |  |  |  |     +---| (100)
+|     |                        |        |  |  |  |     |   +--S_inornatus_2
+|     |                        |        |  |  |  |  +--| (86)
+|     |                        |        |  |  |  |  |  |      +--S_transvittatus_1
+|     |                        |        |  |  |  |  |  +------| (100)
+|     |                        |        |  |  |  |  |         +--S_transvittatus_2
+|     |                        |        |  |  |  +--| (78)
+|     |                        |        |  |  |     |     +--S_omega_1
+|     |                        |        |  |  |     |  +--| (100)
+|     |                        |        |  |  |     |  |  +--S_omega_2
+|     |                        |        |  |  |     +--| (100)
+|     |                        |        |  |  |        |    +--S_pallidus_1
+|     |                        |        |  |  |        +----| (100)
+|     |                        |        |  |  |             +--S_pallidus_2
+|     |                        |        |  +--| (97)
+|     |                        |        |     |       +**S_indicus_1
+|     |                        |        |     +-------| (100)
+|     |                        |        |             +--S_indicus_2
+|     |                        +--------| (100)
+|     |                                 +-----Musca_domestica
++-----| (98)
+      +-------------Simosyrphus_grandicornis
+
+Tree in newick format:
+
+(Cheilosia_longula:0.1142229486,Cheilosia_naruska:0.1712882082,(((Dolichopus_excisus:0.0813629227,Dolichopus_nubilus:0.0323834808)100:0.4349915597,(((Drosophila_melanogaster:0.1471719032,Drosophila_yakuba:0.0920473189)100:0.2577675424,Drosophila_virilis:0.3416121702)98:0.0891199341,(((Haematobia_irritans:0.1621774874,(Haematobosca_croceicomis_1:0.0254580272,Heamatobosca_croceicomis_2:0.0029028541)100:0.1191390051)90:0.0491041734,((((((Prostomoxys_saegerae_1:0.0012530479,Prostomoxyssaegerae_2:0.0064432142)100:0.1548750023,(S_varipes_1:0.0013925889,S_varipes_2:0.0000028095)100:0.0963527894)57:0.0212743052,(((S_bengalensis_1:0.0000026356,S_bengalensis_2:0.0000025709)100:0.0914613342,((S_sitiens_1:0.0000024936,S_sitiens_2:0.0008028716)100:0.0500937344,S_sitiens_Burkina_Faso:0.0515979925)100:0.0461070646)98:0.0381111415,(((S_calcitrans_Africa:0.0303620260,S_calcitrans_India:0.0007661968)100:0.0332249854,S_calcitrans_Thailand_2:0.0005360949)66:0.0012977799,S_calcitrans_Thailand_1:0.0000022949)100:0.0826786867)86:0.0308956633)35:0.0150628054,((S_niger_bilineatus_1:0.0029142182,S_niger_bilineatus_2:0.0040983208)100:0.0848535536,(S_niger_niger_1:0.0083619451,S_niger_niger_2:0.0033120390)100:0.1101361039)64:0.0120947444)74:0.0235715809,(((S_inornatus_1:0.0087515581,S_inornatus_2:0.0006426806)100:0.1113512899,(S_transvittatus_1:0.0058996244,S_transvittatus_2:0.0113813620)100:0.1788743280)86:0.0293000067,((S_omega_1:0.0052415988,S_omega_2:0.0010412816)100:0.0815225722,(S_pallidus_1:0.0035878166,S_pallidus_2:0.0016357555)100:0.1167345815)100:0.0668197966)78:0.0189092541)98:0.0739392930,(S_indicus_1:0.0000024140,S_indicus_2:0.0077841021)100:0.1902633225)97:0.0546537032)86:0.0623462378,Musca_domestica:0.1568921314)100:0.2080358199)100:0.2413405893)100:0.3439237637,Simosyrphus_grandicornis:0.3268733029)98:0.1359494275);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -11451.351179
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++----Cheilosia_longula
+|
++------Cheilosia_naruska
+|
+|                                      +--Dolichopus_excisus
+|                   +------------------| (100)
+|                   |                  +--Dolichopus_nubilus
+|    +--------------| (100)
+|    |              |                       +-----Drosophila_melanogaster
+|    |              |            +----------| (100)
+|    |              |            |          +---Drosophila_yakuba
+|    |              |         +--| (98)
+|    |              |         |  +--------------Drosophila_virilis
+|    |              +---------| (100)
+|    |                        |              +------Haematobia_irritans
+|    |                        |           +--| (90)
+|    |                        |           |  |    +--Haematobosca_croceicomis_1
+|    |                        |           |  +----| (100)
+|    |                        |           |       +--Heamatobosca_croceicomis_2
+|    |                        |        +--| (86)
+|    |                        |        |  |                    +--Prostomoxys_saegerae_1
+|    |                        |        |  |              +-----| (100)
+|    |                        |        |  |              |     +--Prostomoxyssaegerae_2
+|    |                        |        |  |           +--| (57)
+|    |                        |        |  |           |  |   +--S_varipes_1
+|    |                        |        |  |           |  +---| (100)
+|    |                        |        |  |           |      +--S_varipes_2
+|    |                        |        |  |        +--| (35)
+|    |                        |        |  |        |  |         +--S_bengalensis_1
+|    |                        |        |  |        |  |     +---| (100)
+|    |                        |        |  |        |  |     |   +--S_bengalensis_2
+|    |                        |        |  |        |  |  +--| (98)
+|    |                        |        |  |        |  |  |  |     +--S_sitiens_1
+|    |                        |        |  |        |  |  |  |  +--| (100)
+|    |                        |        |  |        |  |  |  |  |  +--S_sitiens_2
+|    |                        |        |  |        |  |  |  +--| (100)
+|    |                        |        |  |        |  |  |     +--S_sitiens_Burkina_Faso
+|    |                        |        |  |        |  +--| (86)
+|    |                        |        |  |        |     |        +--S_calcitrans_Africa
+|    |                        |        |  |        |     |     +--| (100)
+|    |                        |        |  |        |     |     |  +--S_calcitrans_India
+|    |                        |        |  |        |     |  +--| (66)
+|    |                        |        |  |        |     |  |  +--S_calcitrans_Thailand_2
+|    |                        |        |  |        |     +--| (100)
+|    |                        |        |  |        |        +--S_calcitrans_Thailand_1
+|    |                        |        |  |     +--| (74)
+|    |                        |        |  |     |  |     +--S_niger_bilineatus_1
+|    |                        |        |  |     |  |  +--| (100)
+|    |                        |        |  |     |  |  |  +--S_niger_bilineatus_2
+|    |                        |        |  |     |  +--| (64)
+|    |                        |        |  |     |     |   +--S_niger_niger_1
+|    |                        |        |  |     |     +---| (100)
+|    |                        |        |  |     |         +--S_niger_niger_2
+|    |                        |        |  |  +--| (98)
+|    |                        |        |  |  |  |         +--S_inornatus_1
+|    |                        |        |  |  |  |     +---| (100)
+|    |                        |        |  |  |  |     |   +--S_inornatus_2
+|    |                        |        |  |  |  |  +--| (86)
+|    |                        |        |  |  |  |  |  |      +--S_transvittatus_1
+|    |                        |        |  |  |  |  |  +------| (100)
+|    |                        |        |  |  |  |  |         +--S_transvittatus_2
+|    |                        |        |  |  |  +--| (78)
+|    |                        |        |  |  |     |     +--S_omega_1
+|    |                        |        |  |  |     |  +--| (100)
+|    |                        |        |  |  |     |  |  +--S_omega_2
+|    |                        |        |  |  |     +--| (100)
+|    |                        |        |  |  |        |    +--S_pallidus_1
+|    |                        |        |  |  |        +----| (100)
+|    |                        |        |  |  |             +--S_pallidus_2
+|    |                        |        |  +--| (97)
+|    |                        |        |     |       +--S_indicus_1
+|    |                        |        |     +-------| (100)
+|    |                        |        |             +--S_indicus_2
+|    |                        +--------| (100)
+|    |                                 +-----Musca_domestica
++----| (98)
+     +-------------Simosyrphus_grandicornis
+
+
+Consensus tree in newick format: 
+
+(Cheilosia_longula:0.1143656571,Cheilosia_naruska:0.1710970033,(((Dolichopus_excisus:0.0817355736,Dolichopus_nubilus:0.0320634781)100:0.4346152509,(((Drosophila_melanogaster:0.1474615154,Drosophila_yakuba:0.0917537012)100:0.2575185205,Drosophila_virilis:0.3413361651)98:0.0891813690,(((Haematobia_irritans:0.1620535761,(Haematobosca_croceicomis_1:0.0254348904,Heamatobosca_croceicomis_2:0.0028978838)100:0.1189730064)90:0.0491151171,((((((Prostomoxys_saegerae_1:0.0012548017,Prostomoxyssaegerae_2:0.0064293502)100:0.1545496616,(S_varipes_1:0.0013905677,S_varipes_2:0.0000021961)100:0.0961493932)57:0.0213323579,(((S_bengalensis_1:0.0000021961,S_bengalensis_2:0.0000021961)100:0.0912674744,((S_sitiens_1:0.0000021961,S_sitiens_2:0.0008012422)100:0.0500204180,S_sitiens_Burkina_Faso:0.0515003475)100:0.0460717397)98:0.0380675516,(((S_calcitrans_Africa:0.0302954034,S_calcitrans_India:0.0007668075)100:0.0331459586,S_calcitrans_Thailand_2:0.0005367402)66:0.0012949118,S_calcitrans_Thailand_1:0.0000020511)100:0.0825289776)86:0.0308300197)35:0.0150418443,((S_niger_bilineatus_1:0.0029085600,S_niger_bilineatus_2:0.0040928468)100:0.0846983147,(S_niger_niger_1:0.0083488495,S_niger_niger_2:0.0033061410)100:0.1099110533)64:0.0121082362)74:0.0235760518,(((S_inornatus_1:0.0087435801,S_inornatus_2:0.0006404928)100:0.1111513308,(S_transvittatus_1:0.0058958541,S_transvittatus_2:0.0113600545)100:0.1785361448)86:0.0293659065,((S_omega_1:0.0052370954,S_omega_2:0.0010390705)100:0.0814292189,(S_pallidus_1:0.0035860101,S_pallidus_2:0.0016334253)100:0.1165552885)100:0.0667440365)78:0.0188950163)98:0.0739784928,(S_indicus_1:0.0000021961,S_indicus_2:0.0077743655)100:0.1899667336)97:0.0545708483)86:0.0625661761,Musca_domestica:0.1565309694)100:0.2079355451)100:0.2413808452)100:0.3440448879,Simosyrphus_grandicornis:0.3268109942)98:0.1357043399);
+
+TIME STAMP
+----------
+
+Date and time: Fri Sep  7 09:33:50 2018
+Total CPU time used: 89.298943 seconds (0h:1m:29s)
+Total wall-clock time used: 568.5052879 seconds (0h:9m:28s)
+

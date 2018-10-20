@@ -1,0 +1,356 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../RobAlignments/1_Devitt_2013_partitions.nex
+Input file name: ../../../RobAlignments/1_Devitt_2013.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 470752
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 69 taxa with 4 partitions and 823 total sites (0% missing data)
+
+  ID  Name      Type	Seq	Site	Unique	Infor	Invar	Const
+   1  ND4_pos1  DNA	43	229	23	13	209	209
+   2  ND4_pos2  DNA	43	228	6	0	226	226
+   3  ND4_pos3  DNA	43	229	48	40	165	165
+   4  tRNAs     DNA	43	137	23	12	120	120
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: HKY+F+I:ND4_pos1,F81+F:ND4_pos2,TN+F+G4:ND4_pos3,HKY+F+I:tRNAs
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  HKY+F+I           -474.2316    960.4633 + 0.0000    960.8416 + 0.0000    981.0656 + 0.0000
+   2  F81+F             -316.1842    640.3684 + 0.0000    640.5478 + 0.0000    654.0858 + 0.0000
+   3  TN+F+G4           -694.6472   1403.2943 + 0.0000   1403.8011 + 0.0000   1427.3304 + 0.0000
+   4  HKY+F+I           -313.1582    638.3163 + 0.0000    638.9625 + 0.0000    655.8362 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  HKY+F+I        0.6116  HKY{14.7474}+F{0.34376,0.223317,0.164822,0.268102}+I{0.847265}
+   2  F81+F          0.0570  F81
+   3  TN+F+G4        2.4293  TN{94.7045,15.2154}+F{0.470899,0.20904,0.0269172,0.293144}+G4{0.966957}
+   4  HKY+F+I        0.8293  HKY{12.6001}+F{0.374444,0.183202,0.131714,0.31064}+I{0.752897}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -1795.1298 (s.e. 71.6302)
+Unconstrained log-likelihood (without tree): -1512.2696
+Number of free parameters (#branches + #model parameters): 105
+Akaike information criterion (AIC) score: 3800.2595
+Corrected Akaike information criterion (AICc) score: 3831.3055
+Bayesian information criterion (BIC) score: 4295.1199
+
+Total tree length (sum of branch lengths): 0.2293
+Sum of internal branch lengths: 0.0609 (26.5457% of tree length)
+
+WARNING: 21 near-zero internal branches (<0.0012) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'croc_TJD307_ND4' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-----------------------------------------------------------croc_TJD307_ND4
+|
+|                 +**MVZ229220_ND4
+|              +**| (90)
+|              |  +**SDFIELD1167_ND4
++--------------| (99)
+|              +--SDFIELD1343_ND4
+|
+|             +**TJD273_ND4
+|  +----------| (99)
+|  |          +**TJD300_ND4
++--| (82)
+   |                    +**SDFIELD573_ND4
+   |     +--------------| (100)
+   |     |              +**SDFIELD574_ND4
+   +-----| (98)
+         |        +---SDFIELD1158_ND4
+         |     +--| (39)
+         |     |  |     +--TJD458_ND4
+         |     |  |  +**| (71)
+         |     |  |  |  |     +**TJD358_ND4
+         |     |  |  |  |  +**| (79)
+         |     |  |  |  |  |  +**TJD359_ND4
+         |     |  |  |  +--| (89)
+         |     |  |  |     |  +**TJD369_ND4
+         |     |  |  |     +--| (97)
+         |     |  |  |        +**TJD377_ND4
+         |     |  +**| (39)
+         |     |     |  +--TJD434_ND4
+         |     |     +--| (56)
+         |     |        |  +**TJD455_ND4
+         |     |        +**| (84)
+         |     |           +**TJD457_ND4
+         |  +--| (79)
+         |  |  |     +--TJD438_ND4
+         |  |  |  +--| (92)
+         |  |  |  |  +--TJD439_ND4
+         |  |  +**| (30)
+         |  |     |                             +**TJD460_ND4
+         |  |     |                          +--| (99)
+         |  |     |                          |  +**TJD462_ND4
+         |  |     |                       +**| (26)
+         |  |     |                       |  |        +**TJD445_ND4
+         |  |     |                       |  |     +**| (98)
+         |  |     |                       |  |     |  +**TJD497_ND4
+         |  |     |                       |  |  +**| (50)
+         |  |     |                       |  |  |  |  +**TJD444_ND4
+         |  |     |                       |  |  |  +**| (97)
+         |  |     |                       |  |  |     +**TJD449_ND4
+         |  |     |                       |  +**| (90)
+         |  |     |                       |     +**TJD447_ND4
+         |  |     |                    +**| (24)
+         |  |     |                    |  +--TJD459_ND4
+         |  |     |                 +**| (11)
+         |  |     |                 |  +**TJD456_ND4
+         |  |     |              +**| (6)
+         |  |     |              |  +**MVZ195628_ND4
+         |  |     |           +**| (16)
+         |  |     |           |  +**MVZ207643_ND4
+         |  |     |        +**| (13)
+         |  |     |        |  +**TJD454_ND4
+         |  |     |     +**| (17)
+         |  |     |     |  |  +**TJD452_ND4
+         |  |     |     |  +--| (100)
+         |  |     |     |     +**TJD453_ND4
+         |  |     |  +--| (74)
+         |  |     |  |  |  +--MVZ236191_ND4
+         |  |     |  |  +**| (95)
+         |  |     |  |     |  +**TJD464_ND4
+         |  |     |  |     +**| (67)
+         |  |     |  |        +**TJD465_ND4
+         |  |     +--| (66)
+         |  |        +**MVZ207642_ND4
+         +--| (90)
+            |            +**TJD433_ND4
+            |         +**| (78)
+            |         |  +**TJD436_ND4
+            |     +---| (100)
+            |     |   +**TJD430_ND4
+            |  +--| (91)
+            |  |  |  +**TJD431_ND4
+            |  |  +**| (93)
+            |  |     +**TJD432_ND4
+            +--| (93)
+               +--JFP_517_ND4
+
+Tree in newick format:
+
+(croc_TJD307_ND4:0.0844764924,((MVZ229220_ND4:0.0000020548,SDFIELD1167_ND4:0.0000020548)90:0.0000020548,SDFIELD1343_ND4:0.0024941737)99:0.0222000196,((TJD273_ND4:0.0011396822,TJD300_ND4:0.0000020548)99:0.0168410001,((SDFIELD573_ND4:0.0000020548,SDFIELD574_ND4:0.0000020548)100:0.0221753514,(((SDFIELD1158_ND4:0.0056703582,((TJD458_ND4:0.0024293046,((TJD358_ND4:0.0000020548,TJD359_ND4:0.0000020548)79:0.0000024285,(TJD369_ND4:0.0000020548,TJD377_ND4:0.0000020548)97:0.0012338754)89:0.0023978588)71:0.0011954768,(TJD434_ND4:0.0036460138,(TJD455_ND4:0.0011533635,TJD457_ND4:0.0000020548)84:0.0000021227)56:0.0012611968)39:0.0007165943)39:0.0015967996,((TJD438_ND4:0.0012311562,TJD439_ND4:0.0012324884)92:0.0012338211,((((((((((TJD460_ND4:0.0000020548,TJD462_ND4:0.0000020548)99:0.0024851725,(((TJD445_ND4:0.0000020548,TJD497_ND4:0.0000020548)98:0.0011818701,(TJD444_ND4:0.0011824790,TJD449_ND4:0.0000021914)97:0.0011807378)50:0.0000021642,TJD447_ND4:0.0012105119)90:0.0012029241)26:0.0000022175,TJD459_ND4:0.0024945162)24:0.0000020295,TJD456_ND4:0.0000020548)11:0.0000020956,MVZ195628_ND4:0.0000020548)6:0.0000020548,MVZ207643_ND4:0.0000020548)16:0.0000020548,TJD454_ND4:0.0000020548)13:0.0000020895,(TJD452_ND4:0.0000022443,TJD453_ND4:0.0000022455)100:0.0012631042)17:0.0000021954,(MVZ236191_ND4:0.0023860563,(TJD464_ND4:0.0000020548,TJD465_ND4:0.0000020548)67:0.0000020980)95:0.0012022327)74:0.0012261470,MVZ207642_ND4:0.0000020420)66:0.0012434407)30:0.0000022746)79:0.0012403582,((((TJD433_ND4:0.0000020548,TJD436_ND4:0.0000020548)78:0.0000020548,TJD430_ND4:0.0011695545)100:0.0067718517,(TJD431_ND4:0.0000020548,TJD432_ND4:0.0000020548)93:0.0005750813)91:0.0028926901,JFP_517_ND4:0.0027085759)93:0.0040633923)90:0.0033775429)98:0.0098543579)82:0.0039348438);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -1795.353747
+Robinson-Foulds distance between ML tree and consensus tree: 12
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----------------------------------------------------------croc_TJD307_ND4
+|
+|                 +--MVZ229220_ND4
+|              +--| (90)
+|              |  +--SDFIELD1167_ND4
++--------------| (99)
+|              +--SDFIELD1343_ND4
+|
+|             +--TJD273_ND4
+|  +----------| (99)
+|  |          +--TJD300_ND4
++--| (82)
+   |                           +**SDFIELD573_ND4
+   |                        +**|
+   |                        |  +**SDFIELD736_ND4
+   |                     +--|
+   |                     |  +**SDFIELD901_ND4
+   |      +--------------| (100)
+   |      |              +--SDFIELD574_ND4
+   +------| (98)
+          |        +---SDFIELD1158_ND4
+          |     +--| (39)
+          |     |  |     +--TJD458_ND4
+          |     |  |  +--| (71)
+          |     |  |  |  |                       +**TJD358_ND4
+          |     |  |  |  |                    +**|
+          |     |  |  |  |                    |  +**TJD503_ND4
+          |     |  |  |  |                 +**|
+          |     |  |  |  |                 |  +**TJD372_ND4
+          |     |  |  |  |              +**|
+          |     |  |  |  |              |  +**TJD502_ND4
+          |     |  |  |  |           +**|
+          |     |  |  |  |           |  +**TJD365_ND4
+          |     |  |  |  |        +**|
+          |     |  |  |  |        |  +**TJD363_ND4
+          |     |  |  |  |     +--|
+          |     |  |  |  |     |  +**TJD495_ND4
+          |     |  |  |  |  +--| (79)
+          |     |  |  |  |  |  +--TJD359_ND4
+          |     |  |  |  +--| (89)
+          |     |  |  |     |        +**TJD369_ND4
+          |     |  |  |     |     +**|
+          |     |  |  |     |     |  +**TJD380_ND4
+          |     |  |  |     |  +--|
+          |     |  |  |     |  |  +**TJD491_ND4
+          |     |  |  |     +--| (97)
+          |     |  |  |        +--TJD377_ND4
+          |     |  +--| (39)
+          |     |     |  +--TJD434_ND4
+          |     |     +--| (56)
+          |     |        |  +--TJD455_ND4
+          |     |        +--| (84)
+          |     |           +--TJD457_ND4
+          |  +--| (79)
+          |  |  |     +--TJD438_ND4
+          |  |  |  +--| (92)
+          |  |  |  |  +--TJD439_ND4
+          |  |  +--| (30)
+          |  |     |              +**TJD460_ND4
+          |  |     |           +--|
+          |  |     |           |  +**TJD463_ND4
+          |  |     |        +--| (99)
+          |  |     |        |  +--TJD462_ND4
+          |  |     |     +--| (24)
+          |  |     |     |  |  +--TJD459_ND4
+          |  |     |     |  +--| (36)
+          |  |     |     |     |        +--TJD445_ND4
+          |  |     |     |     |     +--| (98)
+          |  |     |     |     |     |  +--TJD497_ND4
+          |  |     |     |     |  +--| (50)
+          |  |     |     |     |  |  |  +--TJD444_ND4
+          |  |     |     |     |  |  +--| (97)
+          |  |     |     |     |  |     +--TJD449_ND4
+          |  |     |     |     +--| (90)
+          |  |     |     |        +--TJD447_ND4
+          |  |     |  +--| (74)
+          |  |     |  |  |           +--MVZ236191_ND4
+          |  |     |  |  |        +--| (95)
+          |  |     |  |  |        |  |        +**TJD464_ND4
+          |  |     |  |  |        |  |     +**|
+          |  |     |  |  |        |  |     |  +**TJD466_ND4
+          |  |     |  |  |        |  |  +--|
+          |  |     |  |  |        |  |  |  +**TJD467_ND4
+          |  |     |  |  |        |  +--| (67)
+          |  |     |  |  |        |     +--TJD465_ND4
+          |  |     |  |  |     +--| (37)
+          |  |     |  |  |     |  |  +--TJD452_ND4
+          |  |     |  |  |     |  +--| (100)
+          |  |     |  |  |     |     +--TJD453_ND4
+          |  |     |  |  |  +--| (26)
+          |  |     |  |  |  |  +--TJD454_ND4
+          |  |     |  |  +--| (25)
+          |  |     |  |     |                                      +**MVZ195628_ND4
+          |  |     |  |     |                                   +**|
+          |  |     |  |     |                                   |  +**TJD499_ND4
+          |  |     |  |     |                                +**|
+          |  |     |  |     |                                |  +**TJD496_ND4
+          |  |     |  |     |                             +**|
+          |  |     |  |     |                             |  +**TJD446_ND4
+          |  |     |  |     |                          +**|
+          |  |     |  |     |                          |  +**TJD501_ND4
+          |  |     |  |     |                       +**|
+          |  |     |  |     |                       |  +**TJD448_ND4
+          |  |     |  |     |                    +**|
+          |  |     |  |     |                    |  +**TJD450_ND4
+          |  |     |  |     |                 +**|
+          |  |     |  |     |                 |  +**TJD451_ND4
+          |  |     |  |     |              +**|
+          |  |     |  |     |              |  +**TJD469_ND4
+          |  |     |  |     |           +**|
+          |  |     |  |     |           |  +**TJD461_ND4
+          |  |     |  |     |        +**|
+          |  |     |  |     |        |  +**TJD468_ND4
+          |  |     |  |     |     +--|
+          |  |     |  |     |     |  +**TJD500_ND4
+          |  |     |  |     |  +--| (52)
+          |  |     |  |     |  |  +--MVZ207643_ND4
+          |  |     |  |     +--| (23)
+          |  |     |  |        +--TJD456_ND4
+          |  |     +--| (66)
+          |  |        +--MVZ207642_ND4
+          +--| (90)
+             |                  +**TJD433_ND4
+             |               +**|
+             |               |  +**TP29472A_ND4
+             |            +--|
+             |            |  +**TJD437_ND4
+             |         +--| (78)
+             |         |  +--TJD436_ND4
+             |     +---| (100)
+             |     |   +--TJD430_ND4
+             |  +--| (91)
+             |  |  |  +--TJD431_ND4
+             |  |  +--| (93)
+             |  |     +--TJD432_ND4
+             +--| (93)
+                +--JFP_517_ND4
+
+
+Consensus tree in newick format: 
+
+(croc_TJD307_ND4:0.0842553045,((MVZ229220_ND4:0.0000021904,SDFIELD1167_ND4:0.0000021904)90:0.0000021904,SDFIELD1343_ND4:0.0024907908)99:0.0220486957,((TJD273_ND4:0.0011385011,TJD300_ND4:0.0000021904)99:0.0168167249,((((SDFIELD573_ND4:0.0000000000,SDFIELD736_ND4:0.0000000000):0.0000000000,SDFIELD901_ND4:0.0000000000):0.0000021904,SDFIELD574_ND4:0.0000021904)100:0.0221037876,(((SDFIELD1158_ND4:0.0056417807,((TJD458_ND4:0.0031811450,((((((((TJD358_ND4:0.0000000000,TJD503_ND4:0.0000000000):0.0000000000,TJD372_ND4:0.0000000000):0.0000000000,TJD502_ND4:0.0000000000):0.0000000000,TJD365_ND4:0.0000000000):0.0000000000,TJD363_ND4:0.0000000000):0.0000000000,TJD495_ND4:0.0000000000):0.0000021904,TJD359_ND4:0.0000021904)79:0.0000021904,(((TJD369_ND4:0.0000000000,TJD380_ND4:0.0000000000):0.0000000000,TJD491_ND4:0.0000000000):0.0000021904,TJD377_ND4:0.0000021904)97:0.0012300169)89:0.0017074404)71:0.0012434492,(TJD434_ND4:0.0030358131,(TJD455_ND4:0.0011514468,TJD457_ND4:0.0000021904)84:0.0005931396)56:0.0013892852)39:0.0000021904)39:0.0015927869,((TJD438_ND4:0.0012265681,TJD439_ND4:0.0012279227)92:0.0012291245,(((((TJD460_ND4:0.0000000000,TJD463_ND4:0.0000000000):0.0000021904,TJD462_ND4:0.0000021904)99:0.0024744704,(TJD459_ND4:0.0024843203,(((TJD445_ND4:0.0000021904,TJD497_ND4:0.0000021904)98:0.0011773560,(TJD444_ND4:0.0011780503,TJD449_ND4:0.0000021904)97:0.0011763069)50:0.0000021904,TJD447_ND4:0.0012062312)90:0.0011984704)36:0.0000021904)24:0.0000021904,((((MVZ236191_ND4:0.0023765659,(((TJD464_ND4:0.0000000000,TJD466_ND4:0.0000000000):0.0000000000,TJD467_ND4:0.0000000000):0.0000021904,TJD465_ND4:0.0000021904)67:0.0000021904)95:0.0011980149,(TJD452_ND4:0.0000021904,TJD453_ND4:0.0000021904)100:0.0012586645)37:0.0000021904,TJD454_ND4:0.0000021904)26:0.0000021904,(((((((((((((MVZ195628_ND4:0.0000000000,TJD499_ND4:0.0000000000):0.0000000000,TJD496_ND4:0.0000000000):0.0000000000,TJD446_ND4:0.0000000000):0.0000000000,TJD501_ND4:0.0000000000):0.0000000000,TJD448_ND4:0.0000000000):0.0000000000,TJD450_ND4:0.0000000000):0.0000000000,TJD451_ND4:0.0000000000):0.0000000000,TJD469_ND4:0.0000000000):0.0000000000,TJD461_ND4:0.0000000000):0.0000000000,TJD468_ND4:0.0000000000):0.0000000000,TJD500_ND4:0.0000000000):0.0000021904,MVZ207643_ND4:0.0000021904)52:0.0000021904,TJD456_ND4:0.0000021904)23:0.0000021904)25:0.0000021904)74:0.0012216008,MVZ207642_ND4:0.0000021904)66:0.0012384167)30:0.0000021904)79:0.0012370250,((((((TJD433_ND4:0.0000000000,TP29472A_ND4:0.0000000000):0.0000000000,TJD437_ND4:0.0000000000):0.0000021904,TJD436_ND4:0.0000021904)78:0.0000021904,TJD430_ND4:0.0011664561)100:0.0067466048,(TJD431_ND4:0.0000021904,TJD432_ND4:0.0000021904)93:0.0005814792)91:0.0028813480,JFP_517_ND4:0.0027005935)93:0.0040485653)90:0.0033720542)98:0.0098360467)82:0.0040784235);
+
+TIME STAMP
+----------
+
+Date and time: Thu Sep  6 17:28:10 2018
+Total CPU time used: 83.871215 seconds (0h:1m:23s)
+Total wall-clock time used: 436.63082 seconds (0h:7m:16s)
+

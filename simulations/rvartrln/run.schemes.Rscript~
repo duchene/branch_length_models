@@ -1,0 +1,76 @@
+require(phangorn)
+require(NELSI)
+source("../../readIQ.R")
+source("../stemmy.R")
+trs <- read.tree("../chrons.tre")
+seqlens <- c(1000, 2000, 4000, 8000)
+taxa <- c(4, 8, 16, 32)
+
+ratogs32 <- list()
+for(i in 1:100) ratogs32[[i]] <- simulate.uncor.lnorm(trs[[4]], params = list(mean.log = log(0.01), sd.log = 0.2))[[1]]
+for(i in 101:200) ratogs32[[i]] <- simulate.uncor.lnorm(trs[[4]], params = list(mean.log = log(0.011), sd.log = 0.2))[[1]]
+
+for(i in 1:4){
+	for(j in 1:4){
+		system(paste0("mkdir sqln", seqlens[i], "tx", taxa[j]))
+		setwd(paste0("sqln", seqlens[i], "tx", taxa[j]))
+		res <- matrix(NA, 3, 100)
+		rownames(res) <- c("mod3", "mod5", "mod7")
+		trlendif <- matrix(NA, 3, 100)
+		rownames(trlendif) <- c("mod3", "mod5", "mod7")
+		trstemdif <- matrix(NA, 3, 100)
+		rownames(trstemdif) <- c("mod3", "mod5", "mod7")
+		trdist <- matrix(NA, 3, 100)
+		rownames(trdist) <- c("mod3", "mod5", "mod7")
+		ratogs <- ratogs32
+		if(taxa[j] < 32) for(l in 1:200) ratogs[[l]] <- drop.tip(ratogs[[l]], paste0("t", (taxa[j]+1):32))
+		for(k in 1:100){
+			ratogs[[k]]$edge.length[which(ratogs[[k]]$edge[,1] == (Ntip(ratogs[[k]]) + 1))[1]] <- 0
+			ratogs[[k+100]]$edge.length[which(ratogs[[k+100]]$edge[,1] == (Ntip(ratogs[[k+100]]) + 1))[1]] <- 0
+			al1 <- simSeq(ratogs[[k]], l = seqlens[i]/2)
+			al2 <- simSeq(ratogs[[k+100]], l = seqlens[i]/2)
+			al <- cbind(al1, al2)
+			write.dna(as.DNAbin(al), format = "fasta", file = "al.fasta")
+			system(paste0("~/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s al.fasta -m TEST -bb 1000 -q ../../part", seqlens[i], ".nex -nt 2 -redo -pre 3_scheme"))
+			system(paste0("~/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s al.fasta -m TEST -bb 1000 -spp ../../part", seqlens[i], ".nex -nt 2 -redo -pre 5_scheme"))
+			system(paste0("~/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s al.fasta -m TEST -bb 1000 -sp ../../part", seqlens[i], ".nex -nt 2 -redo -pre 7_scheme"))
+			
+			out3 <- readIQ("3_scheme.iqtree")
+			out5 <- readIQ("5_scheme.iqtree")
+			out7 <- readIQ("7_scheme.iqtree")
+			
+			trs <- list(tr3 = out3$tree, tr5 = out3$tree, tr7 = out7$tree)
+			
+			res[1, k] <- out3$stats["bic"]
+			res[2, k] <- out5$stats["bic"]
+			res[3, k] <- out7$stats["bic"]
+			
+			truelen <- mean(c(sum(ratogs[[k]]$edge.length), sum(ratogs[[k+100]]$edge.length)))
+			truestem <- mean(c(stemmy(ratogs[[k]]), stemmy(ratogs[[k+100]])))
+			
+			trlendif[1, k] <- (sum(out3$tree$edge.length) - truelen) / truelen
+			trlendif[2, k] <- (sum(out5$tree$edge.length) - truelen) / truelen
+			trlendif[3, k] <- (sum(out7$tree$edge.length) - truelen) / truelen
+			
+			trstemdif[1, k] <- (stemmy(out3$tree) - truestem) / truestem
+			trstemdif[2, k] <- (stemmy(out5$tree) - truestem) / truestem
+			trstemdif[3, k] <- (stemmy(out7$tree) - truestem) / truestem
+			
+			trdist[1, k] <- dist.topo(out3$tree, ratogs[[k]])
+			trdist[2, k] <- dist.topo(out5$tree, ratogs[[k]])
+			trdist[3, k] <- dist.topo(out7$tree, ratogs[[k]])
+					
+		}
+		system("rm 3_scheme*")
+		system("rm 5_scheme*")
+		system("rm 7_scheme*")
+		system("rm al.fasta")
+		modelsup <- apply(res, 2, function(x) which(x == min(x)))
+		save(res, modelsup, trlendif, trstemdif, trdist, out3, out5, out7, file = "res.Rdata")
+		setwd("..")
+	}
+}
+
+
+
+

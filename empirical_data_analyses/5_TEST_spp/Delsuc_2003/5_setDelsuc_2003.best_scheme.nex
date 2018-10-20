@@ -1,0 +1,30 @@
+#nexus
+begin sets;
+  charset ADRA2B_1 = 1-1158\3;
+  charset ADRA2B_2 = 2-1158\3;
+  charset ADRA2B_3 = 3-1158\3;
+  charset BRCA1_1 = 1159-3951\3;
+  charset BRCA1_2 = 1160-3951\3;
+  charset BRCA1_3 = 1161-3951\3;
+  charset VWF_1 = 3952-5113\3;
+  charset VWF_2 = 3953-5113\3;
+  charset VWF_3 = 3954-5113\3;
+  charset 12S_rRNA = 5114-6011;
+  charset ND1_1 = 6012-6968\3;
+  charset ND1_2 = 6013-6968\3;
+  charset ND1_3 = 6014-6968\3;
+  charpartition mymodels =
+    TN+F+I: ADRA2B_1,
+    TIM3+F+G4: ADRA2B_2,
+    GTR+F+G4: ADRA2B_3,
+    HKY+F+G4: BRCA1_1,
+    HKY+F+G4: BRCA1_2,
+    HKY+F+G4: BRCA1_3,
+    HKY+F+I: VWF_1,
+    K2P+I: VWF_2,
+    TPM2u+F+G4: VWF_3,
+    TIM2+F+I+G4: 12S_rRNA,
+    TIM2e+I: ND1_1,
+    HKY+F+I+G4: ND1_2,
+    TPM3u+F+I+G4: ND1_3;
+end;

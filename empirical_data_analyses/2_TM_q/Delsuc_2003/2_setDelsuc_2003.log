@@ -1,0 +1,322 @@
+IQ-TREE multicore version 1.6.7 for Mac OS X 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meeps-mac-pro.staff.sydney.edu.au (AVX, 64 GB RAM)
+Command: /Users/davidduchene/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s ../../../RobAlignments/1_Delsuc_2003.fasta -m TESTMERGE -bb 1000 -q ../../../RobAlignments/1_Delsuc_2003_partitions.nex -nt 2 -pre 2_setDelsuc_2003
+Seed:    942182 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Sep  7 08:38:18 2018
+Kernel:  AVX - 2 threads (8 CPU cores detected)
+
+Reading partition model file ../../../RobAlignments/1_Delsuc_2003_partitions.nex ...
+Reading alignment file ../../../RobAlignments/1_Delsuc_2003.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 13 sequences with 6968 columns, 1181 distinct patterns
+1444 parsimony-informative, 758 singleton sites, 4766 constant sites
+                      Gap/Ambiguity  Composition  p-value
+   1  Bradypus                0.59%    passed     82.56%
+   2  Choloepus               0.29%    passed     85.01%
+   3  Cyclopes                0.29%    passed     31.57%
+   4  Tamandua                1.02%    passed     82.46%
+   5  Myrmecophaga            0.14%    passed     92.38%
+   6  Dasypus_kappleri        2.34%    passed     93.37%
+   7  Dasypus_novemcinctus    0.96%    passed     96.58%
+   8  Cabassous               0.82%    passed     96.37%
+   9  Priodontes              0.66%    passed     99.83%
+  10  Tolypeutes              0.42%    passed     86.21%
+  11  Chaetophractus          0.16%    passed     99.37%
+  12  Euphractus              0.67%    passed     99.77%
+  13  Zaedyus                 0.22%    passed     99.67%
+****  TOTAL                   0.66%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 13 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		13	386	68	288	TESTMERGE	ADRA2B_1
+2		13	386	64	292	TESTMERGE	ADRA2B_2
+3		13	386	104	226	TESTMERGE	ADRA2B_3
+4		13	931	110	715	TESTMERGE	BRCA1_1
+5		13	931	130	714	TESTMERGE	BRCA1_2
+6		13	931	158	684	TESTMERGE	BRCA1_3
+7		13	388	71	284	TESTMERGE	VWF_1
+8		13	387	47	316	TESTMERGE	VWF_2
+9		13	387	100	211	TESTMERGE	VWF_3
+10		13	898	235	554	TESTMERGE	12S_rRNA
+11		13	319	92	193	TESTMERGE	ND1_1
+12		13	319	31	262	TESTMERGE	ND1_2
+13		13	319	234	27	TESTMERGE	ND1_3
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
+NOTE: ModelFinder requires 10 MB RAM!
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -29062.870 / df: 32 / AIC: 58189.740 / AICc: 58190.045 / BIC: 58408.911
+Selecting individual models for 13 charsets using BIC...
+ No. Model        Score       Charset
+   1 TIM2+F+I+G4  9052.170    12S_rRNA
+   2 HKY+F+G4     6030.441    BRCA1_3
+   3 HKY+F+I+G4   7443.378    ND1_3
+   4 HKY+F+G4     5690.273    BRCA1_1
+   5 GTR+F+G4     3290.440    ADRA2B_3
+   6 TPM2u+F+G4   3502.858    VWF_3
+   7 HKY+F+G4     5707.338    BRCA1_2
+   8 TIM2e+I      3304.771    ND1_1
+   9 TN+F+G4      2746.715    ADRA2B_1
+  10 TPM3u+F+G4   2660.224    ADRA2B_2	0h:0m:16s (0h:4m:8s left)
+  11 HKY+F+G4     2675.223    VWF_1	0h:0m:17s (0h:3m:47s left)
+  12 K2P+G4       2325.108    VWF_2	0h:0m:18s (0h:3m:37s left)
+  13 TN+F+I+G4    1774.475    ND1_2	0h:0m:18s (0h:3m:29s left)
+Full partition model BIC score: 56604.275 (LnL: -27872.957  df:97)
+Merging models to increase model fit (about 157 total partition schemes)...
+  14 GTR+F+I+G4   56692.400   BRCA1_3+12S_rRNA	0h:0m:22s (0h:3m:45s left)
+  15 TVM+F+I+G4   56888.483   BRCA1_3+ND1_3	0h:0m:28s (0h:4m:26s left)
+  16 TIM2+F+I+G4  56705.049   12S_rRNA+ND1_3	0h:0m:28s (0h:4m:13s left)
+  17 TIM2+F+I+G4  56642.471   BRCA1_1+12S_rRNA	0h:0m:32s (0h:4m:25s left)
+  18 TIM2+F+I+G4  56814.149   BRCA1_1+ND1_3	0h:0m:35s (0h:4m:31s left)
+  19 GTR+F+I+G4   57078.501   ADRA2B_3+12S_rRNA	0h:0m:35s (0h:4m:18s left)
+  20 TIM2+F+I+G4  56592.436   BRCA1_2+12S_rRNA	0h:0m:38s (0h:4m:26s left)
+  21 GTR+F+G4     57142.879   ADRA2B_3+ND1_3	0h:0m:40s (0h:4m:22s left)
+  22 GTR+F+I+G4   57064.060   VWF_3+12S_rRNA	0h:0m:42s (0h:4m:21s left)
+  23 GTR+F+G4     57137.133   VWF_3+ND1_3	0h:0m:46s (0h:4m:28s left)
+  24 TIM2+F+I+G4  56775.202   BRCA1_2+ND1_3	0h:0m:49s (0h:4m:32s left)
+  25 TIM2+F+I+G4  56583.342   12S_rRNA+ND1_1	0h:0m:50s (0h:4m:27s left)
+  26 TIM2+F+I+G4  56743.297   ADRA2B_1+12S_rRNA	0h:0m:53s (0h:4m:30s left)
+  27 TIM2+F+I+G4  56736.872   ND1_1+ND1_3	0h:0m:56s (0h:4m:29s left)
+  28 TIM2+F+I+G4  56900.353   ADRA2B_1+ND1_3	0h:0m:59s (0h:4m:33s left)
+  29 TIM2+F+I+G4  56675.039   ADRA2B_2+12S_rRNA	0h:0m:59s (0h:4m:23s left)
+  30 TIM2+F+I+G4  56705.818   VWF_1+12S_rRNA	0h:1m:2s (0h:4m:25s left)
+  31 TIM2+F+I+G4  56856.160   ADRA2B_2+ND1_3	0h:1m:5s (0h:4m:24s left)
+  32 TIM2+F+I+G4  56851.499   VWF_1+ND1_3	0h:1m:8s (0h:4m:25s left)
+  33 TIM2+F+I+G4  56612.171   VWF_2+12S_rRNA	0h:1m:8s (0h:4m:17s left)
+  34 TPM3u+F+G4   56714.548   BRCA1_1+BRCA1_3	0h:1m:10s (0h:4m:16s left)
+  35 TVMe+G4      57143.920   ADRA2B_3+BRCA1_3	0h:1m:13s (0h:4m:16s left)
+  36 K3Pu+F+I+G4  56761.360   VWF_2+ND1_3	0h:1m:13s (0h:4m:8s left)
+  37 K3P+G4       57141.346   BRCA1_3+VWF_3	0h:1m:15s (0h:4m:6s left)
+  38 TIM2+F+I+G4  56662.223   12S_rRNA+ND1_2	0h:1m:16s (0h:3m:59s left)
+  39 HKY+F+G4     56619.165   BRCA1_2+BRCA1_3	0h:1m:18s (0h:3m:58s left)
+  40 TIM2+F+G4    56973.678   ADRA2B_3+BRCA1_1	0h:1m:21s (0h:3m:58s left)
+  41 TIM+F+I+G4   56767.260   ND1_2+ND1_3	0h:1m:21s (0h:3m:51s left)
+  42 HKY+F+G4     56615.954   BRCA1_1+BRCA1_2	0h:1m:24s (0h:3m:51s left)
+  43 TIM2+F+G4    56959.629   BRCA1_1+VWF_3	0h:1m:24s (0h:3m:44s left)
+  44 TPM2+F+G4    57035.027   ADRA2B_3+BRCA1_2	0h:1m:26s (0h:3m:42s left)
+  45 TVM+F+G4     56567.058   ADRA2B_3+VWF_3	0h:1m:28s (0h:3m:41s left)
+  46 HKY+F+G4     56656.863   BRCA1_3+ND1_1	0h:1m:29s (0h:3m:36s left)
+  47 TIM+F+G4     57052.602   BRCA1_2+VWF_3	0h:1m:31s (0h:3m:34s left)
+  48 TN+F+G4      56643.042   BRCA1_1+ND1_1	0h:1m:32s (0h:3m:29s left)
+  49 TPM3u+F+G4   56808.337   ADRA2B_1+BRCA1_3	0h:1m:33s (0h:3m:27s left)
+  50 GTR+F+G4     56867.162   ADRA2B_3+ND1_1	0h:1m:34s (0h:3m:21s left)
+  51 TN+F+G4      56617.255   BRCA1_2+ND1_1	0h:1m:36s (0h:3m:20s left)
+  52 GTR+F+G4     56850.920   VWF_3+ND1_1	0h:1m:37s (0h:3m:16s left)
+  53 TPM3u+F+G4   56693.795   ADRA2B_2+BRCA1_3	0h:1m:37s (0h:3m:12s left)
+  54 TPM3+F+G4    56775.877   BRCA1_3+VWF_1	0h:1m:38s (0h:3m:8s left)
+  55 TPM2u+F+G4   56671.770   ADRA2B_1+BRCA1_1	0h:1m:39s (0h:3m:4s left)
+  56 TPM3u+F+G4   56675.010   ADRA2B_2+BRCA1_1	0h:1m:40s (0h:3m:0s left)
+  57 TPM2u+F+G4   56727.470   ADRA2B_1+BRCA1_2	0h:1m:42s (0h:2m:59s left)
+  58 TN+F+I       56664.358   ADRA2B_1+ADRA2B_3	0h:1m:43s (0h:2m:55s left)
+  59 TN+F+G4      56738.673   ADRA2B_2+ADRA2B_3	0h:1m:45s (0h:2m:54s left)
+  60 HKY+F+I      56684.586   ADRA2B_1+VWF_3	0h:1m:46s (0h:2m:52s left)
+  61 HKY+F+G4     56625.023   BRCA1_1+VWF_1	0h:1m:46s (0h:2m:48s left)
+  62 TPM3+F+G4    56620.604   BRCA1_3+VWF_2	0h:1m:48s (0h:2m:46s left)
+  63 HKY+F+G4     56668.841   ADRA2B_2+BRCA1_2	0h:1m:48s (0h:2m:42s left)
+  64 HKY+F+G4     56686.994   ADRA2B_3+VWF_1	0h:1m:50s (0h:2m:40s left)
+  65 HKY+F+G4     56770.541   ADRA2B_2+VWF_3	0h:1m:51s (0h:2m:37s left)
+  66 HKY+F+G4     56690.534   BRCA1_2+VWF_1	0h:1m:52s (0h:2m:35s left)
+  67 TN+F+G4      56705.325   VWF_1+VWF_3	0h:1m:53s (0h:2m:32s left)
+  68 HKY+F+I+G4   56638.248   BRCA1_1+VWF_2	0h:1m:54s (0h:2m:29s left)
+  69 HKY+F+G4     56650.243   BRCA1_3+ND1_2	0h:1m:55s (0h:2m:27s left)
+  70 TIM2+F+I     56669.718   ADRA2B_1+ND1_1	0h:1m:56s (0h:2m:24s left)
+  71 TPM2u+F+G4   56891.448   ADRA2B_3+VWF_2	0h:1m:57s (0h:2m:22s left)
+  72 TIM3e+G4     56631.143   ADRA2B_2+ND1_1	0h:1m:58s (0h:2m:19s left)
+  73 TIM2+F+G4    56606.381   BRCA1_2+VWF_2	0h:2m:0s (0h:2m:18s left)
+  74 K3Pu+F+G4    56922.329   VWF_2+VWF_3	0h:2m:0s (0h:2m:15s left)
+  75 TPM3u+F+I+G4 56767.443   BRCA1_1+ND1_2	0h:2m:2s (0h:2m:13s left)
+  76 TIM2+F+I     56659.679   VWF_1+ND1_1	0h:2m:2s (0h:2m:10s left)
+  77 TIM+F+G4     56894.201   ADRA2B_3+ND1_2	0h:2m:4s (0h:2m:9s left)
+  78 K3Pu+F+G4    56914.900   VWF_3+ND1_2	0h:2m:5s (0h:2m:6s left)
+  79 HKY+F+I+G4   56674.774   BRCA1_2+ND1_2	0h:2m:6s (0h:2m:5s left)
+  80 TIM3+F+G4    56588.564   ADRA2B_1+ADRA2B_2	0h:2m:7s (0h:2m:2s left)
+  81 TN+F+G4      56569.244   ADRA2B_1+VWF_1	0h:2m:9s (0h:2m:1s left)
+  82 HKY+F+I      56613.532   VWF_2+ND1_1	0h:2m:9s (0h:1m:58s left)
+  83 TIM3+F+G4    56604.715   ADRA2B_2+VWF_1	0h:2m:10s (0h:1m:56s left)
+  84 TPM2u+F+G4   56628.960   ND1_1+ND1_2	0h:2m:10s (0h:1m:53s left)
+  85 TIM3e+G4     56646.805   ADRA2B_1+VWF_2	0h:2m:11s (0h:1m:51s left)
+  86 TIM3e+G4     56585.740   ADRA2B_2+VWF_2	0h:2m:12s (0h:1m:49s left)
+  87 TIM3e+G4     56644.285   VWF_1+VWF_2	0h:2m:13s (0h:1m:47s left)
+  88 TPM3u+F+G4   56707.950   ADRA2B_1+ND1_2	0h:2m:13s (0h:1m:44s left)
+  89 TPM3u+F+I+G4 56608.455   ADRA2B_2+ND1_2	0h:2m:14s (0h:1m:42s left)
+  90 TPM3u+F+G4   56725.745   VWF_1+ND1_2	0h:2m:14s (0h:1m:40s left)
+  91 TPM3u+F+I+G4 56611.573   VWF_2+ND1_2	0h:2m:15s (0h:1m:38s left)
+Merging ADRA2B_3+VWF_3 with BIC score: 56567.058 (LnL: -27885.320  df: 90)
+  92 GTR+F+G4     56921.645   ADRA2B_3+VWF_3+ND1_1	0h:2m:20s (0h:1m:38s left)
+  93 K3Pu+F+G4    57472.374   ADRA2B_3+BRCA1_3+VWF_3	0h:2m:20s (0h:1m:36s left)
+  94 TIM+F+G4     57300.173   ADRA2B_3+BRCA1_2+VWF_3	0h:2m:24s (0h:1m:36s left)
+  95 TIM2+F+G4    57169.797   ADRA2B_3+BRCA1_1+VWF_3	0h:2m:24s (0h:1m:34s left)
+  96 TN+F+G4      56998.152   ADRA2B_3+VWF_3+ND1_2	0h:2m:28s (0h:1m:34s left)
+  97 GTR+F+G4     57296.708   ADRA2B_3+VWF_3+12S_rRNA	0h:2m:28s (0h:1m:31s left)
+  98 TPM3u+F+G4   56699.799   ADRA2B_1+ADRA2B_3+VWF_3	0h:2m:31s (0h:1m:31s left)
+  99 HKY+F+G4     56810.826   ADRA2B_2+ADRA2B_3+VWF_3	0h:2m:31s (0h:1m:28s left)
+ 100 TN+F+G4      56730.170   ADRA2B_3+VWF_1+VWF_3	0h:2m:34s (0h:1m:27s left)
+ 101 HKY+F+G4     57013.668   ADRA2B_3+VWF_2+VWF_3	0h:2m:35s (0h:1m:25s left)
+ 102 GTR+F+G4     57262.014   ADRA2B_3+VWF_3+ND1_3	0h:2m:40s (0h:1m:26s left)
+Merging ADRA2B_1+VWF_1 with BIC score: 56532.027 (LnL: -27889.927  df: 85)
+ 103 TIM3+F+G4    56685.324   ADRA2B_1+VWF_1+ND1_2	0h:2m:42s (0h:1m:25s left)
+ 104 TIM3e+G4     56816.115   ADRA2B_1+BRCA1_3+VWF_1	0h:2m:42s (0h:1m:23s left)
+ 105 HKY+F+G4     56616.993   ADRA2B_1+BRCA1_1+VWF_1	0h:2m:44s (0h:1m:21s left)
+ 106 HKY+F+G4     56742.766   ADRA2B_1+ADRA2B_3+VWF_1+VWF_3	0h:2m:46s (0h:1m:20s left)
+ 107 TN+F+I       56624.162   ADRA2B_1+VWF_1+ND1_1	0h:2m:48s (0h:1m:18s left)
+ 108 TPM2+F+G4    56709.672   ADRA2B_1+BRCA1_2+VWF_1	0h:2m:48s (0h:1m:16s left)
+ 109 TIM3+F+G4    56530.246   ADRA2B_1+ADRA2B_2+VWF_1	0h:2m:51s (0h:1m:15s left)
+ 110 TIM3+F+G4    56605.392   ADRA2B_1+VWF_1+VWF_2	0h:2m:52s (0h:1m:13s left)
+ 111 TIM2+F+G4    56897.121   ADRA2B_1+VWF_1+ND1_3	0h:2m:53s (0h:1m:11s left)
+ 112 TIM2+F+I+G4  56741.412   ADRA2B_1+VWF_1+12S_rRNA	0h:2m:55s (0h:1m:10s left)
+Merging 12S_rRNA+ND1_1 with BIC score: 56511.094 (LnL: -27897.159  df: 81)
+ 113 TIM2+F+I+G4  56623.059   BRCA1_3+12S_rRNA+ND1_1	0h:2m:59s (0h:1m:9s left)
+ 114 TIM2+F+I+G4  56557.951   BRCA1_1+12S_rRNA+ND1_1	0h:3m:4s (0h:1m:9s left)
+ 115 TIM2+F+I+G4  56638.500   12S_rRNA+ND1_1+ND1_3	0h:3m:5s (0h:1m:7s left)
+ 116 TIM2+F+I+G4  56568.959   12S_rRNA+ND1_1+ND1_2	0h:3m:9s (0h:1m:7s left)
+ 117 GTR+F+G4     57292.297   ADRA2B_3+VWF_3+12S_rRNA+ND1_1	0h:3m:9s (0h:1m:4s left)
+ 118 TIM2+F+I+G4  56505.412   BRCA1_2+12S_rRNA+ND1_1	0h:3m:13s (0h:1m:3s left)
+ 119 TIM2+F+I+G4  56731.954   ADRA2B_1+VWF_1+12S_rRNA+ND1_1	0h:3m:14s (0h:1m:1s left)
+ 120 TIM2+F+I+G4  56578.057   ADRA2B_2+12S_rRNA+ND1_1	0h:3m:18s (0h:1m:1s left)
+ 121 TIM2+F+I+G4  56520.764   VWF_2+12S_rRNA+ND1_1	0h:3m:19s (0h:0m:59s left)
+Merging ADRA2B_2+VWF_2 with BIC score: 56492.558 (LnL: -27905.589  df: 77)
+ 122 TPM3+F+G4    56584.182   ADRA2B_2+BRCA1_3+VWF_2	0h:3m:21s (0h:0m:57s left)
+ 123 TPM3u+F+I+G4 56581.133   ADRA2B_2+BRCA1_1+VWF_2	0h:3m:21s (0h:0m:55s left)
+ 124 TPM3u+F+I+G4 56558.437   ADRA2B_2+BRCA1_2+VWF_2	0h:3m:23s (0h:0m:54s left)
+ 125 HKY+F+G4     56982.788   ADRA2B_2+ADRA2B_3+VWF_2+VWF_3	0h:3m:24s (0h:0m:52s left)
+ 126 TIM3+F+G4    56553.576   ADRA2B_1+ADRA2B_2+VWF_1+VWF_2	0h:3m:27s (0h:0m:50s left)
+ 127 GTR+F+I+G4   56771.122   ADRA2B_2+VWF_2+ND1_3	0h:3m:29s (0h:0m:49s left)
+ 128 TPM3u+F+I+G4 56509.215   ADRA2B_2+VWF_2+ND1_2	0h:3m:30s (0h:0m:47s left)
+ 129 TIM2+F+I+G4  56574.679   ADRA2B_2+VWF_2+12S_rRNA+ND1_1	0h:3m:31s (0h:0m:45s left)
+Merging BRCA1_2+12S_rRNA+ND1_1 with BIC score: 56486.876 (LnL: -27924.871  df: 72)
+ 130 TIM2+F+I+G4  56540.872   BRCA1_1+BRCA1_2+12S_rRNA+ND1_1	0h:3m:35s (0h:0m:44s left)
+ 131 TIM2+F+I+G4  56586.715   BRCA1_2+BRCA1_3+12S_rRNA+ND1_1	0h:3m:35s (0h:0m:42s left)
+ 132 TIM2+F+I+G4  56760.136   ADRA2B_1+BRCA1_2+VWF_1+12S_rRNA+ND1_1	0h:3m:40s (0h:0m:41s left)
+ 133 TIM+F+I+G4   57445.158   ADRA2B_3+BRCA1_2+VWF_3+12S_rRNA+ND1_1	0h:3m:41s (0h:0m:39s left)
+ 134 TIM2+F+I+G4  56577.473   ADRA2B_2+BRCA1_2+VWF_2+12S_rRNA+ND1_1	0h:3m:44s (0h:0m:38s left)
+ 135 TIM2+F+I+G4  56554.790   BRCA1_2+12S_rRNA+ND1_1+ND1_2	0h:3m:44s (0h:0m:36s left)
+ 136 TIM2+F+I+G4  56640.639   BRCA1_2+12S_rRNA+ND1_1+ND1_3	0h:3m:50s (0h:0m:35s left)
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = TN+F+G4: ADRA2B_1 VWF_1, TIM3e+G4: ADRA2B_2 VWF_2, TVM+F+G4: ADRA2B_3 VWF_3, HKY+F+G4: BRCA1_1, TIM2+F+I+G4: BRCA1_2 12S_rRNA ND1_1, HKY+F+G4: BRCA1_3, TN+F+I+G4: ND1_2, HKY+F+I+G4: ND1_3;
+Agglomerative model selection: ((ADRA2B_1,VWF_1)2:56532,(ADRA2B_2,VWF_2)4:56492.6,(ADRA2B_3,VWF_3)1:56567.1,BRCA1_1,(BRCA1_2,(12S_rRNA,ND1_1)3:56511.1)5:56486.9,BRCA1_3,ND1_2,ND1_3)
+Merging into 8 partitions...
+Partition information was printed to 2_setDelsuc_2003.best_scheme.nex
+Partition information in Raxml format was printed to 2_setDelsuc_2003.best_scheme
+
+All model information printed to 2_setDelsuc_2003.model.gz
+CPU time for ModelFinder: 110.198 seconds (0h:1m:50s)
+Wall-clock time for ModelFinder: 231.155 seconds (0h:3m:51s)
+Generating 1000 samples for ultrafast bootstrap (seed: 942182)...
+
+NOTE: 9 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -29627.415
+Current log-likelihood at step 1: -28154.752
+Current log-likelihood at step 2: -28020.673
+Current log-likelihood at step 3: -28011.425
+Current log-likelihood at step 4: -27994.090
+Current log-likelihood at step 5: -27991.746
+Current log-likelihood at step 6: -27989.353
+Current log-likelihood at step 7: -27986.845
+Current log-likelihood at step 8: -27984.206
+Current log-likelihood at step 9: -27981.418
+Current log-likelihood at step 10: -27978.465
+Current log-likelihood at step 11: -27975.326
+Current log-likelihood at step 12: -27971.979
+Current log-likelihood at step 13: -27968.398
+Current log-likelihood at step 14: -27964.555
+Current log-likelihood at step 15: -27960.417
+Current log-likelihood at step 16: -27955.950
+Current log-likelihood at step 17: -27951.122
+Current log-likelihood at step 18: -27945.910
+Current log-likelihood at step 19: -27940.324
+Current log-likelihood at step 20: -27934.453
+Current log-likelihood at step 21: -27918.363
+Current log-likelihood at step 22: -27918.322
+Parameters optimization took 21 rounds (3.018 sec)
+
+Computing ML distances based on estimated model parameters... 0.010 sec
+Computing BIONJ tree...
+0.001 seconds
+Log-likelihood of BIONJ tree: -27918.321
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 1.676 second
+Computing log-likelihood of 98 initial trees ... 16.908 seconds
+Current best score: -27918.321
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -27918.321
+Current log-likelihood at step 1: -27918.315
+Parameters optimization took 0 rounds (0.164 sec)
+
+BETTER TREE FOUND at iteration 1: -27918.315
+Iteration 10 / LogL: -27918.327 / Time: 0h:0m:33s
+Iteration 20 / LogL: -27918.323 / Time: 0h:0m:48s
+Finish initializing candidate tree set (1)
+Current best tree score: -27918.315 / CPU time: 44.730
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -27918.384 / Time: 0h:1m:7s (0h:2m:45s left)
+UPDATE BEST LOG-LIKELIHOOD: -27918.315
+Iteration 40 / LogL: -27918.323 / Time: 0h:1m:24s (0h:2m:12s left)
+Iteration 50 / LogL: -27918.321 / Time: 0h:1m:43s (0h:1m:47s left)
+Log-likelihood cutoff on original alignment: -27951.077
+Iteration 60 / LogL: -27918.321 / Time: 0h:2m:1s (0h:1m:24s left)
+UPDATE BEST LOG-LIKELIHOOD: -27918.315
+Iteration 70 / LogL: -27918.333 / Time: 0h:2m:16s (0h:1m:1s left)
+Iteration 80 / LogL: -27918.342 / Time: 0h:2m:35s (0h:0m:41s left)
+UPDATE BEST LOG-LIKELIHOOD: -27918.315
+Iteration 90 / LogL: -27918.831 / Time: 0h:2m:51s (0h:0m:21s left)
+Iteration 100 / LogL: -27918.318 / Time: 0h:3m:8s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -27951.299
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:3m:13s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -27918.315
+Current log-likelihood at step 1: -27918.313
+Parameters optimization took 0 rounds (0.028 sec)
+
+BEST SCORE FOUND : -27918.313
+Creating bootstrap support values...
+Split supports printed to NEXUS file 2_setDelsuc_2003.splits.nex
+Total tree length: 0.714
+
+Total number of iterations: 102
+CPU time used for tree search: 34.062 sec (0h:0m:34s)
+Wall-clock time used for tree search: 189.412 sec (0h:3m:9s)
+Total CPU time used: 35.635 sec (0h:0m:35s)
+Total wall-clock time used: 193.511 sec (0h:3m:13s)
+
+Computing bootstrap consensus tree...
+Reading input file 2_setDelsuc_2003.splits.nex...
+13 taxa and 29 splits.
+Consensus tree written to 2_setDelsuc_2003.contree
+Reading input trees file 2_setDelsuc_2003.contree
+Log-likelihood of consensus tree: -27918.313
+
+Analysis results written to: 
+  IQ-TREE report:                2_setDelsuc_2003.iqtree
+  Maximum-likelihood tree:       2_setDelsuc_2003.treefile
+  Likelihood distances:          2_setDelsuc_2003.mldist
+  Best partitioning scheme:      2_setDelsuc_2003.best_scheme.nex
+           in RAxML format:      2_setDelsuc_2003.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          2_setDelsuc_2003.splits.nex
+  Consensus tree:                2_setDelsuc_2003.contree
+  Screen log file:               2_setDelsuc_2003.log
+
+Date and Time: Fri Sep  7 08:45:24 2018

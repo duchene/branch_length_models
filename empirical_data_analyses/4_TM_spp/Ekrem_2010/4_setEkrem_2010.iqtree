@@ -1,0 +1,443 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../RobAlignments/1_Ekrem_2010_partitions.nex
+Input file name: ../../../RobAlignments/1_Ekrem_2010.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 341682
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 74 taxa with 9 partitions and 2701 total sites (3.31159% missing data)
+
+  ID  Name          Type	Seq	Site	Unique	Infor	Invar	Const
+   1  COI_1         DNA	74	220	53	43	172	172
+   2  COI_2         DNA	74	220	17	4	208	208
+   3  COI_3+COII_3  DNA	74	451	443	425	11	11
+   4  COII_1        DNA	72	232	92	80	144	144
+   5  COII_2        DNA	72	232	45	32	191	191
+   6  16S           DNA	73	477	257	175	229	229
+   7  CAD_1         DNA	68	290	145	87	163	163
+   8  CAD_2         DNA	68	289	92	41	222	222
+   9  CAD_3         DNA	68	290	282	258	13	13
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM3+F+G4:COI_1,F81+F+I+G4:COI_2,TPM2u+F+I+G4:COI_3+COII_3,GTR+F+I+G4:COII_1,F81+F+I+G4:COII_2,GTR+F+I+G4:16S,TVMe+G4:CAD_1,TIM3+F+G4:CAD_2,TPM2u+F+I+G4:CAD_3
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM3+F+G4        -1708.9226   3433.8453 + 0.0000   3434.5278 + 0.0000   3460.9943 + 0.0000
+   2  F81+F+I+G4        -462.7057    937.4114 + 0.0000    937.8058 + 0.0000    957.7732 + 0.0000
+   3  TPM2u+F+I+G4    -16524.4446  33064.8892 + 0.0000  33065.2150 + 0.0000  33097.7810 + 0.0000
+   4  GTR+F+I+G4       -2740.3042   5502.6085 + 0.0000   5503.8085 + 0.0000   5540.5226 + 0.0000
+   5  F81+F+I+G4       -1258.8093   2529.6186 + 0.0000   2529.9919 + 0.0000   2550.2990 + 0.0000
+   6  GTR+F+I+G4       -5201.6616  10425.3232 + 0.0000  10425.8909 + 0.0000  10471.1659 + 0.0000
+   7  TVMe+G4          -2618.4306   5248.8611 + 0.0000   5249.1579 + 0.0000   5270.8804 + 0.0000
+   8  TIM3+F+G4        -1371.1538   2758.3077 + 0.0000   2758.8219 + 0.0000   2787.6391 + 0.0000
+   9  TPM2u+F+I+G4     -8632.1019  17280.2038 + 0.0000  17280.7162 + 0.0000  17309.5628 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM3+F+G4      0.7066  TIM3{0.170554,5.3749,100}+F{0.288022,0.183404,0.26404,0.264534}+G4{0.219623}
+   2  F81+F+I+G4     0.1114  F81+I{0.875521}+G4{0.114191}
+   3  TPM2u+F+I+G4   4.1369  TPM2u{0.451348,10.5291}+F{0.415581,0.106352,0.0290108,0.449056}+I{0.0068126}+G4{0.849945}
+   4  GTR+F+I+G4     0.4042  GTR{1.16521,8.30626,2.97845,0.145634,24.5021}+F{0.340316,0.178761,0.193758,0.287165}+I{0.604724}+G4{1.36408}
+   5  F81+F+I+G4     0.1992  F81+I{0.78769}+G4{0.576346}
+   6  GTR+F+I+G4     0.3549  GTR{0.733163,5.33842,5.7306,0.30005,2.81005}+F{0.407722,0.0605929,0.12241,0.409275}+I{0.343005}+G4{0.807089}
+   7  TVMe+G4        0.1725  TVMe{4.99406,7.16769,2.30306,2.02945}+FQ+G4{0.322058}
+   8  TIM3+F+G4      0.0819  TIM3{4.44559,2.5895,5.49399}+F{0.353872,0.191287,0.177823,0.277018}+G4{0.184685}
+   9  TPM2u+F+I+G4   0.9391  TPM2u{2.28668,9.99441}+F{0.276506,0.141143,0.182439,0.399913}+I{0.0299748}+G4{2.50579}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -40404.4093 (s.e. 909.9985)
+Unconstrained log-likelihood (without tree): -10644.3900
+Number of free parameters (#branches + #model parameters): 216
+Akaike information criterion (AIC) score: 81240.8186
+Corrected Akaike information criterion (AICc) score: 81278.5578
+Bayesian information criterion (BIC) score: 82515.5162
+
+Total tree length (sum of branch lengths): 11.1998
+Sum of internal branch lengths: 3.8312 (34.2073% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0004) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Cladotanytarsus_atridorsum_To81' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Cladotanytarsus_atridorsum_To81
+|
++--Cladotanytarsus_pallidus_To02
+|
+|                                         +------Krenopsectra_acuta_To392
+|                                      +--| (100)
+|                                      |  |         +--Micropsectra_attenuata_To131
+|                                      |  |     +---| (100)
+|                                      |  |     |   +--Micropsectra_attenuata_To302
+|                                      |  |  +--| (100)
+|                                      |  |  |  +---Micropsectra_sp_To391
+|                                      |  +--| (100)
+|                                      |     |  +--Micropsectra_oberaarensis_To336
+|                                      |     +--| (100)
+|                                      |        +--Micropsectra_seguyi_To334
+|                                   +--| (94)
+|                                   |  |                 +------Micropsectra_appendica_To133
+|                                   |  |              +--| (100)
+|                                   |  |              |  |     +-------Micropsectra_atrofasciata_IS27
+|                                   |  |              |  |  +--| (100)
+|                                   |  |              |  |  |  |  +---Micropsectra_logani_To188
+|                                   |  |              |  |  |  +--| (92)
+|                                   |  |              |  |  |     +-----Micropsectra_polita_To181
+|                                   |  |              |  +--| (100)
+|                                   |  |              |     |  +-------Micropsectra_pallidula_To74
+|                                   |  |              |     +--| (93)
+|                                   |  |              |        |           +**Micropsectra_schrankelae_To43
+|                                   |  |              |        |        +--| (100)
+|                                   |  |              |        |        |  +--Micropsectra_schrankelae_To44
+|                                   |  |              |        |     +--| (100)
+|                                   |  |              |        |     |  +--Micropsectra_schrankelae_To47
+|                                   |  |              |        |  +--| (98)
+|                                   |  |              |        |  |  |        +--Micropsectra_sofiae_Soe11
+|                                   |  |              |        |  |  |     +--| (100)
+|                                   |  |              |        |  |  |     |  +--Micropsectra_sofiae_To166
+|                                   |  |              |        |  |  |  +--| (100)
+|                                   |  |              |        |  |  |  |  +--Micropsectra_sofiae_Soe12
+|                                   |  |              |        |  |  +--| (100)
+|                                   |  |              |        |  |     +--Micropsectra_sofiae_To145
+|                                   |  |              |        +--| (100)
+|                                   |  |              |           |  +---Micropsectra_sp_To350
+|                                   |  |              |           +--| (97)
+|                                   |  |              |              +--Micropsectra_sp_To378
+|                                   |  |           +--| (52)
+|                                   |  |           |  +--------Micropsectra_lacustris_AT16
+|                                   |  |        +--| (79)
+|                                   |  |        |  |                       +**Micropsectra_contracta_To06
+|                                   |  |        |  |                    +--| (100)
+|                                   |  |        |  |                    |  +--Micropsectra_contracta_To357
+|                                   |  |        |  |                 +--| (99)
+|                                   |  |        |  |                 |  +--Micropsectra_contracta_To358
+|                                   |  |        |  |              +--| (100)
+|                                   |  |        |  |              |  +--Micropsectra_contracta_To356
+|                                   |  |        |  |           +--| (100)
+|                                   |  |        |  |           |  |  +--Micropsectra_notescens_To315
+|                                   |  |        |  |           |  +--| (100)
+|                                   |  |        |  |           |     |  +--Micropsectra_notescens_To351
+|                                   |  |        |  |           |     +**| (88)
+|                                   |  |        |  |           |        +**Micropsectra_notescens_To352
+|                                   |  |        |  |        +--| (60)
+|                                   |  |        |  |        |  |         +--Micropsectra_junci_To154
+|                                   |  |        |  |        |  |      +--| (100)
+|                                   |  |        |  |        |  |      |  +--Micropsectra_junci_To157
+|                                   |  |        |  |        |  |  +---| (100)
+|                                   |  |        |  |        |  |  |   +--Micropsectra_junci_To54
+|                                   |  |        |  |        |  +--| (89)
+|                                   |  |        |  |        |     |   +--Micropsectra_notescens_To324
+|                                   |  |        |  |        |     +---| (100)
+|                                   |  |        |  |        |         |  +--Micropsectra_notescens_To353
+|                                   |  |        |  |        |         +--| (96)
+|                                   |  |        |  |        |            +--Micropsectra_notescens_To354
+|                                   |  |        |  |     +--| (100)
+|                                   |  |        |  |     |  |       +--Micropsectra_insignilobus_To182
+|                                   |  |        |  |     |  |    +--| (100)
+|                                   |  |        |  |     |  |    |  +--Micropsectra_insignilobus_To184
+|                                   |  |        |  |     |  +----| (100)
+|                                   |  |        |  |     |       +--Micropsectra_insignilobus_To31
+|                                   |  |        |  |  +--| (79)
+|                                   |  |        |  |  |  |  +-----Micropsectra_kurobemaculata_To07
+|                                   |  |        |  |  |  +--| (88)
+|                                   |  |        |  |  |     |        +--Micropsectra_lindrothi_IS48
+|                                   |  |        |  |  |     +--------| (100)
+|                                   |  |        |  |  |              +--Micropsectra_lindrothi_To361
+|                                   |  |        |  +--| (93)
+|                                   |  |        |     |   +--Micropsectra_recurvata_IS22
+|                                   |  |        |     +---| (100)
+|                                   |  |        |         +--------Micropsectra_sp_To383
+|                                   |  |     +--| (93)
+|                                   |  |     |  |  +--------Micropsectra_pharetrophora_To12
+|                                   |  |     |  +--| (93)
+|                                   |  |     |     +------Parapsectra_mendli_To335
+|                                   |  |  +--| (100)
+|                                   |  |  |  |           +--Parapsectra_nana_To135
+|                                   |  |  |  |        +--| (99)
+|                                   |  |  |  |        |  +--Parapsectra_bumasta_To307
+|                                   |  |  |  |    +---| (100)
+|                                   |  |  |  |    |   |  +**Parapsectra_chionophila_Soe04
+|                                   |  |  |  |    |   +--| (100)
+|                                   |  |  |  |    |      |  +--Parapsectra_chionophila_To40
+|                                   |  |  |  |    |      +--| (100)
+|                                   |  |  |  |    |         +--Parapsectra_chionophila_To55
+|                                   |  |  |  +----| (100)
+|                                   |  |  |       +------Parapsectra_uliginosa_NO39
+|                                   |  +--| (95)
+|                                   |     |  +-------Micropsectra_borealis_NO41
+|                                   |     +--| (99)
+|                                   |        |         +--Micropsectra_radialis_NO44
+|                                   |        +---------| (100)
+|                                   |                  +--Micropsectra_radialis_To37
+|                            +------| (100)
+|                            |      +---------Micropsectra_roseiventris_To84
+|                         +--| (98)
+|                         |  |                          +--Paratanytarsus_austriacus_Bj55
+|                         |  |                       +--| (100)
+|                         |  |                       |  +--Paratanytarsus_austriacus_Soe01
+|                         |  |                    +--| (100)
+|                         |  |                    |  +--Paratanytarsus_austriacus_To04
+|                         |  |                 +--| (100)
+|                         |  |                 |  +---Paratanytarsus_hyperboreus_To45
+|                         |  |            +----| (100)
+|                         |  |            |    +----Paratanytarsus_austriacus_To364
+|                         |  |         +--| (93)
+|                         |  |         |  |  +----------Paratanytarsus_dissimilis_To316
+|                         |  |         |  +--| (96)
+|                         |  |         |     +--------Paratanytarsus_natvigi_To50
+|                         |  |     +---| (100)
+|                         |  |     |   +------------Paratanytarsus_grimmii_To18
+|                         |  |  +--| (90)
+|                         |  |  |  |     +----------Paratanytarsus_bituberculatus_To318
+|                         |  |  |  |  +--| (75)
+|                         |  |  |  |  |  |  +-------Paratanytarsus_laetipes_To319
+|                         |  |  |  |  |  +--| (59)
+|                         |  |  |  |  |     +---------Paratanytarsus_tenuis_To61
+|                         |  |  |  +--| (98)
+|                         |  |  |     +-----------Paratanytarsus_intricatus_To317
+|                         |  +--| (89)
+|                         |     |  +-------------Paratanytarsus_setosimanus_To359
+|                         |     +--| (64)
+|                         |        +------------------------Tanytarsini_sp_To94
+|                    +----| (100)
+|                    |    +--------------------------Rheotanytarsus_pentapoda_To41
+|                 +--| (94)
+|                 |  |  +---------------Tanytarsus_curticornis_To82
+|                 |  +--| (81)
+|                 |     +--------------Tanytarsus_mendax_To01
++-----------------| (100)
+                  +--------------Virgatanytarsus_aboensis_To304
+
+Tree in newick format:
+
+(Cladotanytarsus_atridorsum_To81:0.0176769750,Cladotanytarsus_pallidus_To02:0.0202674620,(((((((Krenopsectra_acuta_To392:0.1662415146,(((Micropsectra_attenuata_To131:0.0023984144,Micropsectra_attenuata_To302:0.0024428130)100:0.0999406096,Micropsectra_sp_To391:0.0877394392)100:0.0696607687,(Micropsectra_oberaarensis_To336:0.0301719006,Micropsectra_seguyi_To334:0.0449709068)100:0.0683989555)100:0.0296585461)100:0.0799595439,((((((Micropsectra_appendica_To133:0.1647289710,((Micropsectra_atrofasciata_IS27:0.1745965085,(Micropsectra_logani_To188:0.0872753496,Micropsectra_polita_To181:0.1357028122)92:0.0192226351)100:0.0345965496,(Micropsectra_pallidula_To74:0.1723776629,((((Micropsectra_schrankelae_To43:0.0000022140,Micropsectra_schrankelae_To44:0.0012703859)100:0.0061961098,Micropsectra_schrankelae_To47:0.0032335813)100:0.0478846330,(((Micropsectra_sofiae_Soe11:0.0044373242,Micropsectra_sofiae_To166:0.0049710295)100:0.0043160841,Micropsectra_sofiae_Soe12:0.0020872846)100:0.0141117209,Micropsectra_sofiae_To145:0.0210646147)100:0.0253593705)98:0.0117176355,(Micropsectra_sp_To350:0.0890738281,Micropsectra_sp_To378:0.0490278965)97:0.0154735064)100:0.0585620911)93:0.0193577204)100:0.0290452099)100:0.0380120020,Micropsectra_lacustris_AT16:0.2031197551)52:0.0147242313,((((((((Micropsectra_contracta_To06:0.0000022140,Micropsectra_contracta_To357:0.0016185396)100:0.0008800892,Micropsectra_contracta_To358:0.0053173274)99:0.0026575135,Micropsectra_contracta_To356:0.0019918678)100:0.0533858510,(Micropsectra_notescens_To315:0.0025886773,(Micropsectra_notescens_To351:0.0007993077,Micropsectra_notescens_To352:0.0000021734)88:0.0002738638)100:0.0547868454)100:0.0447024103,(((Micropsectra_junci_To154:0.0077070915,Micropsectra_junci_To157:0.0024160745)100:0.0137102810,Micropsectra_junci_To54:0.0180729057)100:0.0875140658,(Micropsectra_notescens_To324:0.0045316779,(Micropsectra_notescens_To353:0.0038280648,Micropsectra_notescens_To354:0.0080424202)96:0.0019861637)100:0.0869801522)89:0.0144885990)60:0.0221833060,((Micropsectra_insignilobus_To182:0.0015229548,Micropsectra_insignilobus_To184:0.0022930212)100:0.0048142330,Micropsectra_insignilobus_To31:0.0142196374)100:0.1122856344)100:0.0516908159,(Micropsectra_kurobemaculata_To07:0.1474433287,(Micropsectra_lindrothi_IS48:0.0018290993,Micropsectra_lindrothi_To361:0.0024391778)100:0.2024260220)88:0.0256001131)79:0.0201414000,(Micropsectra_recurvata_IS22:0.0738079497,Micropsectra_sp_To383:0.1927204013)100:0.0900127078)93:0.0332734124)79:0.0163643413,(Micropsectra_pharetrophora_To12:0.1915987781,Parapsectra_mendli_To335:0.1584568128)93:0.0419019226)93:0.0238897619,(((Parapsectra_nana_To135:0.0639198046,Parapsectra_bumasta_To307:0.0638217284)99:0.0135175678,(Parapsectra_chionophila_Soe04:0.0000023916,(Parapsectra_chionophila_To40:0.0008553506,Parapsectra_chionophila_To55:0.0008559951)100:0.0008429878)100:0.0530859573)100:0.0864610647,Parapsectra_uliginosa_NO39:0.1602095774)100:0.1225588107)100:0.0419657489,(Micropsectra_borealis_NO41:0.1764101231,(Micropsectra_radialis_NO44:0.0042735500,Micropsectra_radialis_To37:0.0046147221)100:0.2181844323)99:0.0483477837)95:0.0231104990)94:0.0503425987,Micropsectra_roseiventris_To84:0.2287201623)100:0.1519757387,((((((((Paratanytarsus_austriacus_Bj55:0.0019339018,Paratanytarsus_austriacus_Soe01:0.0025174685)100:0.0018232416,Paratanytarsus_austriacus_To04:0.0079100366)100:0.0813862375,Paratanytarsus_hyperboreus_To45:0.1051548600)100:0.0398287105,Paratanytarsus_austriacus_To364:0.1184659929)100:0.1206976573,(Paratanytarsus_dissimilis_To316:0.2368812467,Paratanytarsus_natvigi_To50:0.2012633823)96:0.0374058348)93:0.0411929080,Paratanytarsus_grimmii_To18:0.2801849515)100:0.0932274671,((Paratanytarsus_bituberculatus_To318:0.2488765897,(Paratanytarsus_laetipes_To319:0.1837344725,Paratanytarsus_tenuis_To61:0.2305573154)59:0.0476134961)75:0.0257532815,Paratanytarsus_intricatus_To317:0.2603032846)98:0.0381476787)90:0.0323642554,(Paratanytarsus_setosimanus_To359:0.3048358968,Tanytarsini_sp_To94:0.5466788372)64:0.0103758513)89:0.0399035011)98:0.0758804591,Rheotanytarsus_pentapoda_To41:0.5826093036)100:0.1254347102,(Tanytarsus_curticornis_To82:0.3472038253,Tanytarsus_mendax_To01:0.3389188591)81:0.0704846950)94:0.0633244327,Virgatanytarsus_aboensis_To304:0.3388033142)100:0.3837693698);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -40404.410949
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Cladotanytarsus_atridorsum_To81
+|
++--Cladotanytarsus_pallidus_To02
+|
+|                                         +------Krenopsectra_acuta_To392
+|                                      +--| (100)
+|                                      |  |         +--Micropsectra_attenuata_To131
+|                                      |  |     +---| (100)
+|                                      |  |     |   +--Micropsectra_attenuata_To302
+|                                      |  |  +--| (100)
+|                                      |  |  |  +---Micropsectra_sp_To391
+|                                      |  +--| (100)
+|                                      |     |  +--Micropsectra_oberaarensis_To336
+|                                      |     +--| (100)
+|                                      |        +--Micropsectra_seguyi_To334
+|                                   +--| (94)
+|                                   |  |                 +------Micropsectra_appendica_To133
+|                                   |  |              +--| (100)
+|                                   |  |              |  |     +-------Micropsectra_atrofasciata_IS27
+|                                   |  |              |  |  +--| (100)
+|                                   |  |              |  |  |  |  +---Micropsectra_logani_To188
+|                                   |  |              |  |  |  +--| (92)
+|                                   |  |              |  |  |     +-----Micropsectra_polita_To181
+|                                   |  |              |  +--| (100)
+|                                   |  |              |     |  +-------Micropsectra_pallidula_To74
+|                                   |  |              |     +--| (93)
+|                                   |  |              |        |           +--Micropsectra_schrankelae_To43
+|                                   |  |              |        |        +--| (100)
+|                                   |  |              |        |        |  +--Micropsectra_schrankelae_To44
+|                                   |  |              |        |     +--| (100)
+|                                   |  |              |        |     |  +--Micropsectra_schrankelae_To47
+|                                   |  |              |        |  +--| (98)
+|                                   |  |              |        |  |  |        +--Micropsectra_sofiae_Soe11
+|                                   |  |              |        |  |  |     +--| (100)
+|                                   |  |              |        |  |  |     |  +--Micropsectra_sofiae_To166
+|                                   |  |              |        |  |  |  +--| (100)
+|                                   |  |              |        |  |  |  |  +--Micropsectra_sofiae_Soe12
+|                                   |  |              |        |  |  +--| (100)
+|                                   |  |              |        |  |     +--Micropsectra_sofiae_To145
+|                                   |  |              |        +--| (100)
+|                                   |  |              |           |  +---Micropsectra_sp_To350
+|                                   |  |              |           +--| (97)
+|                                   |  |              |              +--Micropsectra_sp_To378
+|                                   |  |           +--| (52)
+|                                   |  |           |  +--------Micropsectra_lacustris_AT16
+|                                   |  |        +--| (79)
+|                                   |  |        |  |                       +--Micropsectra_contracta_To06
+|                                   |  |        |  |                    +--| (100)
+|                                   |  |        |  |                    |  +--Micropsectra_contracta_To357
+|                                   |  |        |  |                 +--| (99)
+|                                   |  |        |  |                 |  +--Micropsectra_contracta_To358
+|                                   |  |        |  |              +--| (100)
+|                                   |  |        |  |              |  +--Micropsectra_contracta_To356
+|                                   |  |        |  |           +--| (100)
+|                                   |  |        |  |           |  |  +--Micropsectra_notescens_To315
+|                                   |  |        |  |           |  +--| (100)
+|                                   |  |        |  |           |     |  +--Micropsectra_notescens_To351
+|                                   |  |        |  |           |     +--| (88)
+|                                   |  |        |  |           |        +--Micropsectra_notescens_To352
+|                                   |  |        |  |        +--| (60)
+|                                   |  |        |  |        |  |         +--Micropsectra_junci_To154
+|                                   |  |        |  |        |  |      +--| (100)
+|                                   |  |        |  |        |  |      |  +--Micropsectra_junci_To157
+|                                   |  |        |  |        |  |  +---| (100)
+|                                   |  |        |  |        |  |  |   +--Micropsectra_junci_To54
+|                                   |  |        |  |        |  +--| (89)
+|                                   |  |        |  |        |     |   +--Micropsectra_notescens_To324
+|                                   |  |        |  |        |     +---| (100)
+|                                   |  |        |  |        |         |  +--Micropsectra_notescens_To353
+|                                   |  |        |  |        |         +--| (96)
+|                                   |  |        |  |        |            +--Micropsectra_notescens_To354
+|                                   |  |        |  |     +--| (100)
+|                                   |  |        |  |     |  |       +--Micropsectra_insignilobus_To182
+|                                   |  |        |  |     |  |    +--| (100)
+|                                   |  |        |  |     |  |    |  +--Micropsectra_insignilobus_To184
+|                                   |  |        |  |     |  +----| (100)
+|                                   |  |        |  |     |       +--Micropsectra_insignilobus_To31
+|                                   |  |        |  |  +--| (79)
+|                                   |  |        |  |  |  |  +-----Micropsectra_kurobemaculata_To07
+|                                   |  |        |  |  |  +--| (88)
+|                                   |  |        |  |  |     |        +--Micropsectra_lindrothi_IS48
+|                                   |  |        |  |  |     +--------| (100)
+|                                   |  |        |  |  |              +--Micropsectra_lindrothi_To361
+|                                   |  |        |  +--| (93)
+|                                   |  |        |     |   +--Micropsectra_recurvata_IS22
+|                                   |  |        |     +---| (100)
+|                                   |  |        |         +--------Micropsectra_sp_To383
+|                                   |  |     +--| (93)
+|                                   |  |     |  |  +--------Micropsectra_pharetrophora_To12
+|                                   |  |     |  +--| (93)
+|                                   |  |     |     +------Parapsectra_mendli_To335
+|                                   |  |  +--| (100)
+|                                   |  |  |  |           +--Parapsectra_nana_To135
+|                                   |  |  |  |        +--| (99)
+|                                   |  |  |  |        |  +--Parapsectra_bumasta_To307
+|                                   |  |  |  |    +---| (100)
+|                                   |  |  |  |    |   |  +--Parapsectra_chionophila_Soe04
+|                                   |  |  |  |    |   +--| (100)
+|                                   |  |  |  |    |      |  +--Parapsectra_chionophila_To40
+|                                   |  |  |  |    |      +--| (100)
+|                                   |  |  |  |    |         +--Parapsectra_chionophila_To55
+|                                   |  |  |  +----| (100)
+|                                   |  |  |       +------Parapsectra_uliginosa_NO39
+|                                   |  +--| (95)
+|                                   |     |  +-------Micropsectra_borealis_NO41
+|                                   |     +--| (99)
+|                                   |        |         +--Micropsectra_radialis_NO44
+|                                   |        +---------| (100)
+|                                   |                  +--Micropsectra_radialis_To37
+|                            +------| (100)
+|                            |      +---------Micropsectra_roseiventris_To84
+|                         +--| (98)
+|                         |  |                          +--Paratanytarsus_austriacus_Bj55
+|                         |  |                       +--| (100)
+|                         |  |                       |  +--Paratanytarsus_austriacus_Soe01
+|                         |  |                    +--| (100)
+|                         |  |                    |  +--Paratanytarsus_austriacus_To04
+|                         |  |                 +--| (100)
+|                         |  |                 |  +---Paratanytarsus_hyperboreus_To45
+|                         |  |            +----| (100)
+|                         |  |            |    +----Paratanytarsus_austriacus_To364
+|                         |  |         +--| (93)
+|                         |  |         |  |  +----------Paratanytarsus_dissimilis_To316
+|                         |  |         |  +--| (96)
+|                         |  |         |     +--------Paratanytarsus_natvigi_To50
+|                         |  |     +---| (100)
+|                         |  |     |   +------------Paratanytarsus_grimmii_To18
+|                         |  |  +--| (90)
+|                         |  |  |  |     +----------Paratanytarsus_bituberculatus_To318
+|                         |  |  |  |  +--| (75)
+|                         |  |  |  |  |  |  +-------Paratanytarsus_laetipes_To319
+|                         |  |  |  |  |  +--| (59)
+|                         |  |  |  |  |     +---------Paratanytarsus_tenuis_To61
+|                         |  |  |  +--| (98)
+|                         |  |  |     +-----------Paratanytarsus_intricatus_To317
+|                         |  +--| (89)
+|                         |     |  +-------------Paratanytarsus_setosimanus_To359
+|                         |     +--| (64)
+|                         |        +------------------------Tanytarsini_sp_To94
+|                    +----| (100)
+|                    |    +--------------------------Rheotanytarsus_pentapoda_To41
+|                 +--| (94)
+|                 |  |  +---------------Tanytarsus_curticornis_To82
+|                 |  +--| (81)
+|                 |     +--------------Tanytarsus_mendax_To01
++-----------------| (100)
+                  +--------------Virgatanytarsus_aboensis_To304
+
+
+Consensus tree in newick format: 
+
+(Cladotanytarsus_atridorsum_To81:0.0176935577,Cladotanytarsus_pallidus_To02:0.0202438955,(((((((Krenopsectra_acuta_To392:0.1661701003,(((Micropsectra_attenuata_To131:0.0023971656,Micropsectra_attenuata_To302:0.0024411675)100:0.0998506268,Micropsectra_sp_To391:0.0877303488)100:0.0696942918,(Micropsectra_oberaarensis_To336:0.0301693198,Micropsectra_seguyi_To334:0.0449440779)100:0.0683657839)100:0.0296476786)100:0.0799220025,((((((Micropsectra_appendica_To133:0.1646130954,((Micropsectra_atrofasciata_IS27:0.1744672753,(Micropsectra_logani_To188:0.0872243949,Micropsectra_polita_To181:0.1356019582)92:0.0192248879)100:0.0345817335,(Micropsectra_pallidula_To74:0.1722572654,((((Micropsectra_schrankelae_To43:0.0000026304,Micropsectra_schrankelae_To44:0.0012679587)100:0.0061918648,Micropsectra_schrankelae_To47:0.0032312682)100:0.0478490605,(((Micropsectra_sofiae_Soe11:0.0044348470,Micropsectra_sofiae_To166:0.0049668721)100:0.0043132940,Micropsectra_sofiae_Soe12:0.0020854437)100:0.0141055332,Micropsectra_sofiae_To145:0.0210471353)100:0.0253437121)98:0.0117167009,(Micropsectra_sp_To350:0.0890135959,Micropsectra_sp_To378:0.0489902772)97:0.0154637521)100:0.0585308533)93:0.0193469831)100:0.0290379934)100:0.0379941334,Micropsectra_lacustris_AT16:0.2029906958)52:0.0147158765,((((((((Micropsectra_contracta_To06:0.0000026304,Micropsectra_contracta_To357:0.0016160826)100:0.0008795775,Micropsectra_contracta_To358:0.0053141380)99:0.0026561061,Micropsectra_contracta_To356:0.0019902586)100:0.0533506342,(Micropsectra_notescens_To315:0.0025957278,(Micropsectra_notescens_To351:0.0007979846,Micropsectra_notescens_To352:0.0000021210)88:0.0002718457)100:0.0547837356)100:0.0446726489,(((Micropsectra_junci_To154:0.0077022111,Micropsectra_junci_To157:0.0024147596)100:0.0136989638,Micropsectra_junci_To54:0.0180698509)100:0.0874673116,(Micropsectra_notescens_To324:0.0045295678,(Micropsectra_notescens_To353:0.0038261203,Micropsectra_notescens_To354:0.0080375761)96:0.0019847330)100:0.0869264094)89:0.0145033902)60:0.0221736761,((Micropsectra_insignilobus_To182:0.0015204206,Micropsectra_insignilobus_To184:0.0022917309)100:0.0048099146,Micropsectra_insignilobus_To31:0.0142128398)100:0.1122121130)100:0.0516609123,(Micropsectra_kurobemaculata_To07:0.1473393826,(Micropsectra_lindrothi_IS48:0.0018270423,Micropsectra_lindrothi_To361:0.0024378497)100:0.2022822793)88:0.0256314948)79:0.0201312149,(Micropsectra_recurvata_IS22:0.0737688396,Micropsectra_sp_To383:0.1925851126)100:0.0899693295)93:0.0332656377)79:0.0163637106,(Micropsectra_pharetrophora_To12:0.1914809228,Parapsectra_mendli_To335:0.1583267721)93:0.0419423749)93:0.0238813525,(((Parapsectra_nana_To135:0.0638918524,Parapsectra_bumasta_To307:0.0637843992)99:0.0135316431,(Parapsectra_chionophila_Soe04:0.0000023449,(Parapsectra_chionophila_To40:0.0008540126,Parapsectra_chionophila_To55:0.0008546713)100:0.0008417422)100:0.0530465324)100:0.0864037614,Parapsectra_uliginosa_NO39:0.1601370176)100:0.1225155520)100:0.0419448022,(Micropsectra_borealis_NO41:0.1763049824,(Micropsectra_radialis_NO44:0.0042801737,Micropsectra_radialis_To37:0.0046054072)100:0.2180505267)99:0.0483702837)95:0.0231096444)94:0.0503708529,Micropsectra_roseiventris_To84:0.2285769702)100:0.1519005602,((((((((Paratanytarsus_austriacus_Bj55:0.0019325626,Paratanytarsus_austriacus_Soe01:0.0025162903)100:0.0018226970,Paratanytarsus_austriacus_To04:0.0079090651)100:0.0813584238,Paratanytarsus_hyperboreus_To45:0.1051377177)100:0.0398197311,Paratanytarsus_austriacus_To364:0.1184404746)100:0.1206471007,(Paratanytarsus_dissimilis_To316:0.2368025892,Paratanytarsus_natvigi_To50:0.2011848021)96:0.0374503944)93:0.0411837866,Paratanytarsus_grimmii_To18:0.2800944134)100:0.0932007460,((Paratanytarsus_bituberculatus_To318:0.2487834830,(Paratanytarsus_laetipes_To319:0.1836838221,Paratanytarsus_tenuis_To61:0.2304669889)59:0.0476136946)75:0.0257642324,Paratanytarsus_intricatus_To317:0.2602056177)98:0.0381517947)90:0.0323464423,(Paratanytarsus_setosimanus_To359:0.3046892701,Tanytarsini_sp_To94:0.5464225712)64:0.0104015882)89:0.0398912248)98:0.0758962597,Rheotanytarsus_pentapoda_To41:0.5822857937)100:0.1253728353,(Tanytarsus_curticornis_To82:0.3470709507,Tanytarsus_mendax_To01:0.3387307451)81:0.0705021834)94:0.0633609781,Virgatanytarsus_aboensis_To304:0.3386191566)100:0.3835716664);
+
+TIME STAMP
+----------
+
+Date and time: Fri Sep  7 10:36:50 2018
+Total CPU time used: 315.626458 seconds (0h:5m:15s)
+Total wall-clock time used: 2175.046451 seconds (0h:36m:15s)
+

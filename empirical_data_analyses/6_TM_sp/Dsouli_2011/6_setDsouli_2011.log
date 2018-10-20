@@ -1,0 +1,222 @@
+IQ-TREE multicore version 1.6.7 for Mac OS X 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meeps-mac-pro.staff.sydney.edu.au (AVX, 64 GB RAM)
+Command: /Users/davidduchene/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s ../../../RobAlignments/1_Dsouli_2011.fasta -m TESTMERGE -bb 1000 -sp ../../../RobAlignments/1_Dsouli_2011_partitions.nex -nt 2 -pre 6_setDsouli_2011
+Seed:    672080 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Sep  7 08:52:28 2018
+Kernel:  AVX - 2 threads (8 CPU cores detected)
+
+Reading partition model file ../../../RobAlignments/1_Dsouli_2011_partitions.nex ...
+Reading alignment file ../../../RobAlignments/1_Dsouli_2011.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 39 sequences with 1635 columns, 739 distinct patterns
+602 parsimony-informative, 116 singleton sites, 917 constant sites
+                            Gap/Ambiguity  Composition  p-value
+   1  Cheilosia_longula            37.25%    passed     30.91%
+   2  Cheilosia_naruska            39.14%    passed     41.02%
+   3  Dolichopus_excisus           18.04%    failed      0.00%
+   4  Dolichopus_nubilus           18.04%    failed      0.02%
+   5  Drosophila_melanogaster       2.69%    passed     88.31%
+   6  Drosophila_virilis            5.20%    passed     55.13%
+   7  Drosophila_yakuba             2.57%    passed     97.20%
+   8  Haematobia_irritans           0.00%    passed     66.57%
+   9  Haematobosca_croceicomis_1    3.36%    passed     65.61%
+  10  Heamatobosca_croceicomis_2    3.00%    passed     70.41%
+  11  Musca_domestica               1.22%    passed     75.95%
+  12  Prostomoxys_saegerae_1        0.12%    passed     93.85%
+  13  Prostomoxyssaegerae_2         0.12%    passed     96.82%
+  14  Simosyrphus_grandicornis     18.04%    passed     49.68%
+  15  S_bengalensis_1               0.06%    passed     91.95%
+  16  S_bengalensis_2               0.06%    passed     91.95%
+  17  S_calcitrans_Africa           3.43%    passed     86.94%
+  18  S_calcitrans_India            0.00%    passed     71.38%
+  19  S_calcitrans_Thailand_1       0.00%    passed     70.06%
+  20  S_calcitrans_Thailand_2       0.00%    passed     77.40%
+  21  S_indicus_1                   0.00%    passed     94.76%
+  22  S_indicus_2                   0.00%    passed     95.78%
+  23  S_inornatus_1                 0.12%    passed     93.89%
+  24  S_inornatus_2                 0.12%    passed     91.66%
+  25  S_niger_bilineatus_1          0.00%    passed     92.83%
+  26  S_niger_bilineatus_2          0.00%    passed     92.38%
+  27  S_niger_niger_1               0.06%    passed     95.89%
+  28  S_niger_niger_2               0.06%    passed     96.80%
+  29  S_omega_1                     0.49%    passed     90.35%
+  30  S_omega_2                     0.49%    passed     81.61%
+  31  S_pallidus_1                  0.61%    passed     93.77%
+  32  S_pallidus_2                  0.61%    passed     96.49%
+  33  S_sitiens_1                   0.00%    passed     76.37%
+  34  S_sitiens_2                   0.00%    passed     78.45%
+  35  S_sitiens_Burkina_Faso       30.34%    passed     58.42%
+  36  S_transvittatus_1             0.12%    passed     96.68%
+  37  S_transvittatus_2             0.12%    passed     95.82%
+  38  S_varipes_1                   0.31%    passed     68.72%
+  39  S_varipes_2                   2.94%    passed     89.69%
+****  TOTAL                         4.84%  2 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 7 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		39	251	47	187	TESTMERGE	COI_1
+2		39	251	14	234	TESTMERGE	COI_2
+3		39	251	182	44	TESTMERGE	COI_3
+4		37	196	48	130	TESTMERGE	CYTB_1
+5		37	196	24	162	TESTMERGE	CYTB_2
+6		37	195	140	33	TESTMERGE	CYTB_3
+7		35	295	147	127	TESTMERGE	ITS2
+Degree of missing data: 0.037
+Info: multi-threading strategy over partitions
+
+NOTE: S_bengalensis_2 is identical to S_bengalensis_1 but kept for subsequent analysis
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.005 seconds
+NOTE: ModelFinder requires 7 MB RAM!
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -12304.389 / df: 84 / AIC: 24776.778 / AICc: 24785.991 / BIC: 25230.328
+Selecting individual models for 7 charsets using BIC...
+ No. Model        Score       Charset
+   1 HKY+F+G4     5393.541    ITS2
+   2 HKY+F+G4     5102.139    CYTB_3
+   3 TIM2+F+G4    2341.278    CYTB_1
+   4 TIM2+F+G4    2568.219    COI_1
+   5 HKY+F+G4     1486.382    CYTB_2
+   6 TPM2u+F+I    1371.753    COI_2
+   7 HKY+F+G4     6821.565    COI_3
+Full partition model BIC score: 26151.825 (LnL: -11059.577  df:545)
+Merging models to increase model fit (about 43 total partition schemes)...
+   8 TIM+F+I+G4   26244.387   COI_3+ITS2
+   9 TIM2+F+I+G4  26167.349   CYTB_3+ITS2
+  10 TIM+F+I+G4   26245.946   COI_3+CYTB_1	0h:2m:35s (0h:8m:31s left)
+  11 HKY+F+G4     25786.752   COI_3+CYTB_3	0h:2m:49s (0h:8m:13s left)
+  12 GTR+F+I+G4   26254.241   COI_1+COI_3	0h:3m:6s (0h:8m:1s left)
+  13 TIM+F+I+G4   26329.147   COI_3+CYTB_2	0h:3m:10s (0h:7m:18s left)
+  14 TIM2+F+I+G4  25875.444   CYTB_1+ITS2	0h:3m:19s (0h:6m:52s left)
+  15 GTR+F+I+G4   26014.975   CYTB_1+CYTB_3	0h:3m:32s (0h:6m:36s left)
+  16 TIM2+F+I+G4  25889.819   COI_1+ITS2	0h:3m:32s (0h:5m:59s left)
+  17 GTR+F+I+G4   26105.893   COI_1+CYTB_3	0h:3m:54s (0h:5m:58s left)
+  18 TIM+F+I+G4   26403.617   COI_2+COI_3	0h:3m:54s (0h:5m:26s left)
+  19 TN+F+I+G4    25906.988   CYTB_2+ITS2	0h:4m:5s (0h:5m:10s left)
+  20 TIM+F+I+G4   26118.718   CYTB_2+CYTB_3	0h:4m:7s (0h:4m:44s left)
+  21 TN+F+I+G4    25940.351   COI_2+ITS2	0h:4m:18s (0h:4m:30s left)
+  22 TIM2+F+I+G4  25666.486   COI_1+CYTB_1	0h:4m:27s (0h:4m:15s left)
+  23 GTR+F+I+G4   26217.089   COI_2+CYTB_3	0h:4m:30s (0h:3m:55s left)
+  24 TIM2+F+I+G4  25720.182   CYTB_1+CYTB_2	0h:4m:34s (0h:3m:37s left)
+  25 TN+F+I+G4    25702.710   COI_1+CYTB_2	0h:4m:37s (0h:3m:19s left)
+  26 TIM2+F+I+G4  25706.723   COI_1+COI_2	0h:4m:43s (0h:3m:5s left)
+  27 TIM2+F+I+G4  25741.308   COI_2+CYTB_1	0h:4m:43s (0h:2m:48s left)
+  28 F81+F+I      25648.057   COI_2+CYTB_2	0h:4m:46s (0h:2m:33s left)
+Merging COI_2+CYTB_2 with BIC score: 25648.057 (LnL: -11096.269  df: 467)
+  29 TN+F+I+G4    25544.602   COI_2+CYTB_2+ITS2	0h:5m:1s (0h:2m:25s left)
+  30 TIM+F+I+G4   26117.630   COI_2+COI_3+CYTB_2	0h:5m:7s (0h:2m:13s left)
+  31 TIM2+F+I+G4  25275.188   COI_2+CYTB_1+CYTB_2	0h:5m:9s (0h:1m:59s left)
+  32 TIM2+F+I+G4  25228.687   COI_1+COI_2+CYTB_2	0h:5m:14s (0h:1m:48s left)
+  33 GTR+F+I+G4   25860.583   COI_2+CYTB_2+CYTB_3	0h:5m:26s (0h:1m:39s left)
+Merging COI_1+CYTB_1 with BIC score: 25162.718 (LnL: -11138.476  df: 390)
+  34 GTR+F+I+G4   25189.085   COI_1+CYTB_1+CYTB_3	0h:5m:50s (0h:1m:32s left)
+  35 GTR+F+I+G4   25424.818   COI_1+COI_3+CYTB_1	0h:5m:52s (0h:1m:20s left)
+  36 TIM2+F+I+G4  24792.758   COI_1+COI_2+CYTB_1+CYTB_2	0h:6m:3s (0h:1m:10s left)
+  37 TIM2+F+I+G4  24971.368   COI_1+CYTB_1+ITS2	0h:6m:8s (0h:0m:59s left)
+Merging COI_1+COI_2+CYTB_1+CYTB_2 with BIC score: 24792.758 (LnL: -11245.773  df: 311)
+  38 TPM2u+F+I+G4 24717.706   COI_1+COI_2+CYTB_1+CYTB_2+ITS2	0h:6m:30s (0h:0m:51s left)
+  39 GTR+F+I+G4   25012.369   COI_1+COI_2+CYTB_1+CYTB_2+CYTB_3	0h:6m:32s (0h:0m:40s left)
+  40 GTR+F+I+G4   25323.312   COI_1+COI_2+COI_3+CYTB_1+CYTB_2	0h:6m:52s (0h:0m:30s left)
+Merging COI_3+CYTB_3 with BIC score: 24427.685 (LnL: -11344.413  df: 235)
+  41 GTR+F+I+G4   25281.889   COI_1+COI_2+COI_3+CYTB_1+CYTB_2+CYTB_3	0h:7m:32s (0h:0m:22s left)
+  42 TIM+F+I+G4   24657.640   COI_3+CYTB_3+ITS2	0h:7m:39s (0h:0m:10s left)
+Merging COI_1+COI_2+CYTB_1+CYTB_2+ITS2 with BIC score: 24352.633 (LnL: -11576.965  df: 162)
+  43 GTR+F+I+G4   25184.902   COI_1+COI_2+COI_3+CYTB_1+CYTB_2+CYTB_3+ITS2	0h:8m:20s (0h:0m:0s left)
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = TPM2u+F+I+G4: COI_1 COI_2 CYTB_1 CYTB_2 ITS2, HKY+F+G4: COI_3 CYTB_3;
+Agglomerative model selection: ((((COI_1,CYTB_1)2:25162.7,(COI_2,CYTB_2)1:25648.1)3:24792.8,ITS2)5:24352.6,(COI_3,CYTB_3)4:24427.7)
+Merging into 2 partitions...
+Partition information was printed to 6_setDsouli_2011.best_scheme.nex
+Partition information in Raxml format was printed to 6_setDsouli_2011.best_scheme
+
+All model information printed to 6_setDsouli_2011.model.gz
+CPU time for ModelFinder: 222.013 seconds (0h:3m:42s)
+Wall-clock time for ModelFinder: 501.810 seconds (0h:8m:21s)
+Generating 1000 samples for ultrafast bootstrap (seed: 672080)...
+
+NOTE: 6 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Optimizing TPM2u+F+I+G4 parameters for partition COI_1+COI_2+CYTB_1+CYTB_2+ITS2 (82 free parameters)
+Optimizing HKY+F+G4 parameters for partition COI_3+CYTB_3 (80 free parameters)
+Optimal log-likelihood: -11576.808
+Computing ML distances based on estimated model parameters... 0.046 sec
+Computing BIONJ tree...
+0.002 seconds
+Log-likelihood of BIONJ tree: -11549.817
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 3.785 second
+Computing log-likelihood of 98 initial trees ... 5.631 seconds
+Current best score: -11544.432
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -11536.444
+Iteration 10 / LogL: -11539.011 / Time: 0h:0m:38s
+UPDATE BEST LOG-LIKELIHOOD: -11536.440
+Iteration 20 / LogL: -11538.042 / Time: 0h:0m:54s
+Finish initializing candidate tree set (5)
+Current best tree score: -11536.440 / CPU time: 34.537
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -11540.491 / Time: 0h:1m:7s (0h:2m:45s left)
+Iteration 40 / LogL: -11542.276 / Time: 0h:1m:20s (0h:2m:5s left)
+Iteration 50 / LogL: -11539.320 / Time: 0h:1m:33s (0h:1m:37s left)
+Log-likelihood cutoff on original alignment: -11582.096
+Iteration 60 / LogL: -11537.576 / Time: 0h:1m:46s (0h:1m:13s left)
+Iteration 70 / LogL: -11537.073 / Time: 0h:1m:59s (0h:0m:53s left)
+Iteration 80 / LogL: -11539.679 / Time: 0h:2m:11s (0h:0m:34s left)
+UPDATE BEST LOG-LIKELIHOOD: -11536.436
+Iteration 90 / LogL: -11536.436 / Time: 0h:2m:23s (0h:0m:17s left)
+Iteration 100 / LogL: -11540.536 / Time: 0h:2m:37s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -11582.096
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:2m:40s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Optimizing TPM2u+F+I+G4 parameters for partition COI_1+COI_2+CYTB_1+CYTB_2+ITS2 (82 free parameters)
+Optimizing HKY+F+G4 parameters for partition COI_3+CYTB_3 (80 free parameters)
+Optimal log-likelihood: -11536.259
+BEST SCORE FOUND : -11536.259
+Creating bootstrap support values...
+Split supports printed to NEXUS file 6_setDsouli_2011.splits.nex
+Total tree length: 8.724
+
+Total number of iterations: 102
+CPU time used for tree search: 51.341 sec (0h:0m:51s)
+Wall-clock time used for tree search: 140.617 sec (0h:2m:20s)
+Total CPU time used: 58.121 sec (0h:0m:58s)
+Total wall-clock time used: 161.324 sec (0h:2m:41s)
+
+Computing bootstrap consensus tree...
+Reading input file 6_setDsouli_2011.splits.nex...
+39 taxa and 159 splits.
+Consensus tree written to 6_setDsouli_2011.contree
+Reading input trees file 6_setDsouli_2011.contree
+Log-likelihood of consensus tree: -11536.264
+
+Analysis results written to: 
+  IQ-TREE report:                6_setDsouli_2011.iqtree
+  Maximum-likelihood tree:       6_setDsouli_2011.treefile
+  Likelihood distances:          6_setDsouli_2011.mldist
+  Best partitioning scheme:      6_setDsouli_2011.best_scheme.nex
+           in RAxML format:      6_setDsouli_2011.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          6_setDsouli_2011.splits.nex
+  Consensus tree:                6_setDsouli_2011.contree
+  Screen log file:               6_setDsouli_2011.log
+
+Date and Time: Fri Sep  7 09:03:32 2018

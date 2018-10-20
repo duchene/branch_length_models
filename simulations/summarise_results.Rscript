@@ -1,0 +1,133 @@
+
+
+
+schemes <- c("rvar", "trln", "rvartrln")
+
+seqlens <- c(1000, 2000, 4000, 8000)
+taxa <- c(4, 8, 16, 32)
+
+pdf("summary_sims_supportpie.pdf", height = 48, width = 16, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	## Plot sequence lengths as rows and number of taxa al columns.
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			restab <- table(modelsup)
+			if(!"1" %in% names(restab)) restab["1"] <- 0
+			if(!"2" %in% names(restab)) restab["2"] <- 0
+			if(!"3" %in% names(restab)) restab["3"] <- 0
+			restab <- restab[c("1", "2", "3")]
+			names(restab) <- c("Shared", "PropLink", "Unlinked")
+			pie(restab, col = c("yellow", "orange", "red"), labels = c("", "", ""), radius = 1)
+		}
+	}
+}
+
+dev.off()
+
+
+pdf("summary_sims_trlendif.pdf", height = 48, width = 12, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			boxplot(t(trlendif), col = c("yellow", "orange", "red"), range = 0, ylim = c(-0.2, 0.2))
+			abline(0, 0, lty = 2)
+		}
+	}
+}
+dev.off()
+
+
+pdf("summary_sims_trlenrank.pdf", height = 48, width = 12, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			boxplot(t(apply(trlendif, 2, rank)), col = c("yellow", "orange", "red"), outline = F)
+			abline(0, 0, lty = 2)
+		}
+	}
+}
+dev.off()
+
+
+pdf("summary_sims_trlenabsrank.pdf", height = 48, width = 12, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			boxplot(t(apply(abs(trlendif), 2, rank)), col = c("yellow", "orange", "red"), outline = F)
+			abline(0, 0, lty = 2)
+		}
+	}
+}
+dev.off()
+
+
+pdf("summary_sims_trstemdif.pdf", height = 48, width = 12, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			boxplot(t(trstemdif), col = c("yellow", "orange", "red"), range = 0, ylim = c(-0.2, 0.2))
+			abline(0, 0, lty = 2)
+		}
+	}
+}
+dev.off()
+
+
+pdf("summary_sims_trstemrank.pdf", height = 48, width = 12, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			boxplot(t(apply(trstemdif, 2, rank)), col = c("yellow", "orange", "red"), outline = F)
+			abline(0, 0, lty = 2)
+		}
+	}
+}
+dev.off()
+
+
+pdf("summary_sims_trstemabsrank.pdf", height = 48, width = 12, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			boxplot(t(apply(abs(trstemdif), 2, rank)), col = c("yellow", "orange", "red"), outline = F)
+			abline(0, 0, lty = 2)
+		}
+	}
+}
+
+
+pdf("summary_sims_trdist.pdf", height = 48, width = 12, useDingbats = F)
+par(mfrow = c(12, 4))
+
+for(k in 1:3){
+	for(i in 1:4){
+		for(j in 1:4){
+			load(paste0(schemes[k], "/sqln", seqlens[j], "tx", taxa[i], "/res.Rdata"))
+			boxplot(t(trdist), col = c("yellow", "orange", "red"), outline = F)
+			abline(0, 0, lty = 2)
+		}
+	}
+}
+
+dev.off()

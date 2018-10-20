@@ -1,0 +1,313 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../RobAlignments/1_Fishbein_2001_partitions.nex
+Input file name: ../../../RobAlignments/1_Fishbein_2001.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 526050
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 40 taxa with 11 partitions and 9005 total sites (0% missing data)
+
+  ID  Name    Type	Seq	Site	Unique	Infor	Invar	Const
+   1  atpB_1  DNA	40	471	111	35	404	404
+   2  atpB_2  DNA	40	471	79	16	434	434
+   3  atpB_3  DNA	40	471	309	203	182	182
+   4  18S     DNA	40	1716	274	108	1541	1541
+   5  rbcl_1  DNA	40	459	95	32	398	398
+   6  rbcl_2  DNA	40	459	71	14	423	423
+   7  rbcl_3  DNA	40	458	289	189	178	178
+   8  matK_1  DNA	40	373	264	165	141	141
+   9  matK_2  DNA	40	373	230	130	182	182
+  10  matK_3  DNA	40	373	293	205	102	102
+  11  26S     DNA	40	3381	612	463	2725	2725
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+I:atpB_1,HKY+F+I+G4:atpB_2,TVM+F+G4:atpB_3,SYM+I+G4:18S,TIM+F+I+G4:rbcl_1,TVMe+I+G4:rbcl_2,TVM+F+G4:rbcl_3,K3Pu+F+G4:matK_1,TVM+F+G4:matK_2,TVM+F+G4:matK_3,GTR+F+I+G4:26S
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM2+F+I         -1378.1198   2772.2395 + 0.0000   2772.5512 + 0.0000   2805.4784 + 0.0000
+   2  HKY+F+I+G4       -1108.6020   2231.2040 + 0.0000   2231.4459 + 0.0000   2260.2880 + 0.0000
+   3  TVM+F+G4         -4214.4668   8446.9336 + 0.0000   8447.3240 + 0.0000   8484.3273 + 0.0000
+   4  SYM+I+G4         -4655.7834   9327.5668 + 0.0000   9327.6512 + 0.0000   9371.1488 + 0.0000
+   5  TIM+F+I+G4       -1501.9056   3021.8113 + 0.0000   3022.2122 + 0.0000   3058.9728 + 0.0000
+   6  TVMe+I+G4        -1176.8613   2367.7226 + 0.0000   2367.9709 + 0.0000   2396.6259 + 0.0000
+   7  TVM+F+G4         -4116.8786   8251.7571 + 0.0000   8252.1589 + 0.0000   8288.8989 + 0.0000
+   8  K3Pu+F+G4        -3609.2105   7232.4210 + 0.0000   7232.7279 + 0.0000   7259.8721 + 0.0000
+   9  TVM+F+G4         -2941.9222   5901.8444 + 0.0000   5902.3402 + 0.0000   5937.1386 + 0.0000
+  10  TVM+F+G4         -4407.6173   8833.2346 + 0.0000   8833.7305 + 0.0000   8868.5288 + 0.0000
+  11  GTR+F+I+G4      -14588.6155  29199.2310 + 0.0000  29199.3093 + 0.0000  29266.6162 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM2+F+I       0.2799  TIM2{2.31798,1.84195,4.31609}+F{0.263248,0.185654,0.392203,0.158894}+I{0.770272}
+   2  HKY+F+I+G4     0.2015  HKY{4.0488}+F{0.2637,0.24726,0.167881,0.321158}+I{0.83183}+G4{0.697409}
+   3  TVM+F+G4       2.0389  TVM{1.23909,3.68528,0.0526996,1.12625}+F{0.345974,0.146685,0.139286,0.368055}+G4{1.21886}
+   4  SYM+I+G4       0.3104  SYM{0.903626,2.24185,2.99475,0.662159,4.99342}+FQ+I{0.809496}+G4{0.739155}
+   5  TIM+F+I+G4     0.5578  TIM{0.567448,0.424618,2.06006}+F{0.23256,0.198762,0.387494,0.181185}+I{0.764903}+G4{0.544222}
+   6  TVMe+I+G4      0.4516  TVMe{47.3722,100,85.3059,48.6893}+FQ+I{0.852575}+G4{0.340495}
+   7  TVM+F+G4       2.1669  TVM{1.68535,5.58348,0.270716,1.93345}+F{0.283631,0.160809,0.135154,0.420406}+G4{1.00768}
+   8  K3Pu+F+G4      2.2431  K3Pu{1.44615,0.322303}+F{0.260279,0.229797,0.187358,0.322565}+G4{1.09205}
+   9  TVM+F+G4       1.7090  TVM{1.17815,1.7424,0.174556,1.09321}+F{0.351902,0.16339,0.123105,0.361603}+G4{0.859253}
+  10  TVM+F+G4       3.0826  TVM{1.42277,1.98657,0.209489,0.87198}+F{0.316939,0.136665,0.150277,0.396119}+G4{2.54033}
+  11  GTR+F+I+G4     0.9481  GTR{0.946273,3.6008,2.52365,0.467731,11.0685}+F{0.236376,0.249556,0.316024,0.198044}+I{0.666918}+G4{0.515681}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -43667.0664 (s.e. 654.2132)
+Unconstrained log-likelihood (without tree): -30673.8221
+Number of free parameters (#branches + #model parameters): 169
+Akaike information criterion (AIC) score: 87672.1328
+Corrected Akaike information criterion (AICc) score: 87678.6364
+Bayesian information criterion (BIC) score: 88872.9682
+
+Total tree length (sum of branch lengths): 0.8406
+Sum of internal branch lengths: 0.3055 (36.3387% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0001) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Altingia' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Altingia
+|
+|                           +----------Aphanopetalum
+|                       +---| (100)
+|                       |   |                    +----Haloragis
+|                       |   |     +--------------| (100)
+|                       |   |     |              +----Myriophyllum
+|                       |   |  +--| (100)
+|                       |   |  |  +-----Penthorum
+|                       |   +--| (99)
+|                       |      +---------------Tetracarpaea
+|                  +----| (100)
+|                  |    |                  +------------------------Crassula
+|                  |    +------------------| (100)
+|                  |                       |         +-------Dudleya
+|                  |                       |   +-----| (100)
+|                  |                       |   |     +----------Sedum
+|                  |                       +---| (100)
+|                  |                           +------Kalanchoe
+|               +--| (73)
+|               |  |               +--Boykinia
+|               |  |           +---| (100)
+|               |  |           |   +--Sullivantia
+|               |  |     +-----| (100)
+|               |  |     |     |           +------------Chrysosplenium
+|               |  |     |     |        +--| (100)
+|               |  |     |     |        |  +---Peltoboykinia
+|               |  |     |     |     +--| (59)
+|               |  |     |     |     |  +-----------------Saxifraga_mertensiana
+|               |  |     |     |  +--| (71)
+|               |  |     |     |  |  +---Heuchera
+|               |  |     |     +--| (95)
+|               |  |     |        +--------------Saxifraga_integrifolia
+|               |  |  +--| (99)
+|               |  |  |  +-----------Ribes
+|               |  +--| (100)
+|               |     |      +--------Choristylis
+|               |     |  +---| (100)
+|               |     |  |   +---Itea
+|               |     +--| (100)
+|               |        +------Pterostemon
+|            +--| (67)
+|            |  |                                +--Paeonia_brownii
+|            |  |                             +--| (100)
+|            |  |                             |  +--Paeonia_californica
+|            |  |                          +--| (71)
+|            |  |                          |  +--Paeonia_tenuifolia
+|            |  +--------------------------| (100)
+|            |                             +--Paeonia_suffruticosa
+|         +--| (67)
+|         |  |                +-------------------Lambertia
+|         |  |           +----| (100)
+|         |  |           |    +-----Platanus
+|         |  |  +--------| (100)
+|         |  |  |        |        +---Tetracentron
+|         |  |  |        +--------| (100)
+|         |  |  |                 +--Trochodendron
+|         |  +--| (100)
+|         |     |       +-----Leea
+|         |     +-------| (100)
+|         |             +------Vitis
+|      +**| (23)
+|      |  |  +--Cercidiphyllum
+|      |  +--| (68)
+|      |     +---------Daphniphyllum
++------| (100)
+|      |           +--Corylopsis
+|      |        +--| (100)
+|      |        |  +--Hamamelis
+|      |     +--| (98)
+|      |     |  +---Disanthus
+|      |  +--| (90)
+|      |  |  +---Mytilaria
+|      +--| (90)
+|         |  +--Exbucklandia
+|         +--| (100)
+|            +---Rhodoleia
+|
++--Liquidambar
+
+Tree in newick format:
+
+(Altingia:0.0028780989,(((((((Aphanopetalum:0.0207133529,(((Haloragis:0.0103344680,Myriophyllum:0.0103669714)100:0.0278969584,Penthorum:0.0124811532)100:0.0049539550,Tetracarpaea:0.0301310154)99:0.0024338863)100:0.0089870191,(Crassula:0.0477378554,((Dudleya:0.0149164344,Sedum:0.0206579986)100:0.0111851766,Kalanchoe:0.0140975421)100:0.0075764859)100:0.0352655335)100:0.0107656267,((((Boykinia:0.0064209588,Sullivantia:0.0055199016)100:0.0073953659,((((Chrysosplenium:0.0254448899,Peltoboykinia:0.0086656061)100:0.0060846818,Saxifraga_mertensiana:0.0337218337)59:0.0006574548,Heuchera:0.0082812416)71:0.0015751923,Saxifraga_integrifolia:0.0277625364)95:0.0011489752)100:0.0115499344,Ribes:0.0238173747)99:0.0024181889,((Choristylis:0.0177388100,Itea:0.0090668785)100:0.0078723515,Pterostemon:0.0145713383)100:0.0046832274)100:0.0038826378)73:0.0009197606,(((Paeonia_brownii:0.0020956614,Paeonia_californica:0.0020238340)100:0.0020045808,Paeonia_tenuifolia:0.0052033342)71:0.0007069006,Paeonia_suffruticosa:0.0025458151)100:0.0508217212)67:0.0013395163,(((Lambertia:0.0379507661,Platanus:0.0123219210)100:0.0099826607,(Tetracentron:0.0078506582,Trochodendron:0.0069074726)100:0.0184184325)100:0.0169952511,(Leea:0.0114450006,Vitis:0.0136533081)100:0.0158578538)100:0.0064868934)67:0.0014171219,(Cercidiphyllum:0.0061328227,Daphniphyllum:0.0187969642)68:0.0009878134)23:0.0000020505,((((Corylopsis:0.0053790098,Hamamelis:0.0042570747)100:0.0034301514,Disanthus:0.0087588112)98:0.0019028713,Mytilaria:0.0076819035)90:0.0012293834,(Exbucklandia:0.0054357226,Rhodoleia:0.0080273403)100:0.0024156911)90:0.0011188249)100:0.0130859265,Liquidambar:0.0033296952);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -43667.069083
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Altingia
+|
+|                           +----------Aphanopetalum
+|                       +---| (100)
+|                       |   |                    +----Haloragis
+|                       |   |     +--------------| (100)
+|                       |   |     |              +----Myriophyllum
+|                       |   |  +--| (100)
+|                       |   |  |  +-----Penthorum
+|                       |   +--| (99)
+|                       |      +---------------Tetracarpaea
+|                  +----| (100)
+|                  |    |                  +------------------------Crassula
+|                  |    +------------------| (100)
+|                  |                       |         +-------Dudleya
+|                  |                       |   +-----| (100)
+|                  |                       |   |     +----------Sedum
+|                  |                       +---| (100)
+|                  |                           +------Kalanchoe
+|               +--| (73)
+|               |  |               +--Boykinia
+|               |  |           +---| (100)
+|               |  |           |   +--Sullivantia
+|               |  |     +-----| (100)
+|               |  |     |     |           +------------Chrysosplenium
+|               |  |     |     |        +--| (100)
+|               |  |     |     |        |  +---Peltoboykinia
+|               |  |     |     |     +--| (59)
+|               |  |     |     |     |  +-----------------Saxifraga_mertensiana
+|               |  |     |     |  +--| (71)
+|               |  |     |     |  |  +---Heuchera
+|               |  |     |     +--| (95)
+|               |  |     |        +--------------Saxifraga_integrifolia
+|               |  |  +--| (99)
+|               |  |  |  +-----------Ribes
+|               |  +--| (100)
+|               |     |      +--------Choristylis
+|               |     |  +---| (100)
+|               |     |  |   +---Itea
+|               |     +--| (100)
+|               |        +------Pterostemon
+|            +--| (67)
+|            |  |                                +--Paeonia_brownii
+|            |  |                             +--| (100)
+|            |  |                             |  +--Paeonia_californica
+|            |  |                          +--| (71)
+|            |  |                          |  +--Paeonia_tenuifolia
+|            |  +--------------------------| (100)
+|            |                             +--Paeonia_suffruticosa
+|         +--| (67)
+|         |  |                +-------------------Lambertia
+|         |  |           +----| (100)
+|         |  |           |    +-----Platanus
+|         |  |  +--------| (100)
+|         |  |  |        |        +---Tetracentron
+|         |  |  |        +--------| (100)
+|         |  |  |                 +--Trochodendron
+|         |  +--| (100)
+|         |     |       +-----Leea
+|         |     +-------| (100)
+|         |             +------Vitis
+|      +--| (23)
+|      |  |  +--Cercidiphyllum
+|      |  +--| (68)
+|      |     +---------Daphniphyllum
++------| (100)
+|      |           +--Corylopsis
+|      |        +--| (100)
+|      |        |  +--Hamamelis
+|      |     +--| (98)
+|      |     |  +---Disanthus
+|      |  +--| (90)
+|      |  |  +---Mytilaria
+|      +--| (90)
+|         |  +--Exbucklandia
+|         +--| (100)
+|            +---Rhodoleia
+|
++--Liquidambar
+
+
+Consensus tree in newick format: 
+
+(Altingia:0.0028775799,(((((((Aphanopetalum:0.0207063533,(((Haloragis:0.0103315113,Myriophyllum:0.0103636807)100:0.0278882752,Penthorum:0.0124770969)100:0.0049522745,Tetracarpaea:0.0301204947)99:0.0024348244)100:0.0089844077,(Crassula:0.0477184858,((Dudleya:0.0149113172,Sedum:0.0206503997)100:0.0111819192,Kalanchoe:0.0140930952)100:0.0075740805)100:0.0352505216)100:0.0107610037,((((Boykinia:0.0064175518,Sullivantia:0.0055171173)100:0.0073919033,((((Chrysosplenium:0.0254310536,Peltoboykinia:0.0086608972)100:0.0060820029,Saxifraga_mertensiana:0.0337031585)59:0.0006563470,Heuchera:0.0082782940)71:0.0015745104,Saxifraga_integrifolia:0.0277490967)95:0.0011482974)100:0.0115462924,Ribes:0.0238079674)99:0.0024166297,((Choristylis:0.0177318206,Itea:0.0090628981)100:0.0078700535,Pterostemon:0.0145644020)100:0.0046816994)100:0.0038797160)73:0.0009213648,(((Paeonia_brownii:0.0020948353,Paeonia_californica:0.0020220934)100:0.0020037378,Paeonia_tenuifolia:0.0052012533)71:0.0007071023,Paeonia_suffruticosa:0.0025455146)100:0.0508067203)67:0.0013384975,(((Lambertia:0.0379422155,Platanus:0.0123187978)100:0.0099808390,(Tetracentron:0.0078493776,Trochodendron:0.0069056214)100:0.0184134649)100:0.0169916089,(Leea:0.0114423616,Vitis:0.0136496278)100:0.0158536175)100:0.0064865965)67:0.0014160584,(Cercidiphyllum:0.0061314669,Daphniphyllum:0.0187928147)68:0.0009873059)23:0.0000029541,((((Corylopsis:0.0053774541,Hamamelis:0.0042557432)100:0.0034294526,Disanthus:0.0087571773)98:0.0019023767,Mytilaria:0.0076805072)90:0.0012291806,(Exbucklandia:0.0054346661,Rhodoleia:0.0080247693)100:0.0024153889)90:0.0011187116)100:0.0130830330,Liquidambar:0.0033284773);
+
+TIME STAMP
+----------
+
+Date and time: Thu Sep  6 18:14:22 2018
+Total CPU time used: 196.546927 seconds (0h:3m:16s)
+Total wall-clock time used: 1018.02277 seconds (0h:16m:58s)
+

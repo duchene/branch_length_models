@@ -1,0 +1,354 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../RobAlignments/1_Sauquet_2011_partitions.nex
+Input file name: ../../../RobAlignments/1_Sauquet_2011.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 60066
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 51 taxa with 10 partitions and 5441 total sites (24.0527% missing data)
+
+  ID  Name          Type	Seq	Site	Unique	Infor	Invar	Const
+   1  atpb_pos1     DNA	31	451	51	20	410	410
+   2  atpb_pos2     DNA	31	451	28	8	436	436
+   3  atpb_pos3     DNA	31	451	147	103	268	268
+   4  rbcl_pos1     DNA	48	476	94	18	419	419
+   5  rbcl_pos2     DNA	48	476	73	11	441	441
+   6  rbcl_pos3     DNA	48	476	234	131	249	249
+   7  spacer_rbcl   DNA	41	993	427	127	725	725
+   8  spacer_trnlf  DNA	33	481	271	118	277	277
+   9  trnl_intron   DNA	31	558	281	104	362	362
+  10  its           DNA	42	628	313	200	357	357
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+I+G4:atpb_pos1,HKY+F+I+G4:atpb_pos2,TVM+F+I:atpb_pos3,F81+F+I+G4:rbcl_pos1,JC+I+G4:rbcl_pos2,K3Pu+F+G4:rbcl_pos3,K3Pu+F+G4:spacer_rbcl,K3Pu+F+I:spacer_trnlf,TIM+F+I:trnl_intron,GTR+F+I+G4:its
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM2+F+I+G4      -1012.8426   2041.6851 + 0.0000   2042.0109 + 0.0000   2074.5769 + 0.0000
+   2  HKY+F+I+G4        -786.6000   1585.1999 + 0.0000   1585.3891 + 0.0000   1609.8687 + 0.0000
+   3  TVM+F+I          -1977.6049   3971.2099 + 0.0000   3971.5357 + 0.0000   4004.1016 + 0.0000
+   4  F81+F+I+G4       -1411.8259   2833.6518 + 0.0000   2833.7795 + 0.0000   2854.4789 + 0.0000
+   5  JC+I+G4          -1194.6908   2393.3817 + 0.0000   2393.4071 + 0.0000   2401.7125 + 0.0000
+   6  K3Pu+F+G4        -2668.5911   5349.1823 + 0.0000   5349.3614 + 0.0000   5374.1748 + 0.0000
+   7  K3Pu+F+G4        -3515.6703   7043.3407 + 0.0000   7043.4259 + 0.0000   7072.7451 + 0.0000
+   8  K3Pu+F+I         -2213.1325   4438.2649 + 0.0000   4438.4421 + 0.0000   4463.3201 + 0.0000
+   9  TIM+F+I          -2343.1237   4700.2474 + 0.0000   4700.4510 + 0.0000   4730.5179 + 0.0000
+  10  GTR+F+I+G4       -4545.1843   9110.3687 + 0.0000   9110.7253 + 0.0000   9154.7941 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-equal partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM2+F+I+G4    1.0000  TIM2{7.4524,2.05084,57.5338}+F{0.264843,0.177797,0.393996,0.163364}+I{0.732153}+G4{0.292893}
+   2  HKY+F+I+G4     1.0000  HKY{12.7557}+F{0.268161,0.249008,0.169938,0.312893}+I{0.921714}+G4{0.109723}
+   3  TVM+F+I        1.0000  TVM{0.770097,4.82657,0.0001,1.54186}+F{0.370219,0.144276,0.124248,0.361256}+I{0.239448}
+   4  F81+F+I+G4     1.0000  F81+I{0.684903}+G4{0.225607}
+   5  JC+I+G4        1.0000  JC+I{0.812256}+G4{0.171598}
+   6  K3Pu+F+G4      1.0000  K3Pu{4.77525,0.346792}+F{0.285782,0.158549,0.141937,0.413732}+G4{1.0263}
+   7  K3Pu+F+G4      1.0000  K3Pu{1.09626,0.307027}+F{0.335132,0.161561,0.151394,0.351913}+G4{0.783147}
+   8  K3Pu+F+I       1.0000  K3Pu{1.69969,0.248059}+F{0.308112,0.168043,0.13771,0.386135}+I{0.160674}
+   9  TIM+F+I        1.0000  TIM{1.50321,0.47799,2.56148}+F{0.395148,0.164423,0.172414,0.268015}+I{0.377373}
+  10  GTR+F+I+G4     1.0000  GTR{1.00644,1.95036,1.44216,0.499398,3.6545}+F{0.197271,0.301089,0.283235,0.218404}+I{0.568463}+G4{0.582626}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -21617.1956 (s.e. 361.8575)
+Unconstrained log-likelihood (without tree): -21370.6001
+Number of free parameters (#branches + #model parameters): 163
+Akaike information criterion (AIC) score: 43560.3912
+Corrected Akaike information criterion (AICc) score: 43570.5228
+Bayesian information criterion (BIC) score: 44636.4713
+
+Total tree length (sum of branch lengths): 1.1320
+Sum of internal branch lengths: 0.4105 (36.2639% of tree length)
+
+WARNING: 2 near-zero internal branches (<0.0002) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Betula_platyphylla' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Betula_platyphylla
+|
++---Carpinus_betulus
+|
+|                            +--Castanea_sativa
+|                         +--| (92)
+|                         |  |     +--Chrysolepis_sempervirens
+|                         |  |  +--| (58)
+|                         |  |  |  +--Quercus_rubra
+|                         |  +--| (59)
+|                         |     +--Lithocarpus_henryi
+|                 +-------| (100)
+|                 |       +--Trigonobalanus_verticellata
+|              +--| (100)
+|              |  +--------Fagus_grandifolia
+|           +--| (100)
+|           |  |          +------------------------Cucumis_sativus
+|           |  |   +------| (100)
+|           |  |   |      |            +--------------------------Lotus_japonicus
+|           |  |   |      +------------| (100)
+|           |  |   |                   +------------------------Phaseolous_vulgaris
+|           |  +---| (100)
+|           |      |             +--Nothofagus_alessandri
+|           |      |          +--| (100)
+|           |      |          |  |        +--Nothofagus_fusca
+|           |      |          |  |     +--| (95)
+|           |      |          |  |     |  +**Nothofagus_solandri
+|           |      |          |  |  +--| (99)
+|           |      |          |  |  |  |  +**Nothofagus_truncata
+|           |      |          |  |  |  +--| (80)
+|           |      |          |  |  |     +**Nothofagus_cliffortioides
+|           |      |          |  +--| (100)
+|           |      |          |     +--Nothofagus_gunnii
+|           |      |       +--| (100)
+|           |      |       |  |        +--Nothofagus_antarctica
+|           |      |       |  |     +--| (62)
+|           |      |       |  |     |  |  +--Nothofagus_nitida
+|           |      |       |  |     |  +--| (93)
+|           |      |       |  |     |     +--Nothofagus_betuloides
+|           |      |       |  |  +--| (100)
+|           |      |       |  |  |  |  +--Nothofagus_dombeyi
+|           |      |       |  |  |  +--| (79)
+|           |      |       |  |  |     +--Nothofagus_pumilio
+|           |      |       |  +--| (100)
+|           |      |       |     |           +--Nothofagus_aequilateralis
+|           |      |       |     |        +--| (72)
+|           |      |       |     |        |  +**Nothofagus_balansae
+|           |      |       |     |     +--| (61)
+|           |      |       |     |     |  |  +--Nothofagus_baumanniae
+|           |      |       |     |     |  +**| (32)
+|           |      |       |     |     |     +--Nothofagus_discoidea
+|           |      |       |     |  +--| (100)
+|           |      |       |     |  |  +--Nothofagus_codonandra
+|           |      |       |     +--| (100)
+|           |      |       |        |  +--Nothofagus_brassii
+|           |      |       |        +**| (82)
+|           |      |       |           |        +**Nothofagus_carrii
+|           |      |       |           |     +--| (91)
+|           |      |       |           |     |  +--Nothofagus_grandis
+|           |      |       |           |  +--| (66)
+|           |      |       |           |  |  +--Nothofagus_perryi
+|           |      |       |           +--| (84)
+|           |      |       |              +--Nothofagus_resinosa
+|           |      +-------| (100)
+|           |              |        +--Nothofagus_cunninghamii
+|           |              |     +--| (99)
+|           |              |     |  +--Nothofagus_moorei
+|           |              |  +--| (99)
+|           |              |  |  +--Nothofagus_menziesii
+|           |              +--| (100)
+|           |                 |     +--Nothofagus_glauca
+|           |                 |  +--| (76)
+|           |                 |  |  +--Nothofagus_obliqua
+|           |                 +--| (100)
+|           |                    +--Nothofagus_alpina
+|        +--| (75)
+|        |  |           +--Cyclocarya_paliurus
+|        |  |        +--| (99)
+|        |  |        |  +--Juglans_nigra
+|        |  |     +--| (100)
+|        |  |     |  |  +---Platycarya_strobilacea
+|        |  |     |  +--| (86)
+|        |  |     |     +--Carya_illinoinensis
+|        |  |  +--| (100)
+|        |  |  |  |     +--Engelhardia_fenzelii
+|        |  |  |  |  +--| (100)
+|        |  |  |  |  |  +--Alfaropsis_roxburghiana
+|        |  |  |  +--| (100)
+|        |  |  |     |  +--Alfaroa_williamsii
+|        |  |  |     +--| (100)
+|        |  |  |        +--Oreomunnea_mexicana
+|        |  +--| (100)
+|        |     +--Rhoiptelea_chiliantha
+|     +--| (98)
+|     |  |    +--Comptonia_peregrina
+|     |  +----| (100)
+|     |       +--Morella_cerifera
+|  +--| (97)
+|  |  +-------------Casuarina_equisetifolia
++--| (100)
+   +------Ticodendron_incognitum
+
+Tree in newick format:
+
+(Betula_platyphylla:0.0129823695,Carpinus_betulus:0.0191118921,((((((((Castanea_sativa:0.0054096629,((Chrysolepis_sempervirens:0.0118932955,Quercus_rubra:0.0096421224)58:0.0008277826,Lithocarpus_henryi:0.0093502044)59:0.0002950307)92:0.0028607148,Trigonobalanus_verticellata:0.0132160581)100:0.0383377863,Fagus_grandifolia:0.0420949691)100:0.0171338029,((Cucumis_sativus:0.1169704878,(Lotus_japonicus:0.1274555297,Phaseolous_vulgaris:0.1161949904)100:0.0627913001)100:0.0332784637,(((Nothofagus_alessandri:0.0039279789,(((Nothofagus_fusca:0.0007658787,Nothofagus_solandri:0.0000020003)95:0.0002598641,(Nothofagus_truncata:0.0000018839,Nothofagus_cliffortioides:0.0000026145)80:0.0002490436)99:0.0038981926,Nothofagus_gunnii:0.0018091513)100:0.0025793866)100:0.0026366864,(((Nothofagus_antarctica:0.0023760978,(Nothofagus_nitida:0.0010587216,Nothofagus_betuloides:0.0040028092)93:0.0020704068)62:0.0004308902,(Nothofagus_dombeyi:0.0019593154,Nothofagus_pumilio:0.0105879692)79:0.0012390727)100:0.0039144811,((((Nothofagus_aequilateralis:0.0016046323,Nothofagus_balansae:0.0000025396)72:0.0045815940,(Nothofagus_baumanniae:0.0013349931,Nothofagus_discoidea:0.0022963001)32:0.0000024335)61:0.0005534534,Nothofagus_codonandra:0.0034423057)100:0.0036852122,(Nothofagus_brassii:0.0011059548,(((Nothofagus_carrii:0.0000026145,Nothofagus_grandis:0.0013700872)91:0.0009720356,Nothofagus_perryi:0.0015501529)66:0.0005647354,Nothofagus_resinosa:0.0060676685)84:0.0012095708)82:0.0000028390)100:0.0077474652)100:0.0030823934)100:0.0069142851,(((Nothofagus_cunninghamii:0.0011819774,Nothofagus_moorei:0.0037163805)99:0.0012317617,Nothofagus_menziesii:0.0037737241)99:0.0028954273,((Nothofagus_glauca:0.0009967672,Nothofagus_obliqua:0.0009992318)76:0.0004499116,Nothofagus_alpina:0.0056293432)100:0.0046397320)100:0.0120046655)100:0.0389835465)100:0.0191075024)100:0.0112523206,((((Cyclocarya_paliurus:0.0066820487,Juglans_nigra:0.0038325307)99:0.0028655491,(Platycarya_strobilacea:0.0206330068,Carya_illinoinensis:0.0050309250)86:0.0004035979)100:0.0034898230,((Engelhardia_fenzelii:0.0011954837,Alfaropsis_roxburghiana:0.0025619309)100:0.0034988827,(Alfaroa_williamsii:0.0075174310,Oreomunnea_mexicana:0.0034786386)100:0.0115591004)100:0.0148131165)100:0.0155841620,Rhoiptelea_chiliantha:0.0125353605)100:0.0164552595)75:0.0007981986,(Comptonia_peregrina:0.0066144520,Morella_cerifera:0.0049497347)100:0.0261135553)98:0.0053544001,Casuarina_equisetifolia:0.0661827882)97:0.0055899274,Ticodendron_incognitum:0.0341292765)100:0.0115419106);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -21617.199417
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Betula_platyphylla
+|
++---Carpinus_betulus
+|
+|                            +--Castanea_sativa
+|                         +--| (92)
+|                         |  |     +--Chrysolepis_sempervirens
+|                         |  |  +--| (58)
+|                         |  |  |  +--Quercus_rubra
+|                         |  +--| (59)
+|                         |     +--Lithocarpus_henryi
+|                 +-------| (100)
+|                 |       +--Trigonobalanus_verticellata
+|              +--| (100)
+|              |  +--------Fagus_grandifolia
+|           +--| (100)
+|           |  |          +------------------------Cucumis_sativus
+|           |  |   +------| (100)
+|           |  |   |      |            +--------------------------Lotus_japonicus
+|           |  |   |      +------------| (100)
+|           |  |   |                   +------------------------Phaseolous_vulgaris
+|           |  +---| (100)
+|           |      |             +--Nothofagus_alessandri
+|           |      |          +--| (100)
+|           |      |          |  |        +--Nothofagus_fusca
+|           |      |          |  |     +--| (95)
+|           |      |          |  |     |  +--Nothofagus_solandri
+|           |      |          |  |  +--| (99)
+|           |      |          |  |  |  |  +--Nothofagus_truncata
+|           |      |          |  |  |  +--| (80)
+|           |      |          |  |  |     +--Nothofagus_cliffortioides
+|           |      |          |  +--| (100)
+|           |      |          |     +--Nothofagus_gunnii
+|           |      |       +--| (100)
+|           |      |       |  |        +--Nothofagus_antarctica
+|           |      |       |  |     +--| (62)
+|           |      |       |  |     |  |  +--Nothofagus_nitida
+|           |      |       |  |     |  +--| (93)
+|           |      |       |  |     |     +--Nothofagus_betuloides
+|           |      |       |  |  +--| (100)
+|           |      |       |  |  |  |  +--Nothofagus_dombeyi
+|           |      |       |  |  |  +--| (79)
+|           |      |       |  |  |     +--Nothofagus_pumilio
+|           |      |       |  +--| (100)
+|           |      |       |     |              +--Nothofagus_aequilateralis
+|           |      |       |     |           +--| (72)
+|           |      |       |     |           |  +--Nothofagus_balansae
+|           |      |       |     |        +**| (34)
+|           |      |       |     |        |  +--Nothofagus_discoidea
+|           |      |       |     |     +--| (61)
+|           |      |       |     |     |  +--Nothofagus_baumanniae
+|           |      |       |     |  +--| (100)
+|           |      |       |     |  |  +--Nothofagus_codonandra
+|           |      |       |     +--| (100)
+|           |      |       |        |  +--Nothofagus_brassii
+|           |      |       |        +--| (82)
+|           |      |       |           |        +--Nothofagus_carrii
+|           |      |       |           |     +--| (91)
+|           |      |       |           |     |  +--Nothofagus_grandis
+|           |      |       |           |  +--| (66)
+|           |      |       |           |  |  +--Nothofagus_perryi
+|           |      |       |           +--| (84)
+|           |      |       |              +--Nothofagus_resinosa
+|           |      +-------| (100)
+|           |              |        +--Nothofagus_cunninghamii
+|           |              |     +--| (99)
+|           |              |     |  +--Nothofagus_moorei
+|           |              |  +--| (99)
+|           |              |  |  +--Nothofagus_menziesii
+|           |              +--| (100)
+|           |                 |     +--Nothofagus_glauca
+|           |                 |  +--| (76)
+|           |                 |  |  +--Nothofagus_obliqua
+|           |                 +--| (100)
+|           |                    +--Nothofagus_alpina
+|        +--| (75)
+|        |  |           +--Cyclocarya_paliurus
+|        |  |        +--| (99)
+|        |  |        |  +--Juglans_nigra
+|        |  |     +--| (100)
+|        |  |     |  |  +---Platycarya_strobilacea
+|        |  |     |  +--| (86)
+|        |  |     |     +--Carya_illinoinensis
+|        |  |  +--| (100)
+|        |  |  |  |     +--Engelhardia_fenzelii
+|        |  |  |  |  +--| (100)
+|        |  |  |  |  |  +--Alfaropsis_roxburghiana
+|        |  |  |  +--| (100)
+|        |  |  |     |  +--Alfaroa_williamsii
+|        |  |  |     +--| (100)
+|        |  |  |        +--Oreomunnea_mexicana
+|        |  +--| (100)
+|        |     +--Rhoiptelea_chiliantha
+|     +--| (98)
+|     |  |    +--Comptonia_peregrina
+|     |  +----| (100)
+|     |       +--Morella_cerifera
+|  +--| (97)
+|  |  +-------------Casuarina_equisetifolia
++--| (100)
+   +------Ticodendron_incognitum
+
+
+Consensus tree in newick format: 
+
+(Betula_platyphylla:0.0129828443,Carpinus_betulus:0.0191126727,((((((((Castanea_sativa:0.0054098623,((Chrysolepis_sempervirens:0.0118938948,Quercus_rubra:0.0096433874)58:0.0008278111,Lithocarpus_henryi:0.0093513788)59:0.0002951190)92:0.0028621861,Trigonobalanus_verticellata:0.0132158670)100:0.0383395542,Fagus_grandifolia:0.0420970801)100:0.0171336768,((Cucumis_sativus:0.1169427544,(Lotus_japonicus:0.1274562753,Phaseolous_vulgaris:0.1162009540)100:0.0627808690)100:0.0333272082,(((Nothofagus_alessandri:0.0039279608,(((Nothofagus_fusca:0.0007661849,Nothofagus_solandri:0.0000027962)95:0.0002602321,(Nothofagus_truncata:0.0002359288,Nothofagus_cliffortioides:0.0000026145)80:0.0000150792)99:0.0038978663,Nothofagus_gunnii:0.0018103358)100:0.0025793923)100:0.0026371948,(((Nothofagus_antarctica:0.0023769267,(Nothofagus_nitida:0.0010593520,Nothofagus_betuloides:0.0040039775)93:0.0020709821)62:0.0004310486,(Nothofagus_dombeyi:0.0019596427,Nothofagus_pumilio:0.0105891641)79:0.0012390519)100:0.0039149158,(((((Nothofagus_aequilateralis:0.0016048552,Nothofagus_balansae:0.0000026062)72:0.0045824340,Nothofagus_discoidea:0.0022992264)34:0.0000014350,Nothofagus_baumanniae:0.0013350235)61:0.0005523430,Nothofagus_codonandra:0.0034420555)100:0.0036860801,(Nothofagus_brassii:0.0011046650,(((Nothofagus_carrii:0.0000026145,Nothofagus_grandis:0.0013731968)91:0.0009651818,Nothofagus_perryi:0.0015506198)66:0.0005659628,Nothofagus_resinosa:0.0060682335)84:0.0012114308)82:0.0000024422)100:0.0077483127)100:0.0030832369)100:0.0069138768,(((Nothofagus_cunninghamii:0.0011823709,Nothofagus_moorei:0.0037175681)99:0.0012315691,Nothofagus_menziesii:0.0037745250)99:0.0028956386,((Nothofagus_glauca:0.0009967021,Nothofagus_obliqua:0.0009989622)76:0.0004494741,Nothofagus_alpina:0.0056299442)100:0.0046401595)100:0.0120057866)100:0.0389870488)100:0.0191070001)100:0.0112525018,((((Cyclocarya_paliurus:0.0066831755,Juglans_nigra:0.0038324308)99:0.0028654778,(Platycarya_strobilacea:0.0206339493,Carya_illinoinensis:0.0050316083)86:0.0004035143)100:0.0034896912,((Engelhardia_fenzelii:0.0011947605,Alfaropsis_roxburghiana:0.0025628961)100:0.0034992410,(Alfaroa_williamsii:0.0075186922,Oreomunnea_mexicana:0.0034791709)100:0.0115601092)100:0.0148148043)100:0.0155846466,Rhoiptelea_chiliantha:0.0125356583)100:0.0164548036)75:0.0007994013,(Comptonia_peregrina:0.0066154248,Morella_cerifera:0.0049500206)100:0.0261142920)98:0.0053539026,Casuarina_equisetifolia:0.0661847122)97:0.0055888322,Ticodendron_incognitum:0.0341303604)100:0.0115431435);
+
+TIME STAMP
+----------
+
+Date and time: Thu Sep  6 18:18:41 2018
+Total CPU time used: 125.679862 seconds (0h:2m:5s)
+Total wall-clock time used: 668.2304401 seconds (0h:11m:8s)
+

@@ -1,0 +1,10 @@
+#nexus
+begin sets;
+  charset part1.1_part1.2_part2.1_part2.2_part4.1_part4.2_part5.1_part5.2 = 1-300\3  2-300\3  301-990\3  302-990\3  1504-2022\3  1505-2022\3  2023-2283\3  2024-2283\3;
+  charset part1.3_part2.3 = 3-300\3  303-990\3;
+  charset part3.1_part3.2_part3.3_part4.3_part5.3 = 991-1503\3  992-1503\3  993-1503\3  1506-2022\3  2025-2283\3;
+  charpartition mymodels =
+    HKY+F+G4: part1.1_part1.2_part2.1_part2.2_part4.1_part4.2_part5.1_part5.2,
+    K2P+G4: part1.3_part2.3,
+    K3Pu+F+G4: part3.1_part3.2_part3.3_part4.3_part5.3;
+end;

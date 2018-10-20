@@ -1,0 +1,235 @@
+IQ-TREE multicore version 1.6.7 for Mac OS X 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meeps-mac-pro.staff.sydney.edu.au (AVX, 64 GB RAM)
+Command: /Users/davidduchene/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s ../../../RobAlignments/1_Fishbein_2001.fasta -m TEST -bb 1000 -q ../../../RobAlignments/1_Fishbein_2001_partitions.nex -nt AUTO -pre 3_setFishbein_2001
+Seed:    587482 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Sep  6 17:47:57 2018
+Kernel:  AVX - auto-detect threads (8 CPU cores detected)
+
+Reading partition model file ../../../RobAlignments/1_Fishbein_2001_partitions.nex ...
+Reading alignment file ../../../RobAlignments/1_Fishbein_2001.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 40 sequences with 9237 columns, 2371 distinct patterns
+1585 parsimony-informative, 754 singleton sites, 6898 constant sites
+                        Gap/Ambiguity  Composition  p-value
+   1  Altingia                  2.27%    passed     29.74%
+   2  Aphanopetalum             2.59%    passed     72.39%
+   3  Boykinia                  2.75%    passed     97.56%
+   4  Cercidiphyllum            2.81%    passed     69.40%
+   5  Choristylis               1.89%    passed     75.06%
+   6  Chrysosplenium            1.68%    passed      8.00%
+   7  Corylopsis                3.69%    passed     89.88%
+   8  Crassula                  3.84%    passed     10.78%
+   9  Daphniphyllum             2.93%    passed     88.46%
+  10  Disanthus                 3.51%    passed     96.73%
+  11  Dudleya                   5.16%    passed     97.73%
+  12  Exbucklandia              7.87%    passed     59.54%
+  13  Haloragis                 6.57%    passed     80.78%
+  14  Hamamelis                 4.02%    passed     96.86%
+  15  Heuchera                  1.37%    passed     81.80%
+  16  Itea                      2.35%    passed     97.16%
+  17  Kalanchoe                 3.54%    passed     92.33%
+  18  Lambertia                 1.68%    passed     49.59%
+  19  Leea                      2.48%    passed     53.10%
+  20  Liquidambar               3.24%    passed     47.42%
+  21  Myriophyllum              2.71%    passed     48.94%
+  22  Mytilaria                 2.00%    passed     79.23%
+  23  Paeonia_brownii           3.72%    passed     95.37%
+  24  Paeonia_californica       3.29%    passed     95.30%
+  25  Paeonia_suffruticosa      4.35%    passed     96.27%
+  26  Paeonia_tenuifolia        5.67%    passed     99.45%
+  27  Peltoboykinia             2.01%    passed     54.68%
+  28  Penthorum                 1.62%    passed     71.48%
+  29  Platanus                  2.45%    passed     72.96%
+  30  Pterostemon               2.49%    passed     83.51%
+  31  Rhodoleia                 2.68%    passed     93.70%
+  32  Ribes                     1.66%    passed     98.17%
+  33  Saxifraga_integrifolia    2.15%    passed     35.50%
+  34  Saxifraga_mertensiana     2.46%    passed     30.94%
+  35  Sedum                     2.81%    passed     92.33%
+  36  Sullivantia               1.99%    passed     99.32%
+  37  Tetracarpaea              2.72%    passed     39.47%
+  38  Tetracentron              2.39%    passed     93.86%
+  39  Trochodendron             2.08%    passed     94.94%
+  40  Vitis                     2.65%    passed     37.51%
+****  TOTAL                     3.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 11 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		40	471	35	404	TEST	atpB_1
+2		40	471	16	434	TEST	atpB_2
+3		40	471	203	182	TEST	atpB_3
+4		40	1716	108	1541	TEST	18S
+5		40	459	32	398	TEST	rbcl_1
+6		40	459	14	423	TEST	rbcl_2
+7		40	458	189	178	TEST	rbcl_3
+8		40	373	165	141	TEST	matK_1
+9		40	373	130	182	TEST	matK_2
+10		40	373	205	102	TEST	matK_3
+11		40	3381	463	2725	TEST	26S
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.187 seconds
+NOTE: ModelFinder requires 24 MB RAM!
+NUMBER OF THREADS FOR PARTITION FINDING: 8
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -45633.643 / df: 86 / AIC: 91439.285 / AICc: 91440.963 / BIC: 92050.362
+Selecting individual models for 11 charsets using BIC...
+ No. Model        Score       Charset
+   1 TIM2+F+I+G4  2866.711    atpB_1
+   2 TIM+F+I+G4   3055.082    rbcl_1
+   3 TVM+F+G4     5963.078    matK_2
+   4 K3Pu+F+G4    7391.410    matK_1
+   5 SYM+I+G4     9484.710    18S
+   6 TVM+F+G4     8585.541    atpB_3
+   7 TVM+F+I+G4   9176.541    matK_3
+   8 TVM+F+I+G4   8414.257    rbcl_3
+   9 HKY+F+I+G4   2292.953    atpB_2
+  10 TVMe+I+G4    2401.211    rbcl_2	0h:0m:42s (0h:0m:4s left)
+  11 GTR+F+I+G4   29262.604   26S	0h:0m:57s (0h:0m:0s left)
+Full partition model BIC score: 89823.249 (LnL: -44174.076  df:162)
+Partition information was printed to 3_setFishbein_2001.best_scheme.nex
+Partition information in Raxml format was printed to 3_setFishbein_2001.best_scheme
+
+All model information printed to 3_setFishbein_2001.model.gz
+CPU time for ModelFinder: 30.627 seconds (0h:0m:30s)
+Wall-clock time for ModelFinder: 58.026 seconds (0h:0m:58s)
+Generating 1000 samples for ultrafast bootstrap (seed: 587482)...
+
+NOTE: 24 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 8 CPU cores
+Increase to 10 rounds for branch lengths
+3 trees examined
+Threads: 1 / Time: 8.534 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -59641
+Threads: 2 / Time: 21.134 sec / Speedup: 0.404 / Efficiency: 20% / LogL: -59641
+BEST NUMBER OF THREADS: 1
+
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -46956.171
+Current log-likelihood at step 1: -44140.925
+Current log-likelihood at step 2: -44056.370
+Current log-likelihood at step 3: -44048.778
+Current log-likelihood at step 4: -44045.787
+Current log-likelihood at step 5: -44043.780
+Current log-likelihood at step 6: -44042.365
+Current log-likelihood at step 7: -44041.336
+Current log-likelihood at step 8: -44040.474
+Current log-likelihood at step 9: -44039.699
+Current log-likelihood at step 10: -44038.941
+Current log-likelihood at step 11: -44038.170
+Current log-likelihood at step 12: -44037.358
+Current log-likelihood at step 13: -44036.532
+Current log-likelihood at step 14: -44035.680
+Current log-likelihood at step 15: -44034.810
+Current log-likelihood at step 16: -44030.690
+Current log-likelihood at step 17: -44030.686
+Parameters optimization took 16 rounds (37.656 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Computing ML distances based on estimated model parameters... 0.174 sec
+Computing BIONJ tree...
+0.079 seconds
+Log-likelihood of BIONJ tree: -44012.003
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 16.892 second
+Computing log-likelihood of 98 initial trees ... 72.385 seconds
+Current best score: -44012.003
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -44009.651
+Current log-likelihood at step 1: -44009.605
+Parameters optimization took 0 rounds (1.173 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -44009.605
+Iteration 10 / LogL: -44024.647 / Time: 0h:3m:37s
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -44000.950
+Current log-likelihood at step 1: -44000.800
+Current log-likelihood at step 2: -44000.793
+Parameters optimization took 1 rounds (3.686 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 20: -44000.793
+Iteration 20 / LogL: -44000.793 / Time: 0h:4m:58s
+Finish initializing candidate tree set (7)
+Current best tree score: -44000.793 / CPU time: 226.599
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -44030.320 / Time: 0h:6m:24s (0h:19m:52s left)
+Iteration 40 / LogL: -44009.738 / Time: 0h:7m:43s (0h:15m:49s left)
+Iteration 50 / LogL: -44005.805 / Time: 0h:9m:1s (0h:12m:53s left)
+Log-likelihood cutoff on original alignment: -44049.767
+UPDATE BEST LOG-LIKELIHOOD: -44000.792
+Iteration 60 / LogL: -44009.025 / Time: 0h:10m:16s (0h:10m:27s left)
+Iteration 70 / LogL: -44000.810 / Time: 0h:11m:36s (0h:8m:24s left)
+Iteration 80 / LogL: -44000.798 / Time: 0h:13m:4s (0h:6m:37s left)
+Iteration 90 / LogL: -44000.810 / Time: 0h:14m:24s (0h:4m:51s left)
+UPDATE BEST LOG-LIKELIHOOD: -44000.792
+Iteration 100 / LogL: -44000.795 / Time: 0h:15m:33s (0h:3m:8s left)
+Log-likelihood cutoff on original alignment: -44049.767
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 110 / LogL: -44014.742 / Time: 0h:16m:41s (0h:13m:46s left)
+Iteration 120 / LogL: -44005.805 / Time: 0h:17m:47s (0h:11m:57s left)
+TREE SEARCH COMPLETED AFTER 121 ITERATIONS / Time: 0h:17m:53s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -44000.792
+Current log-likelihood at step 1: -44000.789
+Parameters optimization took 0 rounds (0.794 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -44000.789
+Creating bootstrap support values...
+Split supports printed to NEXUS file 3_setFishbein_2001.splits.nex
+Total tree length: 1.466
+
+Total number of iterations: 121
+CPU time used for tree search: 184.862 sec (0h:3m:4s)
+Wall-clock time used for tree search: 1001.801 sec (0h:16m:41s)
+Total CPU time used: 196.913 sec (0h:3m:16s)
+Total wall-clock time used: 1075.855 sec (0h:17m:55s)
+
+Computing bootstrap consensus tree...
+Reading input file 3_setFishbein_2001.splits.nex...
+40 taxa and 152 splits.
+Consensus tree written to 3_setFishbein_2001.contree
+Reading input trees file 3_setFishbein_2001.contree
+Log-likelihood of consensus tree: -44000.790
+
+Analysis results written to: 
+  IQ-TREE report:                3_setFishbein_2001.iqtree
+  Maximum-likelihood tree:       3_setFishbein_2001.treefile
+  Likelihood distances:          3_setFishbein_2001.mldist
+  Best partitioning scheme:      3_setFishbein_2001.best_scheme.nex
+           in RAxML format:      3_setFishbein_2001.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          3_setFishbein_2001.splits.nex
+  Consensus tree:                3_setFishbein_2001.contree
+  Screen log file:               3_setFishbein_2001.log
+
+Date and Time: Thu Sep  6 18:06:53 2018

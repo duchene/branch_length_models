@@ -1,0 +1,311 @@
+IQ-TREE multicore version 1.6.7 for Mac OS X 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meeps-mac-pro.staff.sydney.edu.au (AVX, 64 GB RAM)
+Command: /Users/davidduchene/Desktop/Software/iqtree-1.6.7-MacOSX/bin/iqtree -s ../../../RobAlignments/1_Fishbein_2001.fasta -m TESTMERGE -bb 1000 -q ../../../RobAlignments/1_Fishbein_2001_partitions.nex -nt 2 -pre 2_setFishbein_2001
+Seed:    653600 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Sep  7 10:09:53 2018
+Kernel:  AVX - 2 threads (8 CPU cores detected)
+
+Reading partition model file ../../../RobAlignments/1_Fishbein_2001_partitions.nex ...
+Reading alignment file ../../../RobAlignments/1_Fishbein_2001.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 40 sequences with 9237 columns, 2371 distinct patterns
+1585 parsimony-informative, 754 singleton sites, 6898 constant sites
+                        Gap/Ambiguity  Composition  p-value
+   1  Altingia                  2.27%    passed     29.74%
+   2  Aphanopetalum             2.59%    passed     72.39%
+   3  Boykinia                  2.75%    passed     97.56%
+   4  Cercidiphyllum            2.81%    passed     69.40%
+   5  Choristylis               1.89%    passed     75.06%
+   6  Chrysosplenium            1.68%    passed      8.00%
+   7  Corylopsis                3.69%    passed     89.88%
+   8  Crassula                  3.84%    passed     10.78%
+   9  Daphniphyllum             2.93%    passed     88.46%
+  10  Disanthus                 3.51%    passed     96.73%
+  11  Dudleya                   5.16%    passed     97.73%
+  12  Exbucklandia              7.87%    passed     59.54%
+  13  Haloragis                 6.57%    passed     80.78%
+  14  Hamamelis                 4.02%    passed     96.86%
+  15  Heuchera                  1.37%    passed     81.80%
+  16  Itea                      2.35%    passed     97.16%
+  17  Kalanchoe                 3.54%    passed     92.33%
+  18  Lambertia                 1.68%    passed     49.59%
+  19  Leea                      2.48%    passed     53.10%
+  20  Liquidambar               3.24%    passed     47.42%
+  21  Myriophyllum              2.71%    passed     48.94%
+  22  Mytilaria                 2.00%    passed     79.23%
+  23  Paeonia_brownii           3.72%    passed     95.37%
+  24  Paeonia_californica       3.29%    passed     95.30%
+  25  Paeonia_suffruticosa      4.35%    passed     96.27%
+  26  Paeonia_tenuifolia        5.67%    passed     99.45%
+  27  Peltoboykinia             2.01%    passed     54.68%
+  28  Penthorum                 1.62%    passed     71.48%
+  29  Platanus                  2.45%    passed     72.96%
+  30  Pterostemon               2.49%    passed     83.51%
+  31  Rhodoleia                 2.68%    passed     93.70%
+  32  Ribes                     1.66%    passed     98.17%
+  33  Saxifraga_integrifolia    2.15%    passed     35.50%
+  34  Saxifraga_mertensiana     2.46%    passed     30.94%
+  35  Sedum                     2.81%    passed     92.33%
+  36  Sullivantia               1.99%    passed     99.32%
+  37  Tetracarpaea              2.72%    passed     39.47%
+  38  Tetracentron              2.39%    passed     93.86%
+  39  Trochodendron             2.08%    passed     94.94%
+  40  Vitis                     2.65%    passed     37.51%
+****  TOTAL                     3.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 11 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		40	471	35	404	TESTMERGE	atpB_1
+2		40	471	16	434	TESTMERGE	atpB_2
+3		40	471	203	182	TESTMERGE	atpB_3
+4		40	1716	108	1541	TESTMERGE	18S
+5		40	459	32	398	TESTMERGE	rbcl_1
+6		40	459	14	423	TESTMERGE	rbcl_2
+7		40	458	189	178	TESTMERGE	rbcl_3
+8		40	373	165	141	TESTMERGE	matK_1
+9		40	373	130	182	TESTMERGE	matK_2
+10		40	373	205	102	TESTMERGE	matK_3
+11		40	3381	463	2725	TESTMERGE	26S
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.037 seconds
+NOTE: ModelFinder requires 24 MB RAM!
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -45617.881 / df: 86 / AIC: 91407.763 / AICc: 91409.440 / BIC: 92018.839
+Selecting individual models for 11 charsets using BIC...
+ No. Model        Score       Charset
+   1 TVM+F+G4     8589.947    atpB_3
+   2 TVM+F+I+G4   9171.274    matK_3
+   3 GTR+F+I+G4   29264.029   26S
+   4 SYM+I+G4     9467.729    18S
+   5 TVM+F+I+G4   8409.754    rbcl_3
+   6 K3Pu+F+G4    7378.993    matK_1
+   7 TVM+F+G4     5965.781    matK_2
+   8 TIM+F+I+G4   3053.682    rbcl_1
+   9 TIM2+F+I+G4  2867.292    atpB_1
+  10 HKY+F+I+G4   2293.991    atpB_2	0h:1m:4s (0h:10m:52s left)
+  11 TVMe+I+G4    2400.325    rbcl_2	0h:1m:6s (0h:10m:3s left)
+Full partition model BIC score: 89791.950 (LnL: -44158.427  df:162)
+Merging models to increase model fit (about 111 total partition schemes)...
+  12 GTR+F+I+G4   90283.093   atpB_3+26S	0h:1m:44s (0h:14m:21s left)
+  13 SYM+I+G4     90259.745   matK_3+26S	0h:1m:45s (0h:13m:14s left)
+  14 TIM2e+I+G4   90162.415   rbcl_3+26S	0h:2m:21s (0h:16m:17s left)
+  15 GTR+F+I+G4   89830.335   18S+26S	0h:2m:22s (0h:15m:13s left)
+  16 GTR+F+I+G4   90166.507   matK_2+26S	0h:2m:57s (0h:17m:34s left)
+  17 GTR+F+I+G4   90170.209   matK_1+26S	0h:2m:57s (0h:16m:23s left)
+  18 GTR+F+I+G4   89811.820   rbcl_1+26S	0h:3m:28s (0h:17m:59s left)
+  19 GTR+F+I+G4   89785.609   atpB_1+26S	0h:3m:30s (0h:16m:59s left)
+  20 GTR+F+I+G4   89831.444   atpB_2+26S	0h:4m:1s (0h:18m:18s left)
+  21 GTR+F+I+G4   89827.323   rbcl_2+26S	0h:4m:2s (0h:17m:20s left)
+  22 TVM+F+I+G4   89733.203   atpB_3+rbcl_3	0h:4m:30s (0h:18m:12s left)
+  23 TVM+F+I+G4   89792.675   atpB_3+matK_3	0h:4m:30s (0h:17m:14s left)
+  24 K3Pu+F+I+G4  90314.093   atpB_3+18S	0h:4m:52s (0h:17m:40s left)
+  25 TVM+F+I+G4   89775.271   rbcl_3+matK_3	0h:4m:59s (0h:17m:9s left)
+  26 TVM+F+G4     89783.679   atpB_3+matK_1	0h:5m:16s (0h:17m:14s left)
+  27 GTR+F+I+G4   90214.124   18S+matK_3	0h:5m:23s (0h:16m:45s left)
+  28 TN+F+I+G4    90218.270   18S+rbcl_3	0h:5m:36s (0h:16m:38s left)
+  29 TVM+F+I+G4   89748.677   matK_1+matK_3	0h:5m:47s (0h:16m:21s left)
+  30 TVM+F+I+G4   89796.828   rbcl_3+matK_1	0h:6m:0s (0h:16m:14s left)
+  31 TVM+F+G4     89765.836   atpB_3+matK_2	0h:6m:12s (0h:16m:2s left)
+  32 SYM+I+G4     90145.414   18S+matK_1	0h:6m:19s (0h:15m:35s left)
+  33 TVM+F+I+G4   89726.749   matK_2+matK_3	0h:6m:36s (0h:15m:36s left)
+  34 TVM+F+I+G4   89771.981   rbcl_3+matK_2	0h:6m:42s (0h:15m:11s left)
+  35 TIM2+F+I+G4  90166.808   18S+matK_2	0h:6m:53s (0h:14m:58s left)
+  36 TVM+F+G4     89729.775   matK_1+matK_2	0h:7m:1s (0h:14m:38s left)
+  37 GTR+F+I+G4   89999.859   atpB_1+atpB_3	0h:7m:12s (0h:14m:24s left)
+  38 GTR+F+I+G4   89965.224   atpB_1+matK_3	0h:7m:23s (0h:14m:11s left)
+  39 GTR+F+I+G4   90055.444   atpB_3+rbcl_1	0h:7m:29s (0h:13m:50s left)
+  40 TIM3+F+I+G4  89975.604   atpB_1+rbcl_3	0h:7m:40s (0h:13m:36s left)
+  41 TVM+F+I+G4   89982.406   atpB_2+atpB_3	0h:7m:47s (0h:13m:18s left)
+  42 GTR+F+I+G4   89993.918   rbcl_1+matK_3	0h:7m:57s (0h:13m:4s left)
+  43 TIM2+F+I+G4  89800.288   atpB_1+18S	0h:8m:6s (0h:12m:49s left)
+  44 GTR+F+I+G4   90035.859   rbcl_1+rbcl_3	0h:8m:14s (0h:12m:33s left)
+  45 TVM+F+I+G4   90068.614   atpB_3+rbcl_2	0h:8m:25s (0h:12m:21s left)
+  46 K3P+I+G4     89879.993   atpB_1+matK_1	0h:8m:31s (0h:12m:2s left)
+  47 K3Pu+F+I+G4  89937.663   atpB_2+matK_3	0h:8m:45s (0h:11m:55s left)
+  48 TIM2+F+I+G4  89791.089   18S+rbcl_1	0h:8m:49s (0h:11m:34s left)
+  49 TVM+F+I+G4   89948.978   atpB_2+rbcl_3	0h:9m:2s (0h:11m:26s left)
+  50 K3Pu+F+I+G4  90005.294   rbcl_2+matK_3	0h:9m:9s (0h:11m:10s left)
+  51 TPM3u+F+I+G4 90006.316   rbcl_2+rbcl_3	0h:9m:16s (0h:10m:55s left)
+  52 K3P+I+G4     89904.570   rbcl_1+matK_1	0h:9m:22s (0h:10m:37s left)
+  53 SYM+I+G4     89778.221   atpB_2+18S	0h:9m:33s (0h:10m:27s left)
+  54 SYM+I+G4     89758.267   18S+rbcl_2	0h:9m:38s (0h:10m:10s left)
+  55 K3Pu+F+I+G4  89927.518   atpB_2+matK_1	0h:9m:49s (0h:10m:0s left)
+  56 GTR+F+G4     89922.496   atpB_1+matK_2	0h:9m:51s (0h:9m:40s left)
+  57 K3Pu+F+I+G4  89977.974   rbcl_2+matK_1	0h:10m:3s (0h:9m:31s left)
+  58 GTR+F+I+G4   89966.874   rbcl_1+matK_2	0h:10m:4s (0h:9m:12s left)
+  59 TVM+F+I+G4   90002.391   rbcl_2+matK_2	0h:10m:15s (0h:9m:2s left)
+  60 TVM+F+I+G4   89951.591   atpB_2+matK_2	0h:10m:16s (0h:8m:43s left)
+  61 TIM2+F+I+G4  89731.216   atpB_1+rbcl_1	0h:10m:25s (0h:8m:32s left)
+  62 K2P+I+G4     89817.675   atpB_1+atpB_2	0h:10m:25s (0h:8m:14s left)
+  63 TIM2+F+I+G4  89810.960   atpB_1+rbcl_2	0h:10m:34s (0h:8m:3s left)
+  64 TIMe+I+G4    89806.189   atpB_2+rbcl_1	0h:10m:35s (0h:7m:46s left)
+  65 TIM2e+I+G4   89795.141   rbcl_1+rbcl_2	0h:10m:41s (0h:7m:33s left)
+  66 TN+F+I+G4    89762.265   atpB_2+rbcl_2	0h:10m:45s (0h:7m:19s left)
+Merging matK_2+matK_3 with BIC score: 89726.749 (LnL: -44162.248  df: 154)
+  67 TVM+F+I+G4   89732.720   atpB_3+matK_2+matK_3	0h:11m:23s (0h:7m:29s left)
+  68 SYM+I+G4     90487.793   matK_2+matK_3+26S	0h:11m:31s (0h:7m:17s left)
+  69 TVM+F+I+G4   89724.937   rbcl_3+matK_2+matK_3	0h:11m:58s (0h:7m:17s left)
+  70 TIM+F+I+G4   90310.503   18S+matK_2+matK_3	0h:12m:1s (0h:7m:2s left)
+  71 GTR+F+I+G4   89946.382   atpB_1+matK_2+matK_3	0h:12m:27s (0h:7m:1s left)
+  72 TVM+F+I+G4   89676.112   matK_1+matK_2+matK_3	0h:12m:32s (0h:6m:47s left)
+  73 GTR+F+I+G4   89985.698   rbcl_1+matK_2+matK_3	0h:12m:50s (0h:6m:40s left)
+  74 TVM+F+I+G4   89921.817   atpB_2+matK_2+matK_3	0h:12m:57s (0h:6m:28s left)
+  75 TVM+F+I+G4   89989.828   rbcl_2+matK_2+matK_3	0h:13m:11s (0h:6m:19s left)
+Merging atpB_1+rbcl_1 with BIC score: 89666.015 (LnL: -44168.303  df: 146)
+  76 GTR+F+I+G4   89865.077   atpB_1+rbcl_1+matK_1	0h:13m:26s (0h:6m:11s left)
+  77 GTR+F+I+G4   90035.480   atpB_1+atpB_3+rbcl_1	0h:13m:30s (0h:5m:57s left)
+  78 TIM2+F+I+G4  89697.519   atpB_1+18S+rbcl_1	0h:13m:44s (0h:5m:48s left)
+  79 GTR+F+I+G4   90055.522   atpB_1+rbcl_1+matK_2+matK_3	0h:13m:55s (0h:5m:38s left)
+  80 TIM2+F+I+G4  89697.190   atpB_1+rbcl_1+rbcl_2	0h:14m:4s (0h:5m:27s left)
+  81 TIM2+F+I+G4  89740.383   atpB_1+atpB_2+rbcl_1	0h:14m:13s (0h:5m:16s left)
+  82 GTR+F+I+G4   89729.383   atpB_1+rbcl_1+26S	0h:14m:16s (0h:5m:3s left)
+  83 GTR+F+I+G4   90006.289   atpB_1+rbcl_1+rbcl_3	0h:14m:29s (0h:4m:53s left)
+Merging atpB_3+rbcl_3 with BIC score: 89607.268 (LnL: -44175.352  df: 138)
+  84 GTR+F+I+G4   90304.497   atpB_3+18S+rbcl_3	0h:14m:57s (0h:4m:48s left)
+  85 TVM+F+I+G4   89636.810   atpB_3+rbcl_3+matK_2+matK_3	0h:15m:7s (0h:4m:37s left)
+  86 GTR+F+I+G4   90105.292   atpB_1+atpB_3+rbcl_1+rbcl_3	0h:15m:35s (0h:4m:32s left)
+  87 SYM+I+G4     90383.626   atpB_3+rbcl_3+26S	0h:15m:42s (0h:4m:20s left)
+  88 TVM+F+I+G4   89904.015   atpB_3+rbcl_2+rbcl_3	0h:16m:2s (0h:4m:11s left)
+  89 TVM+F+I+G4   89817.310   atpB_2+atpB_3+rbcl_3	0h:16m:8s (0h:3m:59s left)
+  90 TVM+F+I+G4   89618.338   atpB_3+rbcl_3+matK_1	0h:16m:31s (0h:3m:51s left)
+Merging matK_1+matK_2+matK_3 with BIC score: 89556.631 (LnL: -44177.350  df: 132)
+  91 SYM+I+G4     90524.019   matK_1+matK_2+matK_3+26S	0h:17m:25s (0h:3m:49s left)
+  92 TVM+F+I+G4   89605.942   atpB_3+rbcl_3+matK_1+matK_2+matK_3	0h:17m:26s (0h:3m:36s left)
+  93 TIM+F+I+G4   90218.651   18S+matK_1+matK_2+matK_3	0h:18m:3s (0h:3m:29s left)
+  94 GTR+F+I+G4   89975.557   atpB_1+rbcl_1+matK_1+matK_2+matK_3	0h:18m:3s (0h:3m:16s left)
+  95 TVM+F+I+G4   89820.314   rbcl_2+matK_1+matK_2+matK_3	0h:18m:39s (0h:3m:8s left)
+  96 TVM+F+I+G4   89753.702   atpB_2+matK_1+matK_2+matK_3	0h:18m:42s (0h:2m:55s left)
+Merging 18S+rbcl_2 with BIC score: 89522.948 (LnL: -44187.825  df: 126)
+  97 TIM2+F+I+G4  89573.758   atpB_1+18S+rbcl_1+rbcl_2	0h:19m:3s (0h:2m:45s left)
+  98 GTR+F+I+G4   90359.768   atpB_3+18S+rbcl_2+rbcl_3	0h:19m:19s (0h:2m:33s left)
+  99 SYM+I+G4     89507.120   atpB_2+18S+rbcl_2	0h:19m:39s (0h:2m:22s left)
+ 100 TIM+F+I+G4   90330.187   18S+rbcl_2+matK_1+matK_2+matK_3	0h:19m:49s (0h:2m:10s left)
+ 101 GTR+F+I+G4   89609.979   18S+rbcl_2+26S	0h:20m:25s (0h:2m:1s left)
+Merging atpB_2+18S+rbcl_2 with BIC score: 89507.120 (LnL: -44207.228  df: 120)
+ 102 TVM+F+I+G4   90400.298   atpB_2+atpB_3+18S+rbcl_2+rbcl_3	0h:21m:4s (0h:1m:51s left)
+ 103 TIM+F+I+G4   90387.462   atpB_2+18S+rbcl_2+matK_1+matK_2+matK_3	0h:21m:10s (0h:1m:38s left)
+ 104 TIM2+F+I+G4  89578.595   atpB_1+atpB_2+18S+rbcl_1+rbcl_2	0h:21m:29s (0h:1m:26s left)
+ 105 SYM+I+G4     89621.487   atpB_2+18S+rbcl_2+26S	0h:21m:56s (0h:1m:15s left)
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = TIM2+F+I+G4: atpB_1 rbcl_1, SYM+I+G4: atpB_2 18S rbcl_2, TVM+F+I+G4: atpB_3 rbcl_3, TVM+F+I+G4: matK_1 matK_2 matK_3, GTR+F+I+G4: 26S;
+Agglomerative model selection: ((atpB_1,rbcl_1)2:89666,(atpB_2,(18S,rbcl_2)5:89522.9)6:89507.1,(atpB_3,rbcl_3)3:89607.3,(matK_1,(matK_2,matK_3)1:89726.7)4:89556.6,26S)
+Merging into 5 partitions...
+Partition information was printed to 2_setFishbein_2001.best_scheme.nex
+Partition information in Raxml format was printed to 2_setFishbein_2001.best_scheme
+
+All model information printed to 2_setFishbein_2001.model.gz
+CPU time for ModelFinder: 528.864 seconds (0h:8m:48s)
+Wall-clock time for ModelFinder: 1317.563 seconds (0h:21m:57s)
+Generating 1000 samples for ultrafast bootstrap (seed: 653600)...
+
+NOTE: 22 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -46937.483
+Current log-likelihood at step 1: -44137.711
+Current log-likelihood at step 2: -44075.521
+Current log-likelihood at step 3: -44069.068
+Current log-likelihood at step 4: -44066.266
+Current log-likelihood at step 5: -44064.687
+Current log-likelihood at step 6: -44063.923
+Current log-likelihood at step 7: -44063.579
+Current log-likelihood at step 8: -44063.434
+Current log-likelihood at step 9: -44063.369
+Parameters optimization took 8 rounds (18.302 sec)
+
+Computing ML distances based on estimated model parameters... 0.103 sec
+Computing BIONJ tree...
+0.047 seconds
+Log-likelihood of BIONJ tree: -44062.870
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 11.552 second
+Computing log-likelihood of 98 initial trees ... 139.325 seconds
+Current best score: -44062.870
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -44060.663
+Current log-likelihood at step 1: -44060.622
+Parameters optimization took 0 rounds (0.669 sec)
+
+BETTER TREE FOUND at iteration 1: -44060.622
+Iteration 10 / LogL: -44065.403 / Time: 0h:3m:43s
+Iteration 20 / LogL: -44060.767 / Time: 0h:4m:35s
+Finish initializing candidate tree set (6)
+Current best tree score: -44060.622 / CPU time: 251.697
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -44051.585
+Current log-likelihood at step 1: -44051.460
+Current log-likelihood at step 2: -44051.442
+Parameters optimization took 1 rounds (1.335 sec)
+
+BETTER TREE FOUND at iteration 21: -44051.442
+Iteration 30 / LogL: -44060.793 / Time: 0h:6m:6s (0h:19m:8s left)
+Iteration 40 / LogL: -44051.479 / Time: 0h:8m:17s (0h:17m:12s left)
+Iteration 50 / LogL: -44056.318 / Time: 0h:11m:8s (0h:16m:8s left)
+Log-likelihood cutoff on original alignment: -44099.999
+Iteration 60 / LogL: -44051.443 / Time: 0h:13m:38s (0h:14m:5s left)
+Iteration 70 / LogL: -44056.332 / Time: 0h:14m:58s (0h:11m:3s left)
+Iteration 80 / LogL: -44059.352 / Time: 0h:16m:17s (0h:8m:27s left)
+Iteration 90 / LogL: -44051.451 / Time: 0h:18m:17s (0h:6m:22s left)
+Iteration 100 / LogL: -44058.609 / Time: 0h:21m:30s (0h:4m:33s left)
+Log-likelihood cutoff on original alignment: -44099.999
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+Iteration 110 / LogL: -44051.467 / Time: 0h:24m:1s (0h:19m:50s left)
+UPDATE BEST LOG-LIKELIHOOD: -44051.442
+Iteration 120 / LogL: -44051.447 / Time: 0h:26m:25s (0h:17m:45s left)
+TREE SEARCH COMPLETED AFTER 122 ITERATIONS / Time: 0h:26m:47s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -44051.441
+Current log-likelihood at step 1: -44051.434
+Parameters optimization took 0 rounds (0.610 sec)
+
+BEST SCORE FOUND : -44051.434
+Creating bootstrap support values...
+Split supports printed to NEXUS file 2_setFishbein_2001.splits.nex
+Total tree length: 1.461
+
+Total number of iterations: 122
+CPU time used for tree search: 219.277 sec (0h:3m:39s)
+Wall-clock time used for tree search: 1582.941 sec (0h:26m:22s)
+Total CPU time used: 225.154 sec (0h:3m:45s)
+Total wall-clock time used: 1608.873 sec (0h:26m:48s)
+
+Computing bootstrap consensus tree...
+Reading input file 2_setFishbein_2001.splits.nex...
+40 taxa and 156 splits.
+Consensus tree written to 2_setFishbein_2001.contree
+Reading input trees file 2_setFishbein_2001.contree
+Log-likelihood of consensus tree: -44051.435
+
+Analysis results written to: 
+  IQ-TREE report:                2_setFishbein_2001.iqtree
+  Maximum-likelihood tree:       2_setFishbein_2001.treefile
+  Likelihood distances:          2_setFishbein_2001.mldist
+  Best partitioning scheme:      2_setFishbein_2001.best_scheme.nex
+           in RAxML format:      2_setFishbein_2001.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          2_setFishbein_2001.splits.nex
+  Consensus tree:                2_setFishbein_2001.contree
+  Screen log file:               2_setFishbein_2001.log
+
+Date and Time: Fri Sep  7 10:58:43 2018

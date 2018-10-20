@@ -1,0 +1,21 @@
+load("results.trees.Rdata")
+
+pdf("~/Dropbox/Research/branch_lengths/mds.pdf", width = 13, height = 6, useDingbats = F)
+
+colfunc <- colorRampPalette(c("lightblue", "darkblue"))
+
+par(mfrow = c(2, 5))
+
+for(i in 1:8) if(i == 2) frame() else plot(rmdsres[[i]], col = colfunc(7), pch = 19, xlim = c(-100, 100), ylim = c(-100, 100))
+
+#, xlim = c(min(rmdsres[[i]][,1])-(0.1*diff(range(rmdsres[[i]][,1]))), max(rmdsres[[i]][,1])+(0.1*diff(range(rmdsres[[i]][,1])))), ylim = c(min(rmdsres[[i]][,2])-(0.1*diff(range(rmdsres[[i]][,2]))), max(rmdsres[[i]][,2])+(0.1*diff(range(rmdsres[[i]][,2])))))
+
+plot(mmdsres$points, col = colfunc(7), pch = 19, xlim = c(-100, 100), ylim = c(-100, 100))
+points(mmdsres$points[2101,1], mmdsres$points[2101,2], pch = 8, col = "red")
+
+plot(bmdsres$points, col = colfunc(7), pch = 19, xlim = c(-100, 100), ylim = c(-100, 100))
+points(mmdsres$points[120,1], mmdsres$points[120,2], pch = 8, col = "red")
+legend("topright", as.character(1:7), col = colfunc(7), pch = 19)
+
+
+dev.off()

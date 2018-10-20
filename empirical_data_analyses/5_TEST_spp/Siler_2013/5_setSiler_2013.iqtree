@@ -1,0 +1,385 @@
+IQ-TREE 1.6.7 built Aug 23 2018
+
+Partition file name: ../../../RobAlignments/1_Siler_2013_partitions.nex
+Input file name: ../../../RobAlignments/1_Siler_2013.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 934246
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 61 taxa with 7 partitions and 2697 total sites (19.6387% missing data)
+
+  ID  Name    Type	Seq	Site	Unique	Infor	Invar	Const
+   1  Cytb_1  DNA	61	370	183	115	227	226
+   2  Cytb_2  DNA	61	370	128	60	286	286
+   3  Cytb_3  DNA	61	370	366	346	9	9
+   4  Cmos_3  DNA	40	190	39	27	151	151
+   5  Cmos_1  DNA	40	190	19	10	176	176
+   6  Cmos_2  DNA	40	189	20	8	175	175
+   7  Vim     DNA	41	1018	200	99	881	881
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TPM2u+F+I+G4:Cytb_1,HKY+F+I+G4:Cytb_2,TIM+F+I+G4:Cytb_3,HKY+F+G4:Cmos_3,K2P+I:Cmos_1,TNe+G4:Cmos_2,HKY+F+G4:Vim
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TPM2u+F+I+G4     -3065.2505   6146.5009 + 0.0000   6146.8998 + 0.0000   6177.8090 + 0.0000
+   2  HKY+F+I+G4       -1611.6581   3237.3163 + 0.0000   3237.6256 + 0.0000   3264.7108 + 0.0000
+   3  TIM+F+I+G4       -8920.7076  17859.4151 + 0.0000  17859.9151 + 0.0000  17894.6367 + 0.0000
+   4  HKY+F+G4          -561.3863   1134.7726 + 0.0000   1135.2316 + 0.0000   1154.2547 + 0.0000
+   5  K2P+I             -406.4843    818.9685 + 0.0000    819.0975 + 0.0000    828.7096 + 0.0000
+   6  TNe+G4            -394.0775    796.1550 + 0.0000    796.3724 + 0.0000    809.1220 + 0.0000
+   7  HKY+F+G4         -2579.4089   5170.8178 + 0.0000   5170.9009 + 0.0000   5200.3714 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TPM2u+F+I+G4   0.6408  TPM2u{6.59649,30.5028}+F{0.333956,0.238841,0.179646,0.247557}+I{0.507243}+G4{0.836557}
+   2  HKY+F+I+G4     0.2584  HKY{59.2588}+F{0.194873,0.293627,0.115525,0.395975}+I{0.648404}+G4{0.786929}
+   3  TIM+F+I+G4     5.8460  TIM{42.5825,3.13454,31.4165}+F{0.407636,0.374245,0.0545655,0.163553}+I{0.00953412}+G4{1.885}
+   4  HKY+F+G4       0.1033  HKY{11.4876}+F{0.283109,0.167516,0.133223,0.416151}+G4{1.19943}
+   5  K2P+I          0.0455  K2P{4.83414}+FQ+I{0.866707}
+   6  TNe+G4         0.0455  TNe{5.07101,0.0001}+FQ+G4{0.0731985}
+   7  HKY+F+G4       0.1615  HKY{4.87324}+F{0.323658,0.154676,0.233848,0.287818}+G4{0.328051}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -17404.4415 (s.e. 491.9772)
+Unconstrained log-likelihood (without tree): -10063.4569
+Number of free parameters (#branches + #model parameters): 161
+Akaike information criterion (AIC) score: 35130.8830
+Corrected Akaike information criterion (AICc) score: 35151.4605
+Bayesian information criterion (BIC) score: 36080.7661
+
+Total tree length (sum of branch lengths): 3.4061
+Sum of internal branch lengths: 1.6210 (47.5922% of tree length)
+
+WARNING: 5 near-zero internal branches (<0.0004) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'AF337128_Lampropeltis_alterna' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--AF337128_Lampropeltis_alterna
+|
++--AF337134_Lampropeltis_triangulum
+|
+|                                              +--AF471040_Lycodon_zawi
+|                                       +------| (100)
+|                                       |      +**Lycodon_zawi_239944
+|                                    +--| (99)
+|                                    |  |         +--Lycodon_aulicus_205000
+|                                    |  |      +--| (91)
+|                                    |  |      |  |        +--Lycodon_aulicus_RMB8785
+|                                    |  |      |  |     +--| (100)
+|                                    |  |      |  |     |  +--Lycodon_capucinus_9277
+|                                    |  |      |  |  +--| (100)
+|                                    |  |      |  |  |  |  +--Lycodon_capucinus_5725
+|                                    |  |      |  |  |  +--| (100)
+|                                    |  |      |  |  |     +**Lycodon_capucinus_DSM1325L
+|                                    |  |      |  +--| (99)
+|                                    |  |      |     +--Lycodon_capucinus_9695
+|                                    |  +------| (100)
+|                                    |         |  +**Lycodon_aulicus_CDS4621
+|                                    |         +--| (99)
+|                                    |            |     +**Lycodon_aulicus_CDS658
+|                                    |            |  +**| (49)
+|                                    |            |  |  +**Lycodon_aulicus_RMB4347
+|                                    |            +**| (45)
+|                                    |               +**Lycodon_capucinus_RMB9060
+|                                +---| (99)
+|                                |   +--------Lycodon_jara_235387
+|                           +----| (100)
+|                           |    |                 +--Lycodon_laoensis_258659
+|                           |    |              +--| (100)
+|                           |    |              |  +--Lycodon_laoensis_DSM902L
+|                           |    |           +--| (85)
+|                           |    |           |  +--Lycodon_laoensis_8481
+|                           |    +-----------| (100)
+|                           |                +**Lycodon_laoensis_262186
+|                        +--| (97)
+|                        |  |   +-------Lycodon_effraensis_DSM927L
+|                        |  +---| (100)
+|                        |      +------Lycodon_effraensis_9670
+|                     +--| (69)
+|                     |  +-----------------Lycodon_stormi_JAM7487
+|                  +--| (80)
+|                  |  |        +---JF827672.Dinodon.rufozonatum
+|                  |  |     +--| (97)
+|                  |  |     |  +-----AB008539.Dinodon.semicarinatus
+|                  |  |  +--| (42)
+|                  |  |  |  |            +--Lycodon_butleri_8066
+|                  |  |  |  |       +----| (100)
+|                  |  |  |  |       |    |  +--Lycodon_butleri_9136
+|                  |  |  |  |       |    +--| (100)
+|                  |  |  |  |       |       +--Lycodon_butleri_9421
+|                  |  |  |  |    +--| (97)
+|                  |  |  |  |    |  |   +--Lycodon_fasciatus_234875
+|                  |  |  |  |    |  +---| (100)
+|                  |  |  |  |    |      +--Lycodon_fasciatus_234957
+|                  |  |  |  +----| (99)
+|                  |  |  |       +----Lycodon_subcinctus_4199
+|                  |  +--| (83)
+|                  |     |           +--Lycodon_subcinctus_5016
+|                  |     |        +--| (99)
+|                  |     |        |  |  +**Lycodon_subcinctus_RMB3097
+|                  |     |        |  +--| (100)
+|                  |     |        |     +--Lycodon_subcinctus_RMB7585
+|                  |     +--------| (100)
+|                  |              +---Lycodon_subcinctus_DSM1449L
+|               +--| (81)
+|               |  |                   +--Lycodon_alcalai_RMB9036
+|               |  |                +--| (77)
+|               |  |                |  |  +**Lycodon_alcalai_RMB9542
+|               |  |                |  +**| (29)
+|               |  |                |     |  +--Lycodon_chrysoprateros_RMB6394
+|               |  |                |     +**| (39)
+|               |  |                |        |  +**Lycodon_sp_RMB5948
+|               |  |                |        +--| (100)
+|               |  |                |           +**Lycodon_sp_RMB5965
+|               |  |             +--| (97)
+|               |  |             |  +**Lycodon_sp_RMB5991
+|               |  |        +----| (100)
+|               |  |        |    +--Lycodon_bibonius_RMB5709
+|               |  |     +--| (94)
+|               |  |     |  |       +--Lycodon_muelleri_CDS5256
+|               |  |     |  |    +--| (99)
+|               |  |     |  |    |  +--Lycodon_muelleri_RMB9788
+|               |  |     |  +----| (100)
+|               |  |     |       |  +--Lycodon_muelleri_DLSUD031
+|               |  |     |       +--| (99)
+|               |  |     |          +--Lycodon_muelleri_RMB10605
+|               |  +-----| (100)
+|               |        |         +--Lycodon_dumereli_ACD4146
+|               |        +---------| (100)
+|               |                  |  +**Lycodon_dumereli_CDS1927
+|               |                  +**| (73)
+|               |                     +**Lycodon_dumereli_RMB4393
+|         +-----| (100)
+|         |     |     +--------------------AF471062_Dipsadoboa_unicolor
+|         |     |  +--| (67)
+|         |     |  |  |  +------------------AF471065_Dasypeltis_atra
+|         |     |  |  +--| (82)
+|         |     |  |     |    +-----------Boiga_cynodon_CDS4400
+|         |     |  |     +----| (100)
+|         |     |  |          +-------Boiga_dendrophila_CDS1575
+|         |     +--| (60)
+|         |        |                                       +----Ahaetulla_prasina_CDS1130
+|         |        |  +------------------------------------| (100)
+|         |        |  |                                    +--Ahaetulla_prasina_RMB3042
+|         |        +--| (50)
+|         |           |   +--------------Ptyas_luzonensis_RMB4445
+|         |           +---| (86)
+|         |               |  +------------------Gonyosoma_oxycephala_RMB11702
+|         |               +--| (78)
+|         |                  +-------------------------Oligodon_maculatus_RMB11713
+|      +--| (87)
+|      |  |  +--GU073440_Pantherophis_bairdi
+|      |  +--| (99)
+|      |     +--GU073446_Pantherophis_obsoletus
++------| (100)
+       |  +--FJ627818_Pituophis_deppei
+       +--| (100)
+          +---FJ627819_Pituophis_catenifer
+
+Tree in newick format:
+
+(AF337128_Lampropeltis_alterna:0.0037385137,AF337134_Lampropeltis_triangulum:0.0010895967,(((((((((((AF471040_Lycodon_zawi:0.0088771434,Lycodon_zawi_239944:0.0000024512)100:0.0563106038,((Lycodon_aulicus_205000:0.0101149916,(((Lycodon_aulicus_RMB8785:0.0042475480,Lycodon_capucinus_9277:0.0057568779)100:0.0044918883,(Lycodon_capucinus_5725:0.0008020940,Lycodon_capucinus_DSM1325L:0.0000026548)100:0.0068581264)100:0.0048267335,Lycodon_capucinus_9695:0.0133919528)99:0.0046441045)91:0.0014406764,(Lycodon_aulicus_CDS4621:0.0000022109,((Lycodon_aulicus_CDS658:0.0000026548,Lycodon_aulicus_RMB4347:0.0000026548)49:0.0000023316,Lycodon_capucinus_RMB9060:0.0000026548)45:0.0000024903)99:0.0057976600)100:0.0583857493)99:0.0312377862,Lycodon_jara_235387:0.0757297136)99:0.0374267233,(((Lycodon_laoensis_258659:0.0021002445,Lycodon_laoensis_DSM902L:0.0017887986)100:0.0061703498,Lycodon_laoensis_8481:0.0045109876)85:0.0006840468,Lycodon_laoensis_262186:0.0000029577)100:0.1006071685)100:0.0399152964,(Lycodon_effraensis_DSM927L:0.0700840615,Lycodon_effraensis_9670:0.0608024852)100:0.0388275415)97:0.0106304734,Lycodon_stormi_JAM7487:0.1430747295)69:0.0042493410,(((JF827672.Dinodon.rufozonatum:0.0314573903,AB008539.Dinodon.semicarinatus:0.0508247424)97:0.0269274552,(((Lycodon_butleri_8066:0.0019002642,(Lycodon_butleri_9136:0.0003789799,Lycodon_butleri_9421:0.0007408488)100:0.0027280748)100:0.0408593063,(Lycodon_fasciatus_234875:0.0037619606,Lycodon_fasciatus_234957:0.0007468480)100:0.0348832110)97:0.0205801533,Lycodon_subcinctus_4199:0.0436972778)99:0.0402132561)42:0.0042643106,((Lycodon_subcinctus_5016:0.0218489529,(Lycodon_subcinctus_RMB3097:0.0000025942,Lycodon_subcinctus_RMB7585:0.0027519502)100:0.0218803030)99:0.0310503858,Lycodon_subcinctus_DSM1449L:0.0318315869)100:0.0778197994)83:0.0112235533)80:0.0101969420,(((((Lycodon_alcalai_RMB9036:0.0004159180,(Lycodon_alcalai_RMB9542:0.0000026548,(Lycodon_chrysoprateros_RMB6394:0.0025396792,(Lycodon_sp_RMB5948:0.0000026548,Lycodon_sp_RMB5965:0.0000026548)100:0.0008318553)39:0.0000024891)29:0.0000023316)77:0.0004121450,Lycodon_sp_RMB5991:0.0000020354)97:0.0060395472,Lycodon_bibonius_RMB5709:0.0140474605)100:0.0427265902,((Lycodon_muelleri_CDS5256:0.0020302844,Lycodon_muelleri_RMB9788:0.0027794233)99:0.0080046972,(Lycodon_muelleri_DLSUD031:0.0025156929,Lycodon_muelleri_RMB10605:0.0029937401)99:0.0153393520)100:0.0410733085)94:0.0095614641,(Lycodon_dumereli_ACD4146:0.0004338058,(Lycodon_dumereli_CDS1927:0.0000022109,Lycodon_dumereli_RMB4393:0.0000026548)73:0.0000023316)100:0.0819395278)100:0.0516051941)81:0.0225297891,((AF471062_Dipsadoboa_unicolor:0.1710195665,(AF471065_Dasypeltis_atra:0.1522248232,(Boiga_cynodon_CDS4400:0.1018008996,Boiga_dendrophila_CDS1575:0.0654932156)100:0.0463501362)82:0.0189188039)67:0.0128138618,((Ahaetulla_prasina_CDS1130:0.0397505099,Ahaetulla_prasina_RMB3042:0.0216211744)100:0.2920520077,(Ptyas_luzonensis_RMB4445:0.1214541107,(Gonyosoma_oxycephala_RMB11702:0.1546947713,Oligodon_maculatus_RMB11713:0.2110460173)78:0.0253891199)86:0.0321336627)50:0.0134460981)60:0.0077783910)100:0.0527626453,(GU073440_Pantherophis_bairdi:0.0254589970,GU073446_Pantherophis_obsoletus:0.0260726818)99:0.0228699327)87:0.0092110139,(FJ627818_Pituophis_deppei:0.0273387856,FJ627819_Pituophis_catenifer:0.0366030332)100:0.0221144939)100:0.0566217346);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -17404.485051
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--AF337128_Lampropeltis_alterna
+|
++--AF337134_Lampropeltis_triangulum
+|
+|                                              +--AF471040_Lycodon_zawi
+|                                       +------| (100)
+|                                       |      +--Lycodon_zawi_239944
+|                                    +--| (99)
+|                                    |  |         +--Lycodon_aulicus_205000
+|                                    |  |      +--| (91)
+|                                    |  |      |  |        +--Lycodon_aulicus_RMB8785
+|                                    |  |      |  |     +--| (100)
+|                                    |  |      |  |     |  +--Lycodon_capucinus_9277
+|                                    |  |      |  |  +--| (100)
+|                                    |  |      |  |  |  |  +--Lycodon_capucinus_5725
+|                                    |  |      |  |  |  +--| (100)
+|                                    |  |      |  |  |     +--Lycodon_capucinus_DSM1325L
+|                                    |  |      |  +--| (99)
+|                                    |  |      |     +--Lycodon_capucinus_9695
+|                                    |  +------| (100)
+|                                    |         |  +--Lycodon_aulicus_CDS4621
+|                                    |         +--| (99)
+|                                    |            |     +--Lycodon_aulicus_CDS658
+|                                    |            |  +--| (49)
+|                                    |            |  |  +--Lycodon_aulicus_RMB4347
+|                                    |            +--| (45)
+|                                    |               +--Lycodon_capucinus_RMB9060
+|                                +---| (99)
+|                                |   +--------Lycodon_jara_235387
+|                           +----| (100)
+|                           |    |                 +--Lycodon_laoensis_258659
+|                           |    |              +--| (100)
+|                           |    |              |  +--Lycodon_laoensis_DSM902L
+|                           |    |           +--| (85)
+|                           |    |           |  +--Lycodon_laoensis_8481
+|                           |    +-----------| (100)
+|                           |                +--Lycodon_laoensis_262186
+|                        +--| (97)
+|                        |  |   +-------Lycodon_effraensis_DSM927L
+|                        |  +---| (100)
+|                        |      +------Lycodon_effraensis_9670
+|                     +--| (69)
+|                     |  +-----------------Lycodon_stormi_JAM7487
+|                  +--| (80)
+|                  |  |     +---JF827672.Dinodon.rufozonatum
+|                  |  |  +--| (97)
+|                  |  |  |  +-----AB008539.Dinodon.semicarinatus
+|                  |  +--| (83)
+|                  |     |               +--Lycodon_butleri_8066
+|                  |     |          +----| (100)
+|                  |     |          |    |  +--Lycodon_butleri_9136
+|                  |     |          |    +--| (100)
+|                  |     |          |       +--Lycodon_butleri_9421
+|                  |     |       +--| (97)
+|                  |     |       |  |   +--Lycodon_fasciatus_234875
+|                  |     |       |  +---| (100)
+|                  |     |       |      +--Lycodon_fasciatus_234957
+|                  |     |  +----| (99)
+|                  |     |  |    +----Lycodon_subcinctus_4199
+|                  |     +--| (43)
+|                  |        |           +--Lycodon_subcinctus_5016
+|                  |        |        +--| (99)
+|                  |        |        |  |  +--Lycodon_subcinctus_RMB3097
+|                  |        |        |  +--| (100)
+|                  |        |        |     +--Lycodon_subcinctus_RMB7585
+|                  |        +--------| (100)
+|                  |                 +---Lycodon_subcinctus_DSM1449L
+|               +--| (81)
+|               |  |                   +--Lycodon_alcalai_RMB9036
+|               |  |                +--| (77)
+|               |  |                |  |  +--Lycodon_alcalai_RMB9542
+|               |  |                |  +--| (29)
+|               |  |                |     |  +--Lycodon_chrysoprateros_RMB6394
+|               |  |                |     +--| (39)
+|               |  |                |        |  +--Lycodon_sp_RMB5948
+|               |  |                |        +--| (100)
+|               |  |                |           +--Lycodon_sp_RMB5965
+|               |  |             +--| (97)
+|               |  |             |  +--Lycodon_sp_RMB5991
+|               |  |        +----| (100)
+|               |  |        |    +--Lycodon_bibonius_RMB5709
+|               |  |     +--| (94)
+|               |  |     |  |       +--Lycodon_muelleri_CDS5256
+|               |  |     |  |    +--| (99)
+|               |  |     |  |    |  +--Lycodon_muelleri_RMB9788
+|               |  |     |  +----| (100)
+|               |  |     |       |  +--Lycodon_muelleri_DLSUD031
+|               |  |     |       +--| (99)
+|               |  |     |          +--Lycodon_muelleri_RMB10605
+|               |  +-----| (100)
+|               |        |         +--Lycodon_dumereli_ACD4146
+|               |        +---------| (100)
+|               |                  |  +--Lycodon_dumereli_CDS1927
+|               |                  +--| (73)
+|               |                     +--Lycodon_dumereli_RMB4393
+|         +-----| (100)
+|         |     |     +--------------------AF471062_Dipsadoboa_unicolor
+|         |     |  +--| (67)
+|         |     |  |  |  +------------------AF471065_Dasypeltis_atra
+|         |     |  |  +--| (82)
+|         |     |  |     |    +-----------Boiga_cynodon_CDS4400
+|         |     |  |     +----| (100)
+|         |     |  |          +-------Boiga_dendrophila_CDS1575
+|         |     +--| (60)
+|         |        |                                       +----Ahaetulla_prasina_CDS1130
+|         |        |  +------------------------------------| (100)
+|         |        |  |                                    +--Ahaetulla_prasina_RMB3042
+|         |        +--| (50)
+|         |           |   +--------------Ptyas_luzonensis_RMB4445
+|         |           +---| (86)
+|         |               |  +------------------Gonyosoma_oxycephala_RMB11702
+|         |               +--| (78)
+|         |                  +-------------------------Oligodon_maculatus_RMB11713
+|      +--| (87)
+|      |  |  +--GU073440_Pantherophis_bairdi
+|      |  +--| (99)
+|      |     +--GU073446_Pantherophis_obsoletus
++------| (100)
+       |  +--FJ627818_Pituophis_deppei
+       +--| (100)
+          +---FJ627819_Pituophis_catenifer
+
+
+Consensus tree in newick format: 
+
+(AF337128_Lampropeltis_alterna:0.0037334183,AF337134_Lampropeltis_triangulum:0.0010915122,(((((((((((AF471040_Lycodon_zawi:0.0088639711,Lycodon_zawi_239944:0.0000020958)100:0.0562339825,((Lycodon_aulicus_205000:0.0101015720,(((Lycodon_aulicus_RMB8785:0.0042421238,Lycodon_capucinus_9277:0.0057491566)100:0.0044847517,(Lycodon_capucinus_5725:0.0008007329,Lycodon_capucinus_DSM1325L:0.0000022699)100:0.0068507328)100:0.0048233466,Lycodon_capucinus_9695:0.0133704155)99:0.0046387000)91:0.0014327142,(Lycodon_aulicus_CDS4621:0.0000028375,((Lycodon_aulicus_CDS658:0.0000022699,Lycodon_aulicus_RMB4347:0.0000022699)49:0.0000022699,Lycodon_capucinus_RMB9060:0.0000022699)45:0.0000029946)99:0.0057976294)100:0.0584347305)99:0.0311681875,Lycodon_jara_235387:0.0756743720)99:0.0373108507,(((Lycodon_laoensis_258659:0.0021008618,Lycodon_laoensis_DSM902L:0.0017891949)100:0.0061586538,Lycodon_laoensis_8481:0.0044996398)85:0.0006973925,Lycodon_laoensis_262186:0.0000028358)100:0.1006237894)100:0.0399575940,(Lycodon_effraensis_DSM927L:0.0701539869,Lycodon_effraensis_9670:0.0607122657)100:0.0388356139)97:0.0110563348,Lycodon_stormi_JAM7487:0.1425224868)69:0.0042299053,((JF827672.Dinodon.rufozonatum:0.0317165418,AB008539.Dinodon.semicarinatus:0.0503926825)97:0.0292344843,((((Lycodon_butleri_8066:0.0018578607,(Lycodon_butleri_9136:0.0003783368,Lycodon_butleri_9421:0.0007396160)100:0.0027650040)100:0.0405710394,(Lycodon_fasciatus_234875:0.0038147065,Lycodon_fasciatus_234957:0.0006914372)100:0.0352067471)97:0.0188918455,Lycodon_subcinctus_4199:0.0443411294)99:0.0400828532,((Lycodon_subcinctus_5016:0.0219128910,(Lycodon_subcinctus_RMB3097:0.0000029946,Lycodon_subcinctus_RMB7585:0.0027495372)100:0.0218041550)99:0.0299285405,Lycodon_subcinctus_DSM1449L:0.0323818905)100:0.0764712041)43:0.0041016017)83:0.0116350383)80:0.0102445902,(((((Lycodon_alcalai_RMB9036:0.0004144627,(Lycodon_alcalai_RMB9542:0.0000022699,(Lycodon_chrysoprateros_RMB6394:0.0025361620,(Lycodon_sp_RMB5948:0.0000022699,Lycodon_sp_RMB5965:0.0000022699)100:0.0008294203)39:0.0000022699)29:0.0000022699)77:0.0004106876,Lycodon_sp_RMB5991:0.0000028375)97:0.0060498635,Lycodon_bibonius_RMB5709:0.0140178973)100:0.0427287941,((Lycodon_muelleri_CDS5256:0.0020321800,Lycodon_muelleri_RMB9788:0.0027739727)99:0.0079824012,(Lycodon_muelleri_DLSUD031:0.0025119437,Lycodon_muelleri_RMB10605:0.0029928724)99:0.0153409169)100:0.0410131992)94:0.0094903832,(Lycodon_dumereli_ACD4146:0.0004324828,(Lycodon_dumereli_CDS1927:0.0000028375,Lycodon_dumereli_RMB4393:0.0000029946)73:0.0000029946)100:0.0820277588)100:0.0513737901)81:0.0228086869,((AF471062_Dipsadoboa_unicolor:0.1710205590,(AF471065_Dasypeltis_atra:0.1521032833,(Boiga_cynodon_CDS4400:0.1017885641,Boiga_dendrophila_CDS1575:0.0654690071)100:0.0462905228)82:0.0188395615)67:0.0128059758,((Ahaetulla_prasina_CDS1130:0.0396801262,Ahaetulla_prasina_RMB3042:0.0216479156)100:0.2922365895,(Ptyas_luzonensis_RMB4445:0.1212586574,(Gonyosoma_oxycephala_RMB11702:0.1545118810,Oligodon_maculatus_RMB11713:0.2110422356)78:0.0255370735)86:0.0322319936)50:0.0134767933)60:0.0077385923)100:0.0528285523,(GU073440_Pantherophis_bairdi:0.0254251173,GU073446_Pantherophis_obsoletus:0.0260473209)99:0.0227877155)87:0.0091922690,(FJ627818_Pituophis_deppei:0.0273113595,FJ627819_Pituophis_catenifer:0.0365547929)100:0.0221241532)100:0.0565396432);
+
+TIME STAMP
+----------
+
+Date and time: Thu Sep  6 18:44:42 2018
+Total CPU time used: 166.993995 seconds (0h:2m:46s)
+Total wall-clock time used: 867.456692 seconds (0h:14m:27s)
+

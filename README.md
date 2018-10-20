@@ -1,3 +1,3 @@
 ## This repository accompanies the manuscript "Linking Branch Lengths Across Loci Provides the Best Fit for Phylogenetic Inference" by David A. Duchêne, K. Jun Tong, Charles S. P. Foster, Sebastián Duchêne, Robert Lanfear, Simon Y. W. Ho
 
-
+Simulations outputs are only included as R objects. Full outputs are deleted after running, as indicated in the run scripts (named run.schemes.Rscript). Folders for analyses of each type of simulation are named rvar (variation in rate across branches across subsets only), trln (variation in tree length across subsets only), and rvartrlen (variation in both rate across branches and tree length across subsets).
